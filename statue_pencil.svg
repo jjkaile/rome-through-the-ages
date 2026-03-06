@@ -1,0 +1,320 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <style>
+    .pencil {
+      fill: none;
+      stroke: #4a4a4a;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .light {
+      fill: none;
+      stroke: #8a8a8a;
+      stroke-width: 0.8;
+      stroke-linecap: round;
+      stroke-dasharray: none;
+    }
+    .construction {
+      fill: none;
+      stroke: #b0b0b0;
+      stroke-width: 0.5;
+      stroke-dasharray: 4 3;
+    }
+    .section-line {
+      fill: none;
+      stroke: #6a6a6a;
+      stroke-width: 1.2;
+      stroke-dasharray: 8 4;
+    }
+    .label {
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      fill: #6a6a6a;
+    }
+  </style>
+
+  <!-- Construction lines (center line + horizontals) -->
+  <line class="construction" x1="300" y1="30" x2="300" y2="870" />
+
+  <!-- Section dividers with labels -->
+  <!-- Head/Chest divide -->
+  <line class="section-line" x1="140" y1="195" x2="460" y2="195" />
+  <!-- Chest/Belly divide -->
+  <line class="section-line" x1="120" y1="370" x2="480" y2="370" />
+  <!-- Belly/Legs divide -->
+  <line class="section-line" x1="140" y1="500" x2="460" y2="500" />
+  <!-- Legs/Feet divide -->
+  <line class="section-line" x1="160" y1="740" x2="440" y2="740" />
+
+  <!-- Labels -->
+  <text class="label" x="470" y="130">HEAD</text>
+  <text class="label" x="470" y="130" dy="16" style="font-size:10px; fill:#999">(gold)</text>
+
+  <text class="label" x="485" y="280">CHEST + ARMS</text>
+  <text class="label" x="485" y="280" dy="16" style="font-size:10px; fill:#999">(silver)</text>
+
+  <text class="label" x="470" y="435">BELLY</text>
+  <text class="label" x="470" y="435" dy="16" style="font-size:10px; fill:#999">(bronze)</text>
+
+  <text class="label" x="450" y="620">LEGS</text>
+  <text class="label" x="450" y="620" dy="16" style="font-size:10px; fill:#999">(iron)</text>
+
+  <text class="label" x="440" y="790">FEET</text>
+  <text class="label" x="440" y="790" dy="16" style="font-size:10px; fill:#999">(iron + clay)</text>
+
+  <!-- ══════ THE FIGURE ══════ -->
+
+  <!-- HEAD — slightly oversized, regal, like an Oscar statuette -->
+  <!-- Skull shape -->
+  <path class="pencil" d="
+    M 270,55
+    C 265,45 275,35 300,33
+    C 325,35 335,45 330,55
+    C 335,75 338,95 335,115
+    C 332,135 328,150 325,160
+    C 318,172 310,178 300,180
+    C 290,178 282,172 275,160
+    C 272,150 268,135 265,115
+    C 262,95 265,75 270,55 Z
+  " />
+
+  <!-- Face construction lines -->
+  <line class="light" x1="272" y1="90" x2="328" y2="90" />
+  <line class="light" x1="270" y1="110" x2="330" y2="110" />
+  <line class="light" x1="275" y1="135" x2="325" y2="135" />
+
+  <!-- Eyes (simple) -->
+  <ellipse class="pencil" cx="285" cy="92" rx="10" ry="5" />
+  <ellipse class="pencil" cx="315" cy="92" rx="10" ry="5" />
+
+  <!-- Brow line -->
+  <path class="pencil" d="M 272,82 C 280,78 290,80 300,82 C 310,80 320,78 328,82" />
+
+  <!-- Nose -->
+  <path class="pencil" d="M 300,95 L 298,118 C 295,123 292,125 289,123" />
+  <path class="light" d="M 298,118 C 302,123 306,125 310,123" />
+
+  <!-- Mouth -->
+  <path class="pencil" d="M 288,140 C 293,145 300,146 307,145 C 312,143 314,140 312,138" />
+
+  <!-- Jaw definition -->
+  <path class="light" d="M 268,120 C 270,150 278,168 300,175" />
+  <path class="light" d="M 332,120 C 330,150 322,168 300,175" />
+
+  <!-- Crown/headdress suggestion — like Nebuchadnezzar's crown -->
+  <path class="pencil" d="
+    M 262,70 C 258,55 265,40 270,35
+    M 270,35 C 275,28 285,25 300,24
+    C 315,25 325,28 330,35
+    M 330,35 C 335,40 342,55 338,70
+  " />
+  <!-- Crown points -->
+  <path class="light" d="M 275,30 L 278,18 L 282,28" />
+  <path class="light" d="M 293,25 L 296,12 L 300,24" />
+  <path class="light" d="M 310,25 L 314,14 L 318,28" />
+
+  <!-- NECK -->
+  <path class="pencil" d="M 285,178 C 283,185 280,190 278,195" />
+  <path class="pencil" d="M 315,178 C 317,185 320,190 322,195" />
+
+  <!-- CHEST & ARMS — Superman power pose, arms crossed -->
+  <!-- Trapezius / shoulders -->
+  <path class="pencil" d="
+    M 278,195
+    C 260,200 230,210 200,218
+    C 185,222 170,225 160,230
+  " />
+  <path class="pencil" d="
+    M 322,195
+    C 340,200 370,210 400,218
+    C 415,222 430,225 440,230
+  " />
+
+  <!-- Chest outline — broad, heroic -->
+  <path class="pencil" d="
+    M 200,218
+    C 195,235 190,260 192,280
+    C 195,305 200,325 210,340
+    C 225,355 260,365 300,370
+    C 340,365 375,355 390,340
+    C 400,325 405,305 408,280
+    C 410,260 405,235 400,218
+  " />
+
+  <!-- Pectoral definition -->
+  <path class="light" d="M 225,235 C 250,250 275,255 300,252" />
+  <path class="light" d="M 375,235 C 350,250 325,255 300,252" />
+
+  <!-- Center chest line -->
+  <path class="light" d="M 300,200 C 300,240 300,300 300,370" />
+
+  <!-- LEFT ARM — crossed over chest, forearm visible -->
+  <path class="pencil" d="
+    M 160,230
+    C 152,245 148,265 150,285
+    C 152,300 158,315 170,325
+    C 190,340 220,348 250,350
+  " />
+  <!-- Left forearm (on top, crossing right) -->
+  <path class="pencil" d="
+    M 170,325
+    C 185,330 210,338 250,345
+    C 280,348 310,348 340,342
+    C 355,338 365,332 370,325
+  " />
+  <!-- Left arm underside -->
+  <path class="pencil" d="
+    M 160,230
+    C 155,248 152,268 155,290
+    C 157,302 162,318 175,332
+  " />
+  <!-- Left fist tucked -->
+  <path class="pencil" d="
+    M 355,332 C 360,328 368,325 370,325" />
+  <path class="light" d="M 358,338 C 362,340 365,338 368,332" />
+
+  <!-- RIGHT ARM — under left, crossed -->
+  <path class="pencil" d="
+    M 440,230
+    C 448,245 452,265 450,285
+    C 448,300 442,315 430,325
+    C 410,340 380,348 350,350
+  " />
+  <!-- Right forearm (underneath) -->
+  <path class="pencil" d="
+    M 430,325
+    C 415,332 390,340 355,345
+    C 325,350 290,350 260,345
+    C 242,340 232,335 228,328
+  " />
+  <!-- Right arm underside -->
+  <path class="pencil" d="
+    M 440,230
+    C 445,248 448,268 445,290
+    C 443,302 438,318 425,332
+  " />
+  <!-- Right fist tucked -->
+  <path class="pencil" d="M 228,328 C 225,325 222,328 225,335" />
+  <path class="light" d="M 232,340 C 228,338 225,335 225,332" />
+
+  <!-- BELLY / WAIST — tapers in, athletic -->
+  <path class="pencil" d="
+    M 210,370
+    C 215,390 225,420 235,445
+    C 245,470 250,485 255,500
+  " />
+  <path class="pencil" d="
+    M 390,370
+    C 385,390 375,420 365,445
+    C 355,470 350,485 345,500
+  " />
+
+  <!-- Abs suggestion -->
+  <path class="light" d="M 265,385 C 275,390 290,392 300,390 C 310,392 325,390 335,385" />
+  <path class="light" d="M 268,415 C 278,420 290,422 300,420 C 310,422 322,420 332,415" />
+  <path class="light" d="M 272,445 C 282,450 292,452 300,450 C 308,452 318,450 328,445" />
+
+  <!-- Belt/waist line -->
+  <path class="pencil" d="M 255,495 C 270,502 285,505 300,505 C 315,505 330,502 345,495" />
+  <path class="pencil" d="M 255,500 C 270,508 285,512 300,512 C 315,512 330,508 345,500" />
+
+  <!-- LEGS — powerful, planted, slightly apart -->
+  <!-- Left leg outer -->
+  <path class="pencil" d="
+    M 255,500
+    C 248,530 238,570 230,610
+    C 222,650 218,680 216,710
+    C 215,725 215,735 218,745
+  " />
+  <!-- Left leg inner -->
+  <path class="pencil" d="
+    M 290,512
+    C 287,540 282,570 278,610
+    C 275,650 273,680 272,710
+    C 272,725 272,735 272,745
+  " />
+
+  <!-- Left knee definition -->
+  <path class="light" d="M 235,615 C 245,622 255,625 265,622" />
+
+  <!-- Left shin -->
+  <path class="light" d="M 245,640 C 243,670 240,700 240,730" />
+
+  <!-- Right leg outer -->
+  <path class="pencil" d="
+    M 345,500
+    C 352,530 362,570 370,610
+    C 378,650 382,680 384,710
+    C 385,725 385,735 382,745
+  " />
+  <!-- Right leg inner -->
+  <path class="pencil" d="
+    M 310,512
+    C 313,540 318,570 322,610
+    C 325,650 327,680 328,710
+    C 328,725 328,735 328,745
+  " />
+
+  <!-- Right knee definition -->
+  <path class="light" d="M 365,615 C 355,622 345,625 335,622" />
+
+  <!-- Right shin -->
+  <path class="light" d="M 355,640 C 357,670 360,700 360,730" />
+
+  <!-- FEET — slightly wider, grounded, with visible toes suggestion -->
+  <!-- Left foot -->
+  <path class="pencil" d="
+    M 218,745
+    C 212,750 200,755 192,758
+    C 182,762 178,768 180,775
+    C 182,782 188,788 200,790
+    C 220,795 245,796 272,792
+    C 278,790 280,785 278,778
+    C 276,770 274,758 272,745
+  " />
+  <!-- Left foot crack lines (iron + clay) -->
+  <path class="light" d="M 220,760 C 225,775 228,785 230,792" />
+  <path class="light" d="M 245,755 C 243,770 242,780 244,793" />
+  <path class="light" d="M 260,752 C 258,768 257,778 260,790" />
+
+  <!-- Right foot -->
+  <path class="pencil" d="
+    M 382,745
+    C 388,750 400,755 408,758
+    C 418,762 422,768 420,775
+    C 418,782 412,788 400,790
+    C 380,795 355,796 328,792
+    C 322,790 320,785 322,778
+    C 324,770 326,758 328,745
+  " />
+  <!-- Right foot crack lines (iron + clay) -->
+  <path class="light" d="M 380,760 C 375,775 372,785 370,792" />
+  <path class="light" d="M 355,755 C 357,770 358,780 356,793" />
+  <path class="light" d="M 340,752 C 342,768 343,778 340,790" />
+
+  <!-- ══════ PEDESTAL suggestion ══════ -->
+  <path class="light" d="M 170,795 L 430,795" />
+  <path class="light" d="M 175,800 L 425,800" />
+
+  <!-- ══════ SKETCH MARKS — loose gestural lines for pencil feel ══════ -->
+  <!-- Shoulder hatching -->
+  <path class="light" d="M 180,225 L 185,232" />
+  <path class="light" d="M 190,222 L 194,228" />
+  <path class="light" d="M 410,225 L 415,232" />
+  <path class="light" d="M 420,222 L 416,228" />
+
+  <!-- Chest shadow hatching -->
+  <path class="light" d="M 210,260 L 218,268" />
+  <path class="light" d="M 215,265 L 222,273" />
+  <path class="light" d="M 220,270 L 226,277" />
+
+  <!-- Leg shadow hatching -->
+  <path class="light" d="M 232,640 L 238,648" />
+  <path class="light" d="M 235,650 L 241,658" />
+  <path class="light" d="M 237,660 L 243,668" />
+
+  <path class="light" d="M 368,640 L 362,648" />
+  <path class="light" d="M 365,650 L 359,658" />
+  <path class="light" d="M 363,660 L 357,668" />
+
+</svg>

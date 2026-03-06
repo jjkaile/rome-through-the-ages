@@ -1,0 +1,342 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <style>
+    .pencil {
+      fill: none;
+      stroke: #4a4a4a;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .light {
+      fill: none;
+      stroke: #8a8a8a;
+      stroke-width: 0.8;
+      stroke-linecap: round;
+    }
+    .construction {
+      fill: none;
+      stroke: #b0b0b0;
+      stroke-width: 0.5;
+      stroke-dasharray: 4 3;
+    }
+    .flame {
+      fill: none;
+      stroke: #4a4a4a;
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .flame-light {
+      fill: none;
+      stroke: #8a8a8a;
+      stroke-width: 0.7;
+      stroke-linecap: round;
+    }
+    .star {
+      fill: none;
+      stroke: #9a9a9a;
+      stroke-width: 0.6;
+    }
+    .star-bright {
+      fill: none;
+      stroke: #6a6a6a;
+      stroke-width: 1.0;
+    }
+    .label {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      fill: #6a6a6a;
+    }
+    .speed-line {
+      fill: none;
+      stroke: #aaaaaa;
+      stroke-width: 0.5;
+      stroke-linecap: round;
+    }
+  </style>
+
+  <!-- ══════ STARS scattered across the sky ══════ -->
+  <!-- Small 4-point stars -->
+  <g class="star">
+    <!-- Top left cluster -->
+    <line x1="45" y1="38" x2="45" y2="48" />
+    <line x1="40" y1="43" x2="50" y2="43" />
+
+    <line x1="120" y1="22" x2="120" y2="30" />
+    <line x1="116" y1="26" x2="124" y2="26" />
+
+    <line x1="85" y1="95" x2="85" y2="103" />
+    <line x1="81" y1="99" x2="89" y2="99" />
+
+    <line x1="200" y1="55" x2="200" y2="63" />
+    <line x1="196" y1="59" x2="204" y2="59" />
+
+    <line x1="30" y1="160" x2="30" y2="168" />
+    <line x1="26" y1="164" x2="34" y2="164" />
+
+    <line x1="155" y1="140" x2="155" y2="148" />
+    <line x1="151" y1="144" x2="159" y2="144" />
+
+    <!-- Middle area -->
+    <line x1="320" y1="35" x2="320" y2="43" />
+    <line x1="316" y1="39" x2="324" y2="39" />
+
+    <line x1="50" y1="270" x2="50" y2="278" />
+    <line x1="46" y1="274" x2="54" y2="274" />
+
+    <line x1="140" y1="220" x2="140" y2="228" />
+    <line x1="136" y1="224" x2="144" y2="224" />
+
+    <line x1="250" y1="170" x2="250" y2="178" />
+    <line x1="246" y1="174" x2="254" y2="174" />
+
+    <!-- Bottom left -->
+    <line x1="70" y1="380" x2="70" y2="388" />
+    <line x1="66" y1="384" x2="74" y2="384" />
+
+    <line x1="35" y1="450" x2="35" y2="458" />
+    <line x1="31" y1="454" x2="39" y2="454" />
+
+    <line x1="160" y1="340" x2="160" y2="348" />
+    <line x1="156" y1="344" x2="164" y2="344" />
+
+    <!-- Right side (fewer, behind the stone) -->
+    <line x1="720" y1="40" x2="720" y2="48" />
+    <line x1="716" y1="44" x2="724" y2="44" />
+
+    <line x1="680" y1="100" x2="680" y2="108" />
+    <line x1="676" y1="104" x2="684" y2="104" />
+
+    <line x1="760" y1="130" x2="760" y2="138" />
+    <line x1="756" y1="134" x2="764" y2="134" />
+  </g>
+
+  <!-- Brighter stars (slightly bigger) -->
+  <g class="star-bright">
+    <line x1="90" y1="48" x2="90" y2="62" />
+    <line x1="83" y1="55" x2="97" y2="55" />
+
+    <line x1="230" y1="100" x2="230" y2="114" />
+    <line x1="223" y1="107" x2="237" y2="107" />
+
+    <line x1="55" y1="320" x2="55" y2="334" />
+    <line x1="48" y1="327" x2="62" y2="327" />
+
+    <line x1="400" y1="25" x2="400" y2="39" />
+    <line x1="393" y1="32" x2="407" y2="32" />
+  </g>
+
+  <!-- Tiny dot stars -->
+  <g>
+    <circle cx="180" cy="75" r="1.5" fill="#aaa" stroke="none" />
+    <circle cx="280" cy="45" r="1" fill="#bbb" stroke="none" />
+    <circle cx="110" cy="180" r="1.5" fill="#aaa" stroke="none" />
+    <circle cx="350" cy="80" r="1" fill="#bbb" stroke="none" />
+    <circle cx="60" cy="130" r="1" fill="#bbb" stroke="none" />
+    <circle cx="200" cy="200" r="1.5" fill="#aaa" stroke="none" />
+    <circle cx="20" cy="80" r="1" fill="#bbb" stroke="none" />
+    <circle cx="300" cy="130" r="1" fill="#bbb" stroke="none" />
+    <circle cx="170" cy="290" r="1" fill="#bbb" stroke="none" />
+    <circle cx="100" cy="400" r="1.5" fill="#aaa" stroke="none" />
+    <circle cx="40" cy="510" r="1" fill="#bbb" stroke="none" />
+    <circle cx="750" cy="70" r="1" fill="#bbb" stroke="none" />
+    <circle cx="690" cy="150" r="1.5" fill="#aaa" stroke="none" />
+  </g>
+
+  <!-- ══════ CONSTRUCTION / TRAJECTORY LINE ══════ -->
+  <line class="construction" x1="720" y1="30" x2="220" y2="530" />
+
+  <!-- ══════ SPEED LINES — parallel to trajectory ══════ -->
+  <line class="speed-line" x1="710" y1="55" x2="620" y2="145" />
+  <line class="speed-line" x1="725" y1="70" x2="650" y2="145" />
+  <line class="speed-line" x1="690" y1="40" x2="610" y2="120" />
+  <line class="speed-line" x1="700" y1="80" x2="640" y2="140" />
+  <line class="speed-line" x1="680" y1="65" x2="600" y2="145" />
+
+  <!-- More speed lines trailing further back -->
+  <line class="speed-line" x1="750" y1="35" x2="715" y2="70" />
+  <line class="speed-line" x1="760" y1="55" x2="730" y2="85" />
+  <line class="speed-line" x1="740" y1="20" x2="700" y2="60" />
+
+  <!-- ══════ THE STONE — rough, jagged, "not cut by human hands" ══════ -->
+  <!-- Main rock body — irregular, chunky -->
+  <path class="pencil" d="
+    M 530,175
+    C 540,160 558,148 575,142
+    C 590,138 605,140 618,145
+    C 632,150 642,158 648,168
+    C 655,180 658,195 655,210
+    C 652,225 645,238 635,248
+    C 622,258 608,264 592,265
+    C 578,266 562,262 550,255
+    C 537,246 528,234 524,220
+    C 520,205 522,190 530,175 Z
+  " />
+
+  <!-- Rock surface details — cracks and facets -->
+  <path class="light" d="M 545,185 L 570,195 L 555,215" />
+  <path class="light" d="M 580,155 L 595,180 L 615,170" />
+  <path class="light" d="M 600,190 L 620,210 L 605,235" />
+  <path class="light" d="M 565,245 L 585,230 L 610,245" />
+  <path class="light" d="M 540,210 L 560,220 L 548,240" />
+  <path class="light" d="M 625,160 L 640,180 L 635,200" />
+
+  <!-- Extra jagged edges — "not cut by human hands" roughness -->
+  <path class="pencil" d="M 555,152 L 548,145 L 558,140" />
+  <path class="pencil" d="M 618,145 L 625,138 L 632,148" />
+  <path class="pencil" d="M 650,185 L 660,180 L 658,195" />
+  <path class="pencil" d="M 530,200 L 520,195 L 524,208" />
+  <path class="pencil" d="M 545,255 L 538,260 L 548,262" />
+  <path class="pencil" d="M 640,240 L 648,245 L 638,252" />
+
+  <!-- Cross-hatching on shadow side (lower left of rock) -->
+  <path class="light" d="M 535,225 L 545,220" />
+  <path class="light" d="M 538,232 L 548,227" />
+  <path class="light" d="M 540,239 L 550,234" />
+  <path class="light" d="M 543,245 L 553,240" />
+  <path class="light" d="M 555,250 L 565,245" />
+  <path class="light" d="M 558,256 L 568,251" />
+
+  <!-- ══════ FLAME / FIRE TRAIL ══════ -->
+  <!-- Main outer flame envelope — sweeping back upper-right -->
+  <path class="flame" d="
+    M 575,148
+    C 590,130 620,105 640,85
+    C 655,70 668,55 680,48
+    C 690,42 700,40 710,42
+  " />
+  <path class="flame" d="
+    M 648,155
+    C 660,140 680,115 695,95
+    C 705,82 715,70 725,60
+  " />
+
+  <!-- Inner flame wisps -->
+  <path class="flame-light" d="
+    M 585,142
+    C 600,120 625,95 650,72
+    C 665,58 678,48 690,45
+  " />
+  <path class="flame-light" d="
+    M 612,148
+    C 628,128 650,105 670,85
+    C 682,72 695,62 705,55
+  " />
+  <path class="flame-light" d="
+    M 640,155
+    C 652,140 668,120 682,100
+    C 690,88 700,78 710,70
+  " />
+
+  <!-- Flame tendrils — loose, wispy -->
+  <path class="flame" d="
+    M 660,52
+    C 665,42 675,32 690,28
+    C 700,25 708,28 712,35
+  " />
+  <path class="flame-light" d="
+    M 700,48
+    C 710,38 722,30 735,28
+    C 742,27 748,30 750,36
+  " />
+  <path class="flame" d="
+    M 720,55
+    C 732,42 745,35 755,38
+  " />
+
+  <!-- Bottom flame edge -->
+  <path class="flame" d="
+    M 655,210
+    C 668,200 685,185 700,170
+    C 710,158 718,148 725,140
+  " />
+  <path class="flame-light" d="
+    M 650,225
+    C 665,212 680,195 695,178
+    C 705,165 712,155 718,148
+  " />
+
+  <!-- Ember / spark dots trailing -->
+  <circle cx="700" cy="35" r="2" fill="none" stroke="#7a7a7a" stroke-width="0.8" />
+  <circle cx="740" cy="45" r="1.5" fill="none" stroke="#8a8a8a" stroke-width="0.6" />
+  <circle cx="755" cy="52" r="1" fill="none" stroke="#9a9a9a" stroke-width="0.5" />
+  <circle cx="730" cy="28" r="1.5" fill="none" stroke="#8a8a8a" stroke-width="0.6" />
+  <circle cx="715" cy="90" r="2" fill="none" stroke="#7a7a7a" stroke-width="0.8" />
+  <circle cx="730" cy="75" r="1.5" fill="none" stroke="#8a8a8a" stroke-width="0.6" />
+  <circle cx="735" cy="108" r="1" fill="none" stroke="#9a9a9a" stroke-width="0.5" />
+  <circle cx="745" cy="95" r="1.5" fill="none" stroke="#8a8a8a" stroke-width="0.6" />
+  <circle cx="718" cy="130" r="1" fill="none" stroke="#9a9a9a" stroke-width="0.5" />
+
+  <!-- Small debris chunks trailing -->
+  <path class="light" d="M 690,60 L 695,55 L 698,62 Z" />
+  <path class="light" d="M 710,78 L 715,73 L 717,80 Z" />
+  <path class="light" d="M 725,100 L 730,96 L 731,103 Z" />
+  <path class="light" d="M 695,115 L 700,110 L 702,118 Z" />
+
+  <!-- ══════ GROUND / HORIZON — the feet area (lower left) ══════ -->
+  <!-- Horizon line suggestion -->
+  <path class="light" d="M 0,520 C 100,515 200,518 300,520 C 400,522 500,518 600,520 C 700,522 750,520 800,518" />
+
+  <!-- Feet of the statue — just the tops visible, about to be struck -->
+  <!-- Left foot -->
+  <path class="pencil" d="
+    M 180,520
+    C 175,515 170,512 168,515
+    C 165,518 162,520 160,525
+    C 158,530 160,535 165,538
+    C 172,542 185,544 200,543
+    C 215,542 225,540 230,535
+    C 233,530 232,525 228,520
+    C 225,516 220,515 215,517
+    L 215,520
+  " />
+
+  <!-- Right foot -->
+  <path class="pencil" d="
+    M 260,518
+    C 255,513 250,510 248,513
+    C 245,516 242,518 240,523
+    C 238,528 240,533 245,536
+    C 252,540 265,542 280,541
+    C 295,540 305,538 310,533
+    C 313,528 312,523 308,518
+    C 305,514 300,513 295,515
+    L 295,518
+  " />
+
+  <!-- Crack lines in the feet -->
+  <path class="light" d="M 185,522 L 190,538" />
+  <path class="light" d="M 200,518 L 198,540" />
+  <path class="light" d="M 212,520 L 215,540" />
+  <path class="light" d="M 265,520 L 268,538" />
+  <path class="light" d="M 280,516 L 278,538" />
+  <path class="light" d="M 292,518 L 295,536" />
+
+  <!-- Legs rising up (just the bottoms visible) -->
+  <path class="pencil" d="M 175,520 C 172,505 170,490 172,475" />
+  <path class="pencil" d="M 228,520 C 225,505 222,490 220,475" />
+  <path class="pencil" d="M 255,518 C 258,503 260,488 262,475" />
+  <path class="pencil" d="M 308,518 C 305,503 302,488 300,475" />
+
+  <!-- Ground texture -->
+  <path class="light" d="M 130,530 C 140,528 155,530 170,532" />
+  <path class="light" d="M 310,528 C 325,530 340,528 355,530" />
+  <path class="light" d="M 80,535 C 95,533 110,535 120,537" />
+  <path class="light" d="M 350,532 C 370,530 390,532 400,534" />
+
+  <!-- ══════ IMPACT ANTICIPATION — light radiating lines from impact point ══════ -->
+  <!-- Where the stone will hit (projected) -->
+  <path class="construction" d="M 240,530 L 220,555" />
+  <path class="construction" d="M 240,530 L 260,558" />
+  <path class="construction" d="M 240,530 L 235,560" />
+  <path class="construction" d="M 240,530 L 210,548" />
+  <path class="construction" d="M 240,530 L 270,550" />
+
+  <!-- ══════ LABELS ══════ -->
+  <text class="label" x="20" y="490">FEET</text>
+  <text class="label" x="20" y="505" style="font-size:10px; fill:#999">(iron + clay)</text>
+
+  <text class="label" x="480" y="290" style="font-size:11px">"not cut by</text>
+  <text class="label" x="480" y="305" style="font-size:11px"> human hands"</text>
+
+</svg>

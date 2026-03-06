@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="900" height="650">
+  <style>
+    .pencil {
+      fill: none;
+      stroke: #4a4a4a;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .light {
+      fill: none;
+      stroke: #8a8a8a;
+      stroke-width: 0.8;
+      stroke-linecap: round;
+    }
+    .heavy {
+      fill: none;
+      stroke: #3a3a3a;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .dust {
+      fill: none;
+      stroke: #aaaaaa;
+      stroke-width: 0.5;
+    }
+    .dust-med {
+      fill: none;
+      stroke: #888888;
+      stroke-width: 0.7;
+    }
+    .cloud-line {
+      fill: none;
+      stroke: #5a5a5a;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .bubble {
+      fill: none;
+      stroke: #3a3a3a;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE DUST CLOUD — massive, billowing         -->
+  <!-- This IS the statue, turned to nothing       -->
+  <!-- Mushroom-cloud shaped but organic            -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Main cloud mass — big, round, billowing -->
+  <!-- Outer edge -->
+  <path class="pencil" d="
+    M 150,350
+    C 140,320 135,285 145,255
+    C 155,228 172,205 195,188
+    C 218,172 245,160 275,155
+    C 300,148 328,145 355,148
+    C 375,142 398,135 420,130
+    C 438,125 458,122 480,125
+    C 502,122 525,125 545,132
+    C 568,138 588,148 605,158
+    C 628,172 648,190 662,212
+    C 678,235 688,262 692,290
+    C 698,318 695,345 688,368
+    C 680,392 668,410 650,425
+    C 632,440 610,448 585,452
+    C 558,458 528,455 500,450
+    C 472,455 445,458 418,455
+    C 390,458 362,455 335,448
+    C 308,442 282,432 260,418
+    C 238,405 220,388 205,370
+    C 188,352 168,340 150,350
+  " />
+
+  <!-- Inner billows — sub-clouds within the mass -->
+  <path class="pencil" d="
+    M 220,310
+    C 215,285 225,260 245,242
+    C 265,225 290,215 318,212
+    C 345,208 370,210 392,218
+  " />
+  <path class="pencil" d="
+    M 392,218
+    C 415,208 440,202 465,205
+    C 490,202 515,208 535,220
+    C 555,232 570,250 578,272
+    C 585,295 582,318 572,338
+  " />
+  <path class="pencil" d="
+    M 280,188
+    C 305,175 335,168 365,165
+    C 395,162 425,165 450,172
+    C 475,165 500,162 528,168
+    C 555,175 578,188 595,205
+  " />
+
+  <!-- Smaller billows -->
+  <path class="light" d="M 250,225 C 265,215 285,210 305,215 C 325,210 345,215 358,228" />
+  <path class="light" d="M 480,195 C 500,185 525,185 545,195 C 558,185 575,188 588,200" />
+  <path class="light" d="M 195,290 C 208,275 225,268 245,272 C 260,265 278,268 292,280" />
+  <path class="light" d="M 605,270 C 618,258 635,255 650,262 C 660,255 672,258 680,270" />
+  <path class="light" d="M 320,155 C 340,145 365,142 385,148 C 400,142 420,140 438,148" />
+
+  <!-- Cloud texture — swirls and curls -->
+  <path class="light" d="M 280,250 C 295,242 310,245 318,255 C 325,245 340,242 355,250" />
+  <path class="light" d="M 420,210 C 435,202 450,205 458,215 C 465,205 480,202 495,210" />
+  <path class="light" d="M 350,290 C 368,280 388,282 398,295 C 408,282 428,280 445,290" />
+  <path class="light" d="M 230,345 C 248,335 268,338 278,350" />
+  <path class="light" d="M 560,345 C 578,335 598,338 608,350" />
+  <path class="light" d="M 480,245 C 495,238 512,240 520,250" />
+  <path class="light" d="M 310,320 C 325,312 342,315 350,325" />
+  <path class="light" d="M 500,320 C 515,312 532,315 540,328" />
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- DUST COLUMN — rising from the ground        -->
+  <!-- Where the statue used to stand               -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Column of dust connecting ground to cloud -->
+  <path class="pencil" d="
+    M 335,448
+    C 340,470 348,495 355,520
+    C 362,545 368,565 372,580
+  " />
+  <path class="pencil" d="
+    M 500,450
+    C 498,472 492,498 488,522
+    C 482,545 478,565 475,580
+  " />
+
+  <!-- Swirling dust in the column -->
+  <path class="light" d="M 365,470 C 385,465 408,468 425,475 C 442,468 462,465 480,470" />
+  <path class="light" d="M 370,500 C 388,495 405,498 420,505 C 435,498 455,495 472,500" />
+  <path class="light" d="M 375,530 C 392,525 408,528 420,535 C 432,528 448,525 465,530" />
+  <path class="light" d="M 380,555 C 395,550 410,552 420,558 C 430,552 445,550 460,555" />
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- GROUND — impact point, crater-ish           -->
+  <!-- Rubble, small fragments                     -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <path class="pencil" d="M 0,590 C 120,588 250,592 370,585 C 420,582 430,580 450,582 C 470,580 480,582 530,585 C 650,592 780,588 900,590" />
+
+  <!-- Small rubble fragments around the base -->
+  <path class="light" d="M 340,582 L 348,578 L 352,585" />
+  <path class="light" d="M 490,580 L 498,576 L 502,583" />
+  <path class="light" d="M 410,584 L 416,580 L 420,586" />
+  <path class="light" d="M 450,582 L 455,577 L 460,584" />
+  <path class="light" d="M 380,586 L 386,582 L 388,588" />
+  <path class="light" d="M 465,584 L 470,580 L 474,586" />
+
+  <!-- Pebbles -->
+  <circle cx="355" cy="588" r="2" fill="none" stroke="#aaa" stroke-width="0.5" />
+  <circle cx="500" cy="586" r="1.5" fill="none" stroke="#aaa" stroke-width="0.5" />
+  <circle cx="430" cy="590" r="2.5" fill="none" stroke="#aaa" stroke-width="0.5" />
+  <circle cx="395" cy="592" r="1.5" fill="none" stroke="#bbb" stroke-width="0.4" />
+  <circle cx="470" cy="590" r="2" fill="none" stroke="#bbb" stroke-width="0.4" />
+
+  <!-- Radiating cracks in the ground from impact -->
+  <path class="light" d="M 420,585 L 380,595 L 340,600" />
+  <path class="light" d="M 420,585 L 350,605" />
+  <path class="light" d="M 430,585 L 470,595 L 520,600" />
+  <path class="light" d="M 430,585 L 510,605" />
+  <path class="light" d="M 425,586 L 425,610" />
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SCATTERED DUST — drifting away from cloud   -->
+  <!-- Particles getting smaller toward edges      -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Left side drift -->
+  <path class="dust-med" d="M 148,340 L 120,335 L 115,342" />
+  <path class="dust-med" d="M 155,305 L 128,298 L 125,306" />
+  <path class="dust" d="M 130,320 L 105,316 L 102,322" />
+  <path class="dust" d="M 110,345 L 88,342 L 86,348" />
+  <path class="dust" d="M 95,310 L 72,308" />
+  <path class="dust" d="M 80,335 L 58,334" />
+  <circle cx="65" cy="315" r="1.5" fill="none" stroke="#bbb" stroke-width="0.4" />
+  <circle cx="48" cy="340" r="1" fill="none" stroke="#ccc" stroke-width="0.3" />
+
+  <!-- Right side drift -->
+  <path class="dust-med" d="M 692,310 L 718,305 L 722,312" />
+  <path class="dust-med" d="M 688,355 L 715,350 L 718,358" />
+  <path class="dust" d="M 720,325 L 745,322 L 748,328" />
+  <path class="dust" d="M 740,348 L 762,346 L 764,352" />
+  <path class="dust" d="M 760,320 L 782,318" />
+  <path class="dust" d="M 775,340 L 798,338" />
+  <circle cx="795" cy="325" r="1.5" fill="none" stroke="#bbb" stroke-width="0.4" />
+  <circle cx="810" cy="345" r="1" fill="none" stroke="#ccc" stroke-width="0.3" />
+
+  <!-- Top drift -->
+  <path class="dust" d="M 380,132 L 375,112 L 382,108" />
+  <path class="dust" d="M 440,122 L 438,100 L 445,98" />
+  <path class="dust" d="M 510,130 L 515,108 L 520,112" />
+  <circle cx="390" cy="100" r="1.5" fill="none" stroke="#bbb" stroke-width="0.4" />
+  <circle cx="460" cy="92" r="1" fill="none" stroke="#ccc" stroke-width="0.3" />
+  <circle cx="530" cy="98" r="1.5" fill="none" stroke="#bbb" stroke-width="0.4" />
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- COMIC SPEECH BUBBLE — classic cloud shape   -->
+  <!-- Coming from the dust cloud itself           -->
+  <!-- As if the dust is speaking                  -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Speech bubble — upper right, classic comic cloud shape -->
+  <path class="bubble" d="
+    M 620,60
+    C 615,48 620,35 632,28
+    C 642,22 655,20 668,24
+    C 678,18 692,15 705,20
+    C 718,14 732,18 742,28
+    C 755,22 768,28 775,40
+    C 785,36 798,42 802,55
+    C 812,52 822,58 825,70
+    C 832,68 840,76 838,88
+    C 845,92 845,102 838,110
+    C 845,118 842,128 832,135
+    C 838,145 828,150 818,150
+    C 822,158 812,164 800,162
+    C 802,172 790,175 778,172
+    C 775,180 762,182 750,178
+    C 745,185 732,185 722,180
+    C 712,186 698,185 688,178
+    C 678,182 665,180 658,172
+    C 648,178 635,175 628,168
+    C 618,172 608,168 605,158
+    C 595,160 588,152 590,142
+    C 582,140 578,130 582,120
+    C 575,115 575,105 580,98
+    C 575,90 578,80 585,74
+    C 582,65 588,58 598,55
+    C 600,48 608,45 618,48
+    C 615,42 620,50 620,60
+    Z
+  " />
+
+  <!-- Thought bubbles leading from dust cloud to speech bubble -->
+  <ellipse class="pencil" cx="648" cy="200" rx="12" ry="10" />
+  <ellipse class="pencil" cx="658" cy="175" rx="8" ry="7" />
+  <circle class="pencil" cx="662" cy="158" r="5" />
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE TEXT — "VANITY OF VANITIES!"            -->
+  <!-- Hand-drawn feel, emphatic                   -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <text style="font-family: 'Georgia', serif; font-size: 26px; fill: #3a3a3a; font-weight: bold; font-style: italic;" x="712" y="85" text-anchor="middle">
+    VANITY
+  </text>
+  <text style="font-family: 'Georgia', serif; font-size: 16px; fill: #6a6a6a; font-style: italic;" x="712" y="108" text-anchor="middle">
+    of
+  </text>
+  <text style="font-family: 'Georgia', serif; font-size: 26px; fill: #3a3a3a; font-weight: bold; font-style: italic;" x="712" y="138" text-anchor="middle">
+    VANITIES!
+  </text>
+
+  <!-- Ecclesiastes reference small -->
+  <text style="font-family: 'Courier New', monospace; font-size: 9px; fill: #999;" x="712" y="158" text-anchor="middle">
+    — Ecclesiastes 1:2
+  </text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- GHOST OUTLINE — faint trace of where the    -->
+  <!-- statue used to stand, barely visible         -->
+  <!-- Like an afterimage                          -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <path style="fill:none; stroke:#e0dcd5; stroke-width:0.6; stroke-dasharray: 6 4;" d="
+    M 405,580
+    C 402,560 400,535 398,510
+    C 396,480 395,450 395,420
+    C 394,390 395,360 398,335
+    C 400,310 404,288 410,270
+    C 416,252 424,238 432,228
+    C 438,220 444,215 450,212
+    C 456,215 462,220 468,228
+    C 476,238 484,252 490,270
+    C 496,288 500,310 502,335
+    C 505,360 506,390 505,420
+    C 504,450 502,480 500,510
+    C 498,535 496,560 494,580
+  " />
+
+</svg>

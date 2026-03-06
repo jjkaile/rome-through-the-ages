@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <style>
+    .pencil {
+      fill: none;
+      stroke: #4a4a4a;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .light {
+      fill: none;
+      stroke: #8a8a8a;
+      stroke-width: 0.8;
+      stroke-linecap: round;
+    }
+    .heavy {
+      fill: none;
+      stroke: #3a3a3a;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .wall-brick {
+      fill: none;
+      stroke: #c8c0b4;
+      stroke-width: 0.5;
+    }
+    .wall-text {
+      font-family: 'Georgia', serif;
+      fill: #3a3a3a;
+    }
+    .glow-ring {
+      fill: none;
+      stroke-linecap: round;
+    }
+  </style>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE WALL — fills the entire background     -->
+  <!-- Faint, textured, ancient stone              -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Brick pattern — very faint, like aged plaster on stone -->
+  <!-- Horizontal courses -->
+  <line class="wall-brick" x1="0" y1="55" x2="900" y2="55" />
+  <line class="wall-brick" x1="0" y1="110" x2="900" y2="110" />
+  <line class="wall-brick" x1="0" y1="165" x2="900" y2="165" />
+  <line class="wall-brick" x1="0" y1="220" x2="900" y2="220" />
+  <line class="wall-brick" x1="0" y1="275" x2="900" y2="275" />
+  <line class="wall-brick" x1="0" y1="330" x2="900" y2="330" />
+  <line class="wall-brick" x1="0" y1="385" x2="900" y2="385" />
+  <line class="wall-brick" x1="0" y1="440" x2="900" y2="440" />
+  <line class="wall-brick" x1="0" y1="495" x2="900" y2="495" />
+  <line class="wall-brick" x1="0" y1="550" x2="900" y2="550" />
+
+  <!-- Vertical joints — offset per row -->
+  <!-- Row 1 -->
+  <line class="wall-brick" x1="120" y1="0" x2="120" y2="55" />
+  <line class="wall-brick" x1="280" y1="0" x2="280" y2="55" />
+  <line class="wall-brick" x1="450" y1="0" x2="450" y2="55" />
+  <line class="wall-brick" x1="620" y1="0" x2="620" y2="55" />
+  <line class="wall-brick" x1="780" y1="0" x2="780" y2="55" />
+  <!-- Row 2 -->
+  <line class="wall-brick" x1="60" y1="55" x2="60" y2="110" />
+  <line class="wall-brick" x1="200" y1="55" x2="200" y2="110" />
+  <line class="wall-brick" x1="370" y1="55" x2="370" y2="110" />
+  <line class="wall-brick" x1="530" y1="55" x2="530" y2="110" />
+  <line class="wall-brick" x1="700" y1="55" x2="700" y2="110" />
+  <line class="wall-brick" x1="850" y1="55" x2="850" y2="110" />
+  <!-- Row 3 -->
+  <line class="wall-brick" x1="150" y1="110" x2="150" y2="165" />
+  <line class="wall-brick" x1="320" y1="110" x2="320" y2="165" />
+  <line class="wall-brick" x1="490" y1="110" x2="490" y2="165" />
+  <line class="wall-brick" x1="660" y1="110" x2="660" y2="165" />
+  <line class="wall-brick" x1="830" y1="110" x2="830" y2="165" />
+  <!-- Row 4 -->
+  <line class="wall-brick" x1="80" y1="165" x2="80" y2="220" />
+  <line class="wall-brick" x1="240" y1="165" x2="240" y2="220" />
+  <line class="wall-brick" x1="410" y1="165" x2="410" y2="220" />
+  <line class="wall-brick" x1="580" y1="165" x2="580" y2="220" />
+  <line class="wall-brick" x1="740" y1="165" x2="740" y2="220" />
+  <!-- Row 5 -->
+  <line class="wall-brick" x1="160" y1="220" x2="160" y2="275" />
+  <line class="wall-brick" x1="340" y1="220" x2="340" y2="275" />
+  <line class="wall-brick" x1="500" y1="220" x2="500" y2="275" />
+  <line class="wall-brick" x1="670" y1="220" x2="670" y2="275" />
+  <line class="wall-brick" x1="840" y1="220" x2="840" y2="275" />
+  <!-- Row 6 -->
+  <line class="wall-brick" x1="90" y1="275" x2="90" y2="330" />
+  <line class="wall-brick" x1="260" y1="275" x2="260" y2="330" />
+  <line class="wall-brick" x1="430" y1="275" x2="430" y2="330" />
+  <line class="wall-brick" x1="600" y1="275" x2="600" y2="330" />
+  <line class="wall-brick" x1="770" y1="275" x2="770" y2="330" />
+  <!-- More rows -->
+  <line class="wall-brick" x1="140" y1="330" x2="140" y2="385" />
+  <line class="wall-brick" x1="310" y1="330" x2="310" y2="385" />
+  <line class="wall-brick" x1="480" y1="330" x2="480" y2="385" />
+  <line class="wall-brick" x1="650" y1="330" x2="650" y2="385" />
+  <line class="wall-brick" x1="820" y1="330" x2="820" y2="385" />
+
+  <line class="wall-brick" x1="70" y1="385" x2="70" y2="440" />
+  <line class="wall-brick" x1="230" y1="385" x2="230" y2="440" />
+  <line class="wall-brick" x1="400" y1="385" x2="400" y2="440" />
+  <line class="wall-brick" x1="560" y1="385" x2="560" y2="440" />
+  <line class="wall-brick" x1="720" y1="385" x2="720" y2="440" />
+  <line class="wall-brick" x1="880" y1="385" x2="880" y2="440" />
+
+  <!-- Wall aging / cracks (very subtle) -->
+  <path style="fill:none;stroke:#d5cfc5;stroke-width:0.3;" d="M 350,80 C 355,95 352,110 348,125" />
+  <path style="fill:none;stroke:#d5cfc5;stroke-width:0.3;" d="M 720,200 C 725,218 722,235 718,250" />
+  <path style="fill:none;stroke:#d5cfc5;stroke-width:0.3;" d="M 180,300 C 185,315 182,332 178,348" />
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE WRITING — mysterious, appearing         -->
+  <!-- Stacked vertically, centered, spaced out    -->
+  <!-- le Carré dossier feel                       -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Subtle glow / aura behind the text area -->
+  <ellipse cx="450" cy="280" rx="280" ry="200" fill="none" stroke="#e0dcd4" stroke-width="0.3" />
+  <ellipse cx="450" cy="280" rx="250" ry="175" fill="none" stroke="#d8d2c8" stroke-width="0.4" />
+  <ellipse cx="450" cy="280" rx="220" ry="150" fill="none" stroke="#d0c8bc" stroke-width="0.5" />
+  <ellipse cx="450" cy="280" rx="190" ry="125" fill="none" stroke="#c8c0b0" stroke-width="0.6" />
+
+  <!-- MENE -->
+  <text class="wall-text" x="450" y="180" text-anchor="middle" style="font-size: 62px; letter-spacing: 18px;">MENE</text>
+
+  <!-- MENE -->
+  <text class="wall-text" x="450" y="265" text-anchor="middle" style="font-size: 62px; letter-spacing: 18px;">MENE</text>
+
+  <!-- TEKEL -->
+  <text class="wall-text" x="450" y="350" text-anchor="middle" style="font-size: 62px; letter-spacing: 18px;">TEKEL</text>
+
+  <!-- UPHARSIN -->
+  <text class="wall-text" x="450" y="435" text-anchor="middle" style="font-size: 52px; letter-spacing: 14px;">UPHARSIN</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- THE HAND — small, in the corner             -->
+  <!-- Just enough to see — not the focus          -->
+  <!-- Materializing, writing the last letter      -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <!-- Wrist / forearm fading in from upper right -->
+  <path class="light" d="
+    M 820,48
+    C 812,62 800,78 786,92
+  " />
+  <path class="light" d="
+    M 832,55
+    C 825,68 815,82 802,95
+  " />
+
+  <!-- Fade-in wisps -->
+  <path style="fill:none;stroke:#b0b0b0;stroke-width:0.4;" d="M 828,42 C 835,38 840,42 838,48" />
+  <path style="fill:none;stroke:#b0b0b0;stroke-width:0.4;" d="M 840,50 C 847,46 850,52 848,56" />
+
+  <!-- Hand -->
+  <path class="pencil" d="
+    M 786,92
+    C 778,98 770,106 766,115
+    C 762,124 762,132 766,136
+  " />
+  <path class="pencil" d="
+    M 802,95
+    C 796,102 790,110 786,120
+    C 783,128 784,134 788,138
+  " />
+
+  <!-- Index finger — pointing down, writing -->
+  <path class="pencil" d="
+    M 766,136
+    C 762,142 756,150 752,158
+    C 748,166 748,172 752,175
+    C 756,178 762,175 766,168
+    C 770,160 774,152 776,145
+  " />
+
+  <!-- Other fingers curled -->
+  <path class="pencil" d="
+    M 776,140
+    C 774,148 772,154 774,158
+    C 776,162 780,160 782,154
+    C 784,148 784,142 782,138
+  " />
+  <path class="light" d="
+    M 784,138
+    C 786,144 786,150 784,154
+    C 783,157 786,158 788,154
+  " />
+
+  <!-- Thumb -->
+  <path class="pencil" d="
+    M 766,118
+    C 760,122 756,128 756,134
+    C 756,138 760,140 764,138
+  " />
+
+  <!-- Tiny writing motion from fingertip -->
+  <path style="fill:none;stroke:#aaa;stroke-width:0.4;" d="M 750,172 L 745,178" />
+  <path style="fill:none;stroke:#aaa;stroke-width:0.4;" d="M 748,176 L 742,182" />
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- BOTTOM: thin line + meanings                -->
+  <!-- Minimal — like classified document footer   -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <line style="stroke:#c0b8a8;stroke-width:0.5;" x1="120" y1="490" x2="780" y2="490" />
+
+  <text style="font-family:'Courier New',monospace; font-size:11px; fill:#8a8a7a; letter-spacing:2px;" x="450" y="520" text-anchor="middle">
+    NUMBERED — NUMBERED — WEIGHED — DIVIDED
+  </text>
+
+  <text style="font-family:'Courier New',monospace; font-size:10px; fill:#a8a898; letter-spacing:1px;" x="450" y="545" text-anchor="middle">
+    Daniel 5:25-28
+  </text>
+
+  <!-- Candlestick suggestion — the "lampstand" detail from Dan 5:5 -->
+  <!-- Small, bottom left, the light source that illuminated the hand -->
+  <path class="light" d="M 65,500 L 65,460" />
+  <path class="light" d="M 55,460 L 75,460" />
+  <path class="light" d="M 60,460 L 58,450 C 58,445 62,442 65,442 C 68,442 72,445 72,450 L 70,460" />
+  <!-- Flame -->
+  <path class="light" d="M 65,442 C 63,435 65,428 65,425 C 65,428 67,435 65,442" />
+  <!-- Glow from flame -->
+  <circle cx="65" cy="435" r="10" fill="none" stroke="#d0c8b8" stroke-width="0.3" />
+
+</svg>
