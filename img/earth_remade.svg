@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <style>
+    .pencil { fill: none; stroke: #4a4a4a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .light { fill: none; stroke: #8a8a8a; stroke-width: 0.8; stroke-linecap: round; }
+    .heavy { fill: none; stroke: #3a3a3a; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .construction { fill: none; stroke: #b0b0b0; stroke-width: 0.5; stroke-dasharray: 6 4; }
+    .glow { fill: none; stroke: #88BBDD; stroke-width: 0.5; stroke-opacity: 0.4; }
+    .glow-strong { fill: none; stroke: #88BBDD; stroke-width: 1; stroke-opacity: 0.6; }
+    .person { fill: none; stroke: #4a4a4a; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .person-light { fill: none; stroke: #7a7a7a; stroke-width: 1; stroke-linecap: round; }
+  </style>
+
+  <!-- ====== THE MOUNTAIN fills the whole frame ====== -->
+  <!-- Gentle mountain/hill shape that IS the earth now -->
+  <path class="light" d="M0,650 C100,600 200,550 300,510 C400,475 500,475 600,510 C700,550 750,580 800,620" />
+  <path class="light" d="M0,680 C100,640 200,590 300,560 C400,530 500,530 600,560 C700,590 750,620 800,660" />
+  <!-- Grass/ground texture -->
+  <path class="light" d="M50,665 C55,658 60,660 58,665" />
+  <path class="light" d="M120,640 C125,633 130,635 128,640" />
+  <path class="light" d="M200,610 C205,603 210,605 208,610" />
+  <path class="light" d="M320,565 C325,558 330,560 328,565" />
+  <path class="light" d="M480,565 C485,558 490,560 488,565" />
+  <path class="light" d="M600,590 C605,583 610,585 608,590" />
+  <path class="light" d="M700,620 C705,613 710,615 708,620" />
+  <path class="light" d="M750,640 C755,633 760,635 758,640" />
+
+  <!-- More grass -->
+  <path class="light" d="M160,630 C163,624 167,626 165,630" />
+  <path class="light" d="M260,590 C263,584 267,586 265,590" />
+  <path class="light" d="M400,555 C403,548 407,550 405,555" />
+  <path class="light" d="M540,570 C543,564 547,566 545,570" />
+  <path class="light" d="M650,610 C653,604 657,606 655,610" />
+
+  <!-- ====== RADIANT LIGHT from center ====== -->
+  <!-- Massive light burst from where Jesus stands -->
+  <!-- Outer ring of rays -->
+  <line class="glow" x1="400" y1="320" x2="50" y2="50" />
+  <line class="glow" x1="400" y1="320" x2="150" y2="20" />
+  <line class="glow" x1="400" y1="320" x2="250" y2="10" />
+  <line class="glow" x1="400" y1="320" x2="400" y2="5" />
+  <line class="glow" x1="400" y1="320" x2="550" y2="10" />
+  <line class="glow" x1="400" y1="320" x2="650" y2="20" />
+  <line class="glow" x1="400" y1="320" x2="750" y2="50" />
+  <line class="glow" x1="400" y1="320" x2="790" y2="150" />
+  <line class="glow" x1="400" y1="320" x2="795" y2="300" />
+  <line class="glow" x1="400" y1="320" x2="10" y2="150" />
+  <line class="glow" x1="400" y1="320" x2="5" y2="300" />
+  <line class="glow" x1="400" y1="320" x2="780" y2="450" />
+  <line class="glow" x1="400" y1="320" x2="20" y2="450" />
+
+  <!-- Inner ring - stronger -->
+  <line class="glow-strong" x1="400" y1="320" x2="100" y2="80" />
+  <line class="glow-strong" x1="400" y1="320" x2="200" y2="30" />
+  <line class="glow-strong" x1="400" y1="320" x2="330" y2="10" />
+  <line class="glow-strong" x1="400" y1="320" x2="470" y2="10" />
+  <line class="glow-strong" x1="400" y1="320" x2="600" y2="30" />
+  <line class="glow-strong" x1="400" y1="320" x2="700" y2="80" />
+  <line class="glow-strong" x1="400" y1="320" x2="770" y2="200" />
+  <line class="glow-strong" x1="400" y1="320" x2="30" y2="200" />
+
+  <!-- ====== JESUS - center figure ====== -->
+  <!-- Standing, arms slightly open, welcoming, simple robed figure -->
+
+  <!-- Head -->
+  <ellipse class="heavy" cx="400" cy="290" rx="22" ry="26" />
+  <!-- Hair suggestion -->
+  <path class="pencil" d="M380,280 C378,270 382,262 390,260 C398,258 408,258 416,262 C422,266 424,274 422,282" />
+  <path class="light" d="M378,285 C376,275 378,268 384,264" />
+  <path class="light" d="M422,285 C424,275 422,268 416,264" />
+
+  <!-- Halo / light circle behind head -->
+  <circle cx="400" cy="285" r="40" fill="none" stroke="#88BBDD" stroke-width="1" stroke-opacity="0.4" />
+  <circle cx="400" cy="285" r="50" fill="none" stroke="#88BBDD" stroke-width="0.5" stroke-opacity="0.25" />
+
+  <!-- Body / robe -->
+  <path class="heavy" d="M388,315 C382,340 375,370 370,400 C365,430 360,460 355,490 C350,510 348,525 350,535" />
+  <path class="heavy" d="M412,315 C418,340 425,370 430,400 C435,430 440,460 445,490 C450,510 452,525 450,535" />
+
+  <!-- Robe bottom -->
+  <path class="heavy" d="M350,535 C365,545 385,550 400,550 C415,550 435,545 450,535" />
+
+  <!-- Robe folds -->
+  <path class="pencil" d="M390,340 C388,370 385,400 383,430 C381,460 380,485 380,510" />
+  <path class="pencil" d="M410,340 C412,370 415,400 417,430 C419,460 420,485 420,510" />
+  <path class="light" d="M395,350 C394,380 393,410 392,440" />
+  <path class="light" d="M405,350 C406,380 407,410 408,440" />
+
+  <!-- Belt/sash -->
+  <path class="pencil" d="M372,400 C385,395 400,393 415,395 C425,397 430,400 428,403" />
+
+  <!-- Left arm - extended slightly, open palm -->
+  <path class="heavy" d="M382,330 C370,340 352,355 335,370 C320,382 308,392 300,400" />
+  <!-- Left hand - open -->
+  <path class="pencil" d="M300,400 C295,405 292,412 295,418 C300,422 308,420 312,415" />
+  <path class="light" d="M298,408 C296,412 298,416 302,416" />
+  <!-- Left sleeve -->
+  <path class="light" d="M375,335 C365,342 355,352 345,362" />
+  <path class="light" d="M370,342 C362,348 354,358 346,368" />
+
+  <!-- Right arm - extended slightly, open palm -->
+  <path class="heavy" d="M418,330 C430,340 448,355 465,370 C480,382 492,392 500,400" />
+  <!-- Right hand - open -->
+  <path class="pencil" d="M500,400 C505,405 508,412 505,418 C500,422 492,420 488,415" />
+  <path class="light" d="M502,408 C504,412 502,416 498,416" />
+  <!-- Right sleeve -->
+  <path class="light" d="M425,335 C435,342 445,352 455,362" />
+  <path class="light" d="M430,342 C438,348 446,358 454,368" />
+
+  <!-- Feet peeking from robe -->
+  <path class="pencil" d="M370,545 C365,550 362,555 365,558 C370,560 378,558 380,555" />
+  <path class="pencil" d="M430,545 C435,550 438,555 435,558 C430,560 422,558 420,555" />
+
+  <!-- ====== WORSHIPERS - surrounding in a semicircle ====== -->
+  <!-- Simple figures, kneeling/bowing, smaller as they get further -->
+
+  <!-- Front row - larger, more detail -->
+
+  <!-- Worshiper 1 - left front, kneeling -->
+  <ellipse class="person" cx="220" cy="480" rx="12" ry="14" /> <!-- head -->
+  <path class="person" d="M220,494 C218,510 215,530 212,545" /> <!-- body leaning forward -->
+  <path class="person" d="M212,545 C205,550 200,548 198,542" /> <!-- leg tucked -->
+  <path class="person-light" d="M220,505 C210,510 202,515 195,520" /> <!-- arm reaching forward -->
+  <path class="person-light" d="M218,500 C225,508 228,518 226,525" /> <!-- other arm -->
+
+  <!-- Worshiper 2 - right front, kneeling -->
+  <ellipse class="person" cx="580" cy="480" rx="12" ry="14" />
+  <path class="person" d="M580,494 C582,510 585,530 588,545" />
+  <path class="person" d="M588,545 C595,550 600,548 602,542" />
+  <path class="person-light" d="M580,505 C590,510 598,515 605,520" />
+  <path class="person-light" d="M582,500 C575,508 572,518 574,525" />
+
+  <!-- Worshiper 3 - left, prostrate/bowing deep -->
+  <ellipse class="person" cx="140" cy="530" rx="10" ry="12" />
+  <path class="person" d="M140,542 C142,555 145,565 148,572" />
+  <path class="person-light" d="M140,548 C132,555 126,560 122,565" /> <!-- arm forward on ground -->
+  <path class="person-light" d="M148,572 C155,575 160,572 158,568" />
+
+  <!-- Worshiper 4 - right, prostrate -->
+  <ellipse class="person" cx="660" cy="530" rx="10" ry="12" />
+  <path class="person" d="M660,542 C658,555 655,565 652,572" />
+  <path class="person-light" d="M660,548 C668,555 674,560 678,565" />
+  <path class="person-light" d="M652,572 C645,575 640,572 642,568" />
+
+  <!-- Worshiper 5 - left mid, hands raised -->
+  <ellipse class="person" cx="170" cy="490" rx="10" ry="12" />
+  <path class="person" d="M170,502 C168,518 166,535 165,548" />
+  <path class="person-light" d="M168,508 C160,498 155,488 152,478" /> <!-- arm up -->
+  <path class="person-light" d="M172,508 C178,498 180,490 178,482" /> <!-- other arm up -->
+
+  <!-- Worshiper 6 - right mid, hands raised -->
+  <ellipse class="person" cx="630" cy="490" rx="10" ry="12" />
+  <path class="person" d="M630,502 C632,518 634,535 635,548" />
+  <path class="person-light" d="M632,508 C640,498 645,488 648,478" />
+  <path class="person-light" d="M628,508 C622,498 620,490 622,482" />
+
+  <!-- Back row - smaller, simpler -->
+  <!-- Left group -->
+  <ellipse class="light" cx="90" cy="560" rx="7" ry="9" />
+  <path class="light" d="M90,569 C88,580 86,590 85,598" />
+
+  <ellipse class="light" cx="110" cy="555" rx="7" ry="9" />
+  <path class="light" d="M110,564 C108,575 106,585 105,593" />
+
+  <!-- Right group -->
+  <ellipse class="light" cx="710" cy="560" rx="7" ry="9" />
+  <path class="light" d="M710,569 C712,580 714,590 715,598" />
+
+  <ellipse class="light" cx="690" cy="555" rx="7" ry="9" />
+  <path class="light" d="M690,564 C692,575 694,585 695,593" />
+
+  <!-- Far back - just dots/suggestions of people -->
+  <ellipse class="light" cx="60" cy="580" rx="5" ry="6" />
+  <ellipse class="light" cx="740" cy="580" rx="5" ry="6" />
+  <ellipse class="light" cx="40" cy="595" rx="4" ry="5" />
+  <ellipse class="light" cx="760" cy="595" rx="4" ry="5" />
+
+  <!-- People between front and Jesus -->
+  <ellipse class="person" cx="300" cy="500" rx="10" ry="12" />
+  <path class="person" d="M300,512 C298,525 296,540 295,550" />
+  <path class="person-light" d="M298,518 C290,510 285,502 282,495" /> <!-- arm raised -->
+
+  <ellipse class="person" cx="500" cy="500" rx="10" ry="12" />
+  <path class="person" d="M500,512 C502,525 504,540 505,550" />
+  <path class="person-light" d="M502,518 C510,510 515,502 518,495" /> <!-- arm raised -->
+
+  <!-- Child figure near front (small, arms up) -->
+  <ellipse class="person" cx="350" cy="520" rx="7" ry="9" />
+  <path class="person" d="M350,529 C348,540 347,548 346,555" />
+  <path class="person-light" d="M348,535 C342,525 340,518 338,510" />
+  <path class="person-light" d="M352,535 C358,525 360,518 362,510" />
+
+  <!-- ====== FLOWERS / NEW CREATION details ====== -->
+  <!-- Small flowers on the ground -->
+  <path class="light" d="M280,575 C282,570 285,570 286,574 C288,570 291,570 292,575" />
+  <path class="light" d="M520,575 C522,570 525,570 526,574 C528,570 531,570 532,575" />
+  <path class="light" d="M180,610 C182,605 185,605 186,609 C188,605 191,605 192,610" />
+  <path class="light" d="M620,610 C622,605 625,605 626,609 C628,605 631,605 632,610" />
+
+  <!-- Birds in the sky -->
+  <path class="light" d="M100,120 C105,115 110,118 115,115 C120,118 125,115 130,120" />
+  <path class="light" d="M650,100 C655,95 660,98 665,95 C670,98 675,95 680,100" />
+  <path class="light" d="M300,80 C304,76 308,78 312,76 C316,78 320,76 324,80" />
+
+  <!-- ====== TEXT ====== -->
+  <text x="400" y="700" text-anchor="middle" font-family="Permanent Marker, cursive" font-size="22" fill="#88BBDD">"and filled the whole earth"</text>
+  <text x="400" y="728" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="13" fill="#777">— Daniel 2:35</text>
+
+  <text x="400" y="770" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="15" fill="#666">the mountain that replaces all kingdoms</text>
+
+</svg>

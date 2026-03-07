@@ -1,0 +1,438 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="900" height="650">
+  <style>
+    .pencil {
+      fill: none;
+      stroke: #4a4a4a;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .light {
+      fill: none;
+      stroke: #8a8a8a;
+      stroke-width: 0.8;
+      stroke-linecap: round;
+    }
+    .heavy {
+      fill: none;
+      stroke: #3a3a3a;
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .motion {
+      fill: none;
+      stroke: #aaaaaa;
+      stroke-width: 0.5;
+      stroke-linecap: round;
+    }
+    .impact {
+      fill: none;
+      stroke: #5a5a5a;
+      stroke-width: 1.0;
+      stroke-linecap: round;
+    }
+  </style>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- LEFT: DARIUS III — proud but scared    -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Persian tiara — tall, ornate -->
+  <path class="pencil" d="
+    M 138,95
+    C 134,82 138,68 148,60
+    C 158,55 172,53 182,58
+    C 192,64 196,76 194,88
+    L 194,105
+    L 138,105
+    Z
+  " />
+  <!-- Crown ornament spikes -->
+  <path class="light" d="M 155,58 L 158,42 L 163,56" />
+  <path class="light" d="M 168,54 L 172,38 L 176,54" />
+  <path class="light" d="M 180,57 L 184,44 L 187,58" />
+  <!-- Crown jewel band -->
+  <path class="light" d="M 140,92 L 192,92" />
+  <circle class="light" cx="155" cy="92" r="3" />
+  <circle class="light" cx="172" cy="92" r="3" />
+
+  <!-- Head -->
+  <path class="pencil" d="
+    M 140,105
+    C 136,120 134,138 136,155
+    C 139,172 150,185 166,192
+    C 182,185 194,172 197,155
+    C 199,138 197,120 193,105
+  " />
+
+  <!-- EYES — the key: proud face but FEAR in the pupils -->
+  <!-- Left eye — wide -->
+  <ellipse class="pencil" cx="152" cy="132" rx="9" ry="6" />
+  <!-- Right eye — wide -->
+  <ellipse class="pencil" cx="180" cy="130" rx="9" ry="6" />
+  <!-- Pupils — darting right, tiny with fear -->
+  <circle cx="156" cy="132" r="2.5" fill="#4a4a4a" stroke="none" />
+  <circle cx="184" cy="130" r="2.5" fill="#4a4a4a" stroke="none" />
+  <!-- Eyebrows — one raised (trying to look proud, but worried) -->
+  <path class="pencil" d="M 140,122 C 146,117 154,119 162,124" />
+  <path class="pencil" d="M 170,120 C 178,115 186,117 194,122" />
+  <!-- Sweat drop -->
+  <path class="light" d="M 200,118 C 202,122 201,128 198,130" />
+
+  <!-- Nose — regal, aquiline -->
+  <path class="pencil" d="M 166,134 C 168,142 170,150 172,158 C 174,162 170,164 166,162" />
+
+  <!-- Mouth — tight, trying to maintain composure -->
+  <path class="pencil" d="M 156,172 C 162,175 170,176 176,174" />
+  <!-- Slight downturn -->
+  <path class="light" d="M 154,174 C 153,176 154,178 156,178" />
+
+  <!-- Beard — long, curled, Persian royal style -->
+  <path class="pencil" d="
+    M 148,175
+    C 150,195 158,215 166,228
+    C 174,215 182,195 184,175
+  " />
+  <!-- Beard texture -->
+  <path class="light" d="M 154,185 C 158,200 162,215 166,225" />
+  <path class="light" d="M 178,185 C 174,200 170,215 166,225" />
+  <path class="light" d="M 160,190 C 162,205 164,218 166,224" />
+  <path class="light" d="M 172,190 C 170,205 168,218 166,224" />
+  <!-- Beard curls -->
+  <path class="light" d="M 158,222 C 155,228 153,230 156,232" />
+  <path class="light" d="M 174,222 C 177,228 179,230 176,232" />
+
+  <!-- Neck and shoulders — robed, broad -->
+  <path class="pencil" d="
+    M 142,190
+    C 120,200 95,215 75,232
+    C 62,242 55,255 52,270
+  " />
+  <path class="pencil" d="
+    M 192,188
+    C 210,196 230,208 248,222
+    C 258,230 265,242 268,258
+  " />
+
+  <!-- Torso — Persian royal robe -->
+  <path class="pencil" d="
+    M 52,270
+    C 48,300 50,335 58,360
+    C 72,380 110,395 166,398
+    C 222,395 260,380 274,360
+    C 282,335 284,300 280,270
+  " />
+
+  <!-- Robe V-neck detail -->
+  <path class="pencil" d="M 110,240 C 125,265 145,280 166,285" />
+  <path class="pencil" d="M 222,240 C 207,265 187,280 166,285" />
+
+  <!-- Robe ornate trim -->
+  <path class="light" d="M 70,290 C 100,300 135,305 166,304 C 197,305 232,300 262,290" />
+  <path class="light" d="M 75,330 C 105,340 140,344 166,343 C 192,344 227,340 257,330" />
+
+  <!-- LEFT ARM — at his side, hand clenched (impotent) -->
+  <path class="pencil" d="
+    M 52,270
+    C 42,290 35,315 32,340
+    C 30,360 32,375 36,388
+  " />
+  <path class="pencil" d="
+    M 60,275
+    C 52,295 48,318 46,340
+    C 44,358 46,372 48,384
+  " />
+  <!-- Clenched fist -->
+  <path class="pencil" d="
+    M 36,388 C 32,394 30,400 34,404
+    C 38,408 44,406 48,400
+    C 52,394 50,388 48,384
+  " />
+
+  <!-- RIGHT ARM — raised but useless now (he already threw) -->
+  <path class="pencil" d="
+    M 248,235
+    C 268,228 288,224 305,225
+    C 318,226 328,232 332,240
+  " />
+  <path class="pencil" d="
+    M 248,244
+    C 268,238 288,236 305,237
+    C 316,238 326,244 330,250
+  " />
+  <!-- Open hand — empty, javelin already gone -->
+  <path class="pencil" d="M 332,240 L 342,234" />
+  <path class="pencil" d="M 334,244 L 345,240" />
+  <path class="pencil" d="M 334,248 L 344,248" />
+  <path class="pencil" d="M 332,252 L 340,256" />
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CENTER: THE SHIELD + SPEAR THROUGH IT  -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- THE SHIELD — large, round, Macedonian -->
+  <ellipse class="heavy" cx="450" cy="280" rx="75" ry="72" />
+  <!-- Shield inner rim -->
+  <ellipse class="pencil" cx="450" cy="280" rx="65" ry="62" />
+  <!-- Star of Vergina -->
+  <circle class="pencil" cx="450" cy="280" r="12" />
+  <!-- 8 rays -->
+  <line class="pencil" x1="450" y1="258" x2="450" y2="268" />
+  <line class="pencil" x1="450" y1="292" x2="450" y2="302" />
+  <line class="pencil" x1="428" y1="280" x2="438" y2="280" />
+  <line class="pencil" x1="462" y1="280" x2="472" y2="280" />
+  <line class="pencil" x1="434" y1="264" x2="441" y2="271" />
+  <line class="pencil" x1="459" y1="289" x2="466" y2="296" />
+  <line class="pencil" x1="434" y1="296" x2="441" y2="289" />
+  <line class="pencil" x1="459" y1="271" x2="466" y2="264" />
+
+  <!-- JAVELIN — stuck through the shield from the left, stopped -->
+  <!-- Entry side (from Darius) -->
+  <path class="heavy" d="M 340,260 L 410,272" />
+  <!-- Javelin head barely poking through back -->
+  <path class="pencil" d="M 480,286 L 495,290" />
+  <path class="pencil" d="M 495,290 L 500,286 L 498,294 Z" />
+  <!-- Impact cracks radiating from entry point -->
+  <path class="impact" d="M 410,272 L 400,262" />
+  <path class="impact" d="M 410,272 L 398,270" />
+  <path class="impact" d="M 410,272 L 405,258" />
+  <path class="impact" d="M 410,272 L 415,260" />
+
+  <!-- THE SARISSA (SPEAR) — the money line -->
+  <!-- Goes FROM Alexander on right, THROUGH the shield, into Darius -->
+  <!-- The spear passes OVER/past the shield toward Darius's chest -->
+  <path class="heavy" d="
+    M 710,310
+    L 580,300
+    L 450,320
+    L 320,348
+    L 200,370
+  " />
+  <!-- Spear point — buried in Darius's chest area -->
+  <path class="pencil" d="M 200,370 L 188,365 L 192,376 Z" />
+
+  <!-- Impact point on Darius — the spear reaches him -->
+  <path class="impact" d="M 200,370 L 192,362" />
+  <path class="impact" d="M 200,370 L 190,374" />
+  <path class="impact" d="M 200,370 L 195,358" />
+
+  <!-- Motion lines along the spear thrust -->
+  <path class="motion" d="M 720,318 L 745,322" />
+  <path class="motion" d="M 715,324 L 740,328" />
+  <path class="motion" d="M 718,330 L 742,334" />
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- RIGHT: ALEXANDER — charging, fierce     -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Macedonian helmet with crest -->
+  <path class="pencil" d="
+    M 698,95
+    C 694,82 698,68 710,62
+    C 720,58 734,58 744,64
+    C 752,70 756,82 754,95
+    L 754,110
+    C 750,118 744,124 738,128
+    L 720,128
+    C 712,124 708,118 706,110
+    Z
+  " />
+  <!-- Crest -->
+  <path class="pencil" d="
+    M 712,62
+    C 706,48 710,32 722,22
+    C 734,16 746,20 750,32
+    C 754,42 752,55 748,64
+  " />
+  <!-- Crest plume texture -->
+  <path class="light" d="M 718,28 C 726,22 736,20 744,28" />
+  <path class="light" d="M 715,38 C 724,32 736,30 748,36" />
+  <path class="light" d="M 714,48 C 722,42 736,40 750,46" />
+
+  <!-- Cheek guards -->
+  <path class="pencil" d="M 706,110 C 702,122 700,135 702,145" />
+  <path class="pencil" d="M 754,110 C 756,122 758,135 756,145" />
+
+  <!-- Face — fierce, determined -->
+  <!-- Eyes — intense, locked on target -->
+  <path class="pencil" d="M 710,118 C 714,114 720,114 726,118" />
+  <path class="pencil" d="M 734,116 C 738,112 744,112 750,116" />
+  <!-- Pupils — focused left at Darius -->
+  <circle cx="716" cy="118" r="2" fill="#4a4a4a" stroke="none" />
+  <circle cx="738" cy="116" r="2" fill="#4a4a4a" stroke="none" />
+  <!-- Fierce brow -->
+  <path class="pencil" d="M 708,112 L 726,110" />
+  <path class="pencil" d="M 734,108 L 752,110" />
+
+  <!-- Nose -->
+  <path class="light" d="M 728,118 L 726,132" />
+
+  <!-- Jaw — gritted, battle cry -->
+  <path class="pencil" d="M 716,142 C 722,148 732,148 738,142" />
+  <path class="light" d="M 720,144 L 734,144" />
+
+  <!-- Neck — thick, strained -->
+  <path class="pencil" d="M 718,150 C 714,158 712,168 710,175" />
+  <path class="pencil" d="M 740,148 C 744,156 746,166 748,175" />
+
+  <!-- Shoulders + cuirass top -->
+  <path class="pencil" d="
+    M 710,175
+    C 692,184 675,195 662,208
+  " />
+  <path class="pencil" d="
+    M 748,175
+    C 766,182 782,192 795,205
+  " />
+
+  <!-- Chest — muscle cuirass -->
+  <path class="pencil" d="
+    M 662,208
+    C 656,235 658,265 665,288
+    C 678,305 705,315 730,316
+    C 755,315 782,305 795,288
+    C 802,265 804,235 798,208
+  " />
+
+  <!-- Muscle detail -->
+  <path class="light" d="M 680,220 C 698,232 715,236 730,234 C 745,236 762,232 780,220" />
+  <path class="light" d="M 685,250 C 700,258 718,260 730,258 C 742,260 760,258 775,250" />
+  <path class="light" d="M 690,275 C 705,282 720,284 730,282 C 740,284 755,282 770,275" />
+  <!-- Center line -->
+  <path class="light" d="M 730,185 C 730,230 730,270 730,310" />
+
+  <!-- RIGHT ARM — thrusting the spear, extended fully left -->
+  <path class="pencil" d="
+    M 662,210
+    C 648,218 632,230 620,245
+    C 610,258 605,270 608,280
+  " />
+  <path class="pencil" d="
+    M 668,218
+    C 655,228 642,240 632,252
+    C 624,262 620,272 622,282
+  " />
+
+  <!-- Belt -->
+  <path class="pencil" d="M 670,295 C 695,302 720,305 730,304 C 740,305 765,302 790,295" />
+
+  <!-- LEFT ARM — holding shield (implied, not drawn — shield is center) -->
+  <!-- We see the arm strap behind the shield -->
+  <path class="light" d="M 795,220 C 780,240 760,260 740,278" />
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- BOTTOM: BUCEPHALUS                      -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Horse head — fierce, nostrils flared, beneath Alexander -->
+  <path class="pencil" d="
+    M 640,420
+    C 628,412 612,408 598,410
+    C 585,413 578,422 576,434
+    C 575,445 580,455 588,462
+  " />
+  <!-- Horse jaw -->
+  <path class="pencil" d="
+    M 640,430
+    C 630,425 618,422 608,424
+    C 598,427 592,435 590,445
+    C 589,453 592,460 598,465
+  " />
+
+  <!-- Horse eye — fierce -->
+  <ellipse class="pencil" cx="610" cy="420" rx="5" ry="4" />
+  <circle cx="612" cy="420" r="2" fill="#4a4a4a" stroke="none" />
+
+  <!-- Nostril — flared -->
+  <path class="pencil" d="M 582,450 C 578,454 580,460 585,460" />
+
+  <!-- Horse mouth — bridle -->
+  <path class="pencil" d="M 588,462 C 592,468 598,470 605,468" />
+  <path class="light" d="M 598,465 C 600,472 598,478 594,480" />
+
+  <!-- Ear -->
+  <path class="pencil" d="M 622,402 L 626,388 L 632,400" />
+  <!-- Second ear -->
+  <path class="light" d="M 630,404 L 633,392 L 638,403" />
+
+  <!-- Mane — wild, flowing -->
+  <path class="pencil" d="
+    M 638,400
+    C 655,405 672,415 688,428
+    C 705,440 720,455 732,470
+  " />
+  <path class="pencil" d="
+    M 640,410
+    C 658,418 676,430 692,445
+    C 708,458 722,472 735,485
+  " />
+  <!-- Mane flow lines -->
+  <path class="light" d="M 650,408 C 662,416 675,425 685,435" />
+  <path class="light" d="M 660,415 C 672,424 684,434 694,445" />
+  <path class="light" d="M 670,422 C 680,432 692,442 702,452" />
+
+  <!-- Horse neck -->
+  <path class="pencil" d="
+    M 588,462
+    C 600,478 618,492 640,502
+    C 660,510 680,515 700,516
+  " />
+
+  <!-- Horse chest / body suggestion -->
+  <path class="pencil" d="
+    M 732,470
+    C 755,478 778,484 800,488
+    C 820,490 838,488 850,484
+  " />
+  <path class="pencil" d="
+    M 700,516
+    C 730,520 762,522 790,518
+    C 815,514 835,506 850,496
+  " />
+
+  <!-- Front legs — charging, one forward one back -->
+  <!-- Front leg (forward) -->
+  <path class="pencil" d="
+    M 640,502
+    C 625,520 610,540 598,558
+    C 590,570 585,578 588,582
+  " />
+  <path class="pencil" d="
+    M 655,508
+    C 642,525 630,542 620,558
+    C 614,568 612,576 615,580
+  " />
+  <!-- Hoof -->
+  <path class="pencil" d="M 585,582 C 590,588 600,590 608,588 L 615,580" />
+
+  <!-- Back leg (pushing off) -->
+  <path class="pencil" d="
+    M 810,500
+    C 818,520 825,542 828,560
+    C 830,572 828,580 824,584
+  " />
+  <path class="pencil" d="
+    M 825,498
+    C 832,518 838,538 840,558
+    C 842,570 840,578 836,582
+  " />
+  <!-- Hoof -->
+  <path class="pencil" d="M 822,584 C 826,590 832,592 838,588 L 838,582" />
+
+  <!-- Dust clouds from hooves -->
+  <path class="light" d="M 575,585 C 568,580 560,582 558,588 C 556,594 562,598 570,596 C 576,594 578,590 575,585" />
+  <path class="light" d="M 550,590 C 545,586 538,588 537,594 C 536,598 540,600 546,599" />
+  <path class="light" d="M 848,586 C 855,582 860,585 860,590 C 860,595 855,598 850,596" />
+
+  <!-- Ground line -->
+  <path class="light" d="M 20,598 C 150,595 350,600 500,598 C 650,596 800,600 880,597" />
+
+  <!-- Dust/debris at ground level -->
+  <path class="light" d="M 520,595 C 515,590 508,592 510,598" />
+  <path class="light" d="M 480,598 C 476,594 470,596 472,600" />
+
+</svg>
