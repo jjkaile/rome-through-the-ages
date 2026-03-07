@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <style>
+    .pencil { fill: none; stroke: #4a4a4a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .light { fill: none; stroke: #8a8a8a; stroke-width: 0.8; stroke-linecap: round; }
+    .heavy { fill: none; stroke: #3a3a3a; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .construction { fill: none; stroke: #b0b0b0; stroke-width: 0.5; stroke-dasharray: 6 4; }
+    .crack { fill: none; stroke: #3a3a3a; stroke-width: 1.5; stroke-linecap: round; }
+    .debris { fill: none; stroke: #5a5a5a; stroke-width: 1.2; stroke-linecap: round; }
+    .impact { fill: none; stroke: #3a3a3a; stroke-width: 2; stroke-linecap: round; }
+    .stone-blue { fill: none; stroke: #88BBDD; stroke-width: 0.8; stroke-opacity: 0.5; }
+  </style>
+
+  <!-- ====== THE STATUE - tilting, breaking apart ====== -->
+
+  <!-- The statue is leaning/falling to the right, feet shattered -->
+  <!-- We see it from about waist down, the moment of impact -->
+
+  <!-- Left leg - still partly intact but cracking -->
+  <path class="heavy" d="M250,100 C248,140 245,190 242,240 C239,290 237,330 236,360" />
+  <path class="heavy" d="M310,100 C312,140 314,190 315,240 C316,290 316,330 316,360" />
+  <!-- Leg cracks -->
+  <path class="crack" d="M260,150 C270,165 275,180 268,195" />
+  <path class="crack" d="M268,195 C280,200 285,195 282,188" />
+  <path class="crack" d="M255,250 C265,260 260,275 250,280" />
+  <path class="crack" d="M300,200 C290,215 288,230 295,240" />
+
+  <!-- Right leg - more broken, tilting -->
+  <path class="heavy" d="M420,100 C425,140 432,190 440,240 C448,290 455,330 462,360" />
+  <path class="heavy" d="M480,100 C488,140 498,190 508,240 C518,290 525,330 530,360" />
+  <!-- Right leg cracks - more severe -->
+  <path class="crack" d="M440,130 C455,145 460,160 450,175" />
+  <path class="crack" d="M450,175 C465,180 470,170 462,165" />
+  <path class="crack" d="M470,200 C460,220 465,240 475,250" />
+  <path class="crack" d="M500,170 C490,185 492,205 505,210" />
+
+  <!-- ====== THE FEET - moment of destruction ====== -->
+
+  <!-- Left foot - crumbling -->
+  <path class="heavy" d="M200,360 C190,380 175,400 165,420 C155,440 150,455 150,470" />
+  <path class="heavy" d="M316,360 C310,380 300,400 290,420 C282,440 278,455 278,470" />
+  <!-- Left foot sole -->
+  <path class="heavy" d="M150,470 C148,480 152,490 170,495 C195,500 230,502 260,498 C275,494 280,485 278,470" />
+
+  <!-- Toes breaking off left foot -->
+  <path class="debris" d="M158,460 C150,450 142,445 135,450 C128,458 132,468 140,472" />
+  <path class="debris" d="M168,455 C162,442 155,438 148,442 C142,450 146,462 155,465" />
+  <!-- Toe fragment flying off -->
+  <path class="debris" d="M120,440 C115,432 108,428 102,432" />
+  <path class="light" d="M108,425 L102,418" />
+  <path class="light" d="M100,435 L92,432" />
+
+  <!-- Right foot - MORE destroyed, this is where stone hits -->
+  <!-- Foot is exploding -->
+  <path class="heavy" d="M462,360 C470,380 478,395 480,405" />
+  <path class="heavy" d="M530,360 C535,375 538,385 535,395" />
+
+  <!-- Explosion lines radiating from impact point -->
+  <!-- Impact point is around (500, 450) -->
+  <path class="impact" d="M500,450 L540,420" />
+  <path class="impact" d="M500,450 L560,440" />
+  <path class="impact" d="M500,450 L550,470" />
+  <path class="impact" d="M500,450 L530,490" />
+  <path class="impact" d="M500,450 L470,490" />
+  <path class="impact" d="M500,450 L460,470" />
+  <path class="impact" d="M500,450 L555,400" />
+  <path class="impact" d="M500,450 L480,410" />
+
+  <!-- Larger explosion burst lines -->
+  <path class="pencil" d="M540,420 L570,400 L580,410" />
+  <path class="pencil" d="M560,440 L600,435 L610,445" />
+  <path class="pencil" d="M550,470 L590,480 L595,470" />
+  <path class="pencil" d="M530,490 L555,515 L565,505" />
+  <path class="pencil" d="M555,400 L580,375 L590,385" />
+
+  <!-- ====== THE STONE - embedded in the foot ====== -->
+  <!-- Stone shape at impact point -->
+  <path class="heavy" d="M465,430
+    C460,438 458,448 460,458
+    C462,468 470,478 480,482
+    C490,486 502,486 512,482
+    C522,478 530,470 535,460
+    C538,450 536,440 530,432
+    C524,424 515,420 505,418
+    C495,416 482,418 475,422
+    C468,426 465,430 465,430 Z" />
+
+  <!-- Stone texture -->
+  <path class="pencil" d="M475,435 C490,432 510,432 525,438" />
+  <path class="pencil" d="M468,450 C485,446 508,446 532,452" />
+  <path class="pencil" d="M472,465 C488,460 510,460 528,468" />
+  <path class="light" d="M480,440 L490,460" />
+  <path class="light" d="M500,435 L505,465" />
+  <path class="light" d="M518,438 L520,462" />
+
+  <!-- Stone glow lines -->
+  <line class="stone-blue" x1="500" y1="450" x2="450" y2="400" />
+  <line class="stone-blue" x1="500" y1="450" x2="440" y2="450" />
+  <line class="stone-blue" x1="500" y1="450" x2="450" y2="500" />
+  <line class="stone-blue" x1="500" y1="450" x2="550" y2="400" />
+  <line class="stone-blue" x1="500" y1="450" x2="555" y2="500" />
+
+  <!-- ====== DEBRIS FLYING EVERYWHERE ====== -->
+
+  <!-- Chunks of foot/statue flying -->
+  <!-- Iron chunks (angular) -->
+  <polygon class="pencil" points="600,380 615,375 620,390 608,395" />
+  <polygon class="pencil" points="640,420 655,412 660,428 645,432" />
+  <polygon class="pencil" points="620,500 632,495 638,510 625,512" />
+  <polygon class="pencil" points="580,350 592,342 598,358 585,360" />
+  <polygon class="pencil" points="560,520 572,515 575,530 562,532" />
+
+  <!-- Clay chunks (rounder) -->
+  <path class="pencil" d="M650,460 C655,455 665,456 668,462 C670,468 665,474 658,474 C652,472 648,466 650,460" />
+  <path class="pencil" d="M590,540 C594,534 602,534 606,540 C608,546 604,552 598,552 C592,550 588,545 590,540" />
+  <path class="pencil" d="M625,360 C630,356 638,358 640,364 C641,370 636,374 630,373 C625,371 622,365 625,360" />
+
+  <!-- Tiny debris particles -->
+  <circle cx="570" cy="380" r="2" fill="#5a5a5a" />
+  <circle cx="610" cy="350" r="1.5" fill="#5a5a5a" />
+  <circle cx="650" cy="390" r="2" fill="#5a5a5a" />
+  <circle cx="630" cy="480" r="1.5" fill="#5a5a5a" />
+  <circle cx="580" cy="500" r="2" fill="#5a5a5a" />
+  <circle cx="550" cy="360" r="1" fill="#5a5a5a" />
+  <circle cx="660" cy="500" r="1" fill="#5a5a5a" />
+  <circle cx="595" cy="450" r="1.5" fill="#5a5a5a" />
+
+  <!-- Dust cloud around impact -->
+  <path class="light" d="M440,410 C430,400 420,405 425,415 C428,425 438,425 440,418" />
+  <path class="light" d="M420,430 C410,425 400,430 405,440 C410,448 420,445 422,438" />
+  <path class="light" d="M540,410 C550,400 560,405 555,415 C552,425 542,425 540,418" />
+  <path class="light" d="M555,430 C565,425 575,432 570,442 C566,450 555,448 553,440" />
+  <path class="light" d="M450,490 C440,495 435,505 442,510 C450,515 458,508 455,498" />
+  <path class="light" d="M540,490 C550,495 555,505 548,510 C540,515 532,508 535,498" />
+
+  <!-- ====== GOLD/SILVER/BRONZE FRAGMENTS from upper statue raining down ====== -->
+  <!-- The WHOLE statue is breaking, not just the feet -->
+  <!-- Small gold fragment -->
+  <polygon class="pencil" points="180,80 192,72 198,85 186,90" />
+  <text x="186" y="68" font-family="Comic Neue, sans-serif" font-size="9" fill="#D4A843">Au</text>
+
+  <!-- Silver fragment -->
+  <polygon class="pencil" points="350,60 365,55 368,68 355,72" />
+  <text x="355" y="50" font-family="Comic Neue, sans-serif" font-size="9" fill="#A8B4C0">Ag</text>
+
+  <!-- Bronze fragment -->
+  <polygon class="pencil" points="550,90 562,82 568,96 555,100" />
+  <text x="555" y="78" font-family="Comic Neue, sans-serif" font-size="9" fill="#B08D57">Cu</text>
+
+  <!-- More fragments falling -->
+  <polygon class="light" points="220,40 228,35 232,45 224,48" />
+  <polygon class="light" points="450,50 458,45 462,55 454,58" />
+  <polygon class="light" points="620,70 628,62 634,74 626,78" />
+  <polygon class="light" points="130,120 140,115 144,128 134,130" />
+  <polygon class="light" points="680,130 688,122 694,135 684,138" />
+
+  <!-- Motion lines on falling fragments -->
+  <line class="light" x1="180" y1="72" x2="178" y2="60" />
+  <line class="light" x1="350" y1="50" x2="348" y2="38" />
+  <line class="light" x1="552" y1="82" x2="550" y2="70" />
+
+  <!-- ====== GROUND ====== -->
+  <line class="heavy" x1="50" y1="505" x2="750" y2="505" />
+
+  <!-- Ground cracks radiating from impact -->
+  <path class="crack" d="M500,505 L510,530 L505,555 L515,575" />
+  <path class="crack" d="M500,505 L520,525 L530,548" />
+  <path class="crack" d="M500,505 L480,530 L475,555 L480,575" />
+  <path class="crack" d="M500,505 L460,525 L450,545" />
+  <path class="crack" d="M500,505 L540,520 L560,540" />
+  <path class="crack" d="M500,505 L440,520 L420,540" />
+
+  <!-- Wider ground cracks -->
+  <path class="crack" d="M350,505 L345,520 L350,535" />
+  <path class="crack" d="M200,505 L198,518 L202,530" />
+  <path class="crack" d="M650,505 L655,520 L650,535" />
+
+  <!-- Pebbles bouncing off ground -->
+  <circle cx="380" cy="500" r="3" fill="none" stroke="#5a5a5a" stroke-width="1" />
+  <circle cx="600" cy="498" r="2.5" fill="none" stroke="#5a5a5a" stroke-width="1" />
+  <circle cx="300" cy="502" r="2" fill="none" stroke="#5a5a5a" stroke-width="1" />
+
+  <!-- ====== MOTION LINES on the whole statue tilting ====== -->
+  <path class="light" d="M240,100 C235,98 230,100 232,105" />
+  <path class="light" d="M235,120 C230,118 225,120 227,125" />
+  <path class="light" d="M238,140 C233,138 228,140 230,145" />
+
+  <!-- ====== TEXT ====== -->
+  <text x="400" y="620" text-anchor="middle" font-family="Permanent Marker, cursive" font-size="42" fill="#3a3a3a">ICONOCLASM!</text>
+
+  <text x="400" y="660" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="15" fill="#777" font-style="italic">"it struck the statue on its feet of iron and clay</text>
+  <text x="400" y="680" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="15" fill="#777" font-style="italic">and smashed them"</text>
+  <text x="400" y="705" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="12" fill="#999">— Daniel 2:34</text>
+
+  <!-- Small note about element symbols -->
+  <text x="400" y="750" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="11" fill="#666">(gold, silver, bronze, iron, clay — all of it. together. dust.)</text>
+
+  <!-- CRASH sound effect lettering scattered -->
+  <text x="620" y="370" font-family="Permanent Marker, cursive" font-size="22" fill="#4a4a4a" transform="rotate(15, 620, 370)">CRACK</text>
+  <text x="130" y="440" font-family="Permanent Marker, cursive" font-size="16" fill="#6a6a6a" transform="rotate(-10, 130, 440)">crumble</text>
+  <text x="660" y="520" font-family="Permanent Marker, cursive" font-size="14" fill="#8a8a8a" transform="rotate(5, 660, 520)">dust</text>
+
+</svg>

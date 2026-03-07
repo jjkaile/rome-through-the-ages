@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <style>
+    .pencil { fill: none; stroke: #4a4a4a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .light { fill: none; stroke: #8a8a8a; stroke-width: 0.8; stroke-linecap: round; }
+    .heavy { fill: none; stroke: #3a3a3a; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .construction { fill: none; stroke: #b0b0b0; stroke-width: 0.5; stroke-dasharray: 6 4; }
+    .iron-fill { fill: #7A7A9A; fill-opacity: 0.06; }
+  </style>
+
+  <!-- Construction lines -->
+  <line class="construction" x1="300" y1="0" x2="300" y2="900" />
+
+  <!-- Connection label top -->
+  <text x="300" y="28" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="14" fill="#999">↑ thighs of bronze ↑</text>
+  <path class="light" d="M200,42 Q300,35 400,42" />
+
+  <!-- Connection label bottom -->
+  <text x="300" y="880" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="14" fill="#999">↓ feet of iron + clay ↓</text>
+  <path class="light" d="M210,858 Q300,865 390,858" />
+
+  <!-- ====== LEFT LEG ====== -->
+  <!-- Outer line -->
+  <path class="heavy iron-fill" d="M140,55
+    C135,100 128,160 122,220
+    C116,280 112,340 110,400
+    C108,460 107,520 108,580
+    C109,640 112,700 118,760
+    L122,820" />
+
+  <!-- Inner line -->
+  <path class="heavy" d="M265,55
+    C260,100 252,160 245,220
+    C238,280 232,340 228,400
+    C224,460 222,520 222,580
+    C222,640 224,700 228,760
+    L232,820" />
+
+  <!-- Kneecap - left -->
+  <path class="heavy" d="M120,55 C115,65 112,80 115,95 C118,110 128,120 140,125 C155,128 170,128 185,125 C200,120 212,108 218,95 C222,80 220,65 215,55" />
+  <!-- Kneecap inner detail -->
+  <ellipse class="pencil" cx="168" cy="88" rx="30" ry="22" />
+  <path class="light" d="M148,80 C155,75 168,72 180,75 C188,78 192,84 190,90" />
+  <!-- Kneecap shading -->
+  <path class="light" d="M140,78 C148,72 162,68 175,70" />
+  <path class="light" d="M138,95 C148,90 162,88 178,90" />
+  <path class="light" d="M142,108 C152,104 165,102 178,105" />
+
+  <!-- Shin bone (tibia) ridge - left -->
+  <path class="pencil" d="M165,125 C160,180 155,250 152,320 C149,390 148,460 148,530 C148,600 150,670 155,740 L158,800" />
+  <!-- Secondary shin line -->
+  <path class="light" d="M172,130 C168,190 164,260 162,330 C160,400 158,470 158,540 C158,605 160,675 164,740" />
+
+  <!-- Calf muscle - left (gastrocnemius) -->
+  <!-- Outer calf bulge -->
+  <path class="pencil" d="M115,180 C105,220 98,270 95,320 C92,370 95,420 102,460 C108,490 115,510 120,520" />
+  <!-- Inner calf line -->
+  <path class="pencil" d="M230,180 C235,220 238,270 240,320 C242,370 240,420 235,460 C230,490 225,510 222,520" />
+
+  <!-- Calf shading lines - left -->
+  <path class="light" d="M112,200 C105,240 100,290 98,340" />
+  <path class="light" d="M118,210 C112,250 108,295 106,340" />
+  <path class="light" d="M125,215 C120,255 116,298 114,342" />
+  <path class="light" d="M225,200 C230,240 234,290 235,340" />
+  <path class="light" d="M220,210 C224,250 228,295 229,340" />
+
+  <!-- Calf muscle separation line -->
+  <path class="pencil" d="M148,200 C145,260 142,320 142,380 C142,430 144,470 148,500" />
+
+  <!-- Achilles tendon area - left -->
+  <path class="pencil" d="M120,520 C118,560 116,600 115,640 C114,680 115,720 118,760" />
+  <path class="pencil" d="M222,520 C220,560 218,600 216,640 C215,680 216,720 218,760" />
+  <!-- Tendon lines -->
+  <path class="light" d="M140,530 C138,580 136,630 135,680 C134,720 136,750 138,770" />
+  <path class="light" d="M200,530 C198,580 196,630 195,680 C194,720 196,750 198,770" />
+
+  <!-- Ankle area - left -->
+  <path class="pencil" d="M118,780 C112,800 110,815 115,830 C120,840 140,845 168,845 C195,845 215,840 222,830 C228,815 225,800 220,780" />
+  <!-- Ankle bone bumps -->
+  <ellipse class="pencil" cx="115" cy="790" rx="8" ry="12" />
+  <ellipse class="pencil" cx="222" cy="790" rx="8" ry="12" />
+  <!-- Ankle shading -->
+  <line class="light" x1="135" y1="815" x2="135" y2="838" />
+  <line class="light" x1="155" y1="818" x2="155" y2="842" />
+  <line class="light" x1="175" y1="818" x2="175" y2="842" />
+  <line class="light" x1="195" y1="815" x2="195" y2="838" />
+
+  <!-- ====== RIGHT LEG ====== -->
+  <!-- Outer line -->
+  <path class="heavy iron-fill" d="M460,55
+    C465,100 472,160 478,220
+    C484,280 488,340 490,400
+    C492,460 493,520 492,580
+    C491,640 488,700 482,760
+    L478,820" />
+
+  <!-- Inner line -->
+  <path class="heavy" d="M335,55
+    C340,100 348,160 355,220
+    C362,280 368,340 372,400
+    C376,460 378,520 378,580
+    C378,640 376,700 372,760
+    L368,820" />
+
+  <!-- Kneecap - right -->
+  <path class="heavy" d="M380,55 C385,65 388,80 385,95 C382,110 372,120 360,125 C345,128 330,128 315,125 C300,120 288,108 282,95 C278,80 280,65 285,55" />
+  <!-- Kneecap inner detail -->
+  <ellipse class="pencil" cx="332" cy="88" rx="30" ry="22" />
+  <path class="light" d="M352,80 C345,75 332,72 320,75 C312,78 308,84 310,90" />
+  <!-- Kneecap shading -->
+  <path class="light" d="M360,78 C352,72 338,68 325,70" />
+  <path class="light" d="M362,95 C352,90 338,88 322,90" />
+  <path class="light" d="M358,108 C348,104 335,102 322,105" />
+
+  <!-- Shin bone (tibia) ridge - right -->
+  <path class="pencil" d="M335,125 C340,180 345,250 348,320 C351,390 352,460 352,530 C352,600 350,670 345,740 L342,800" />
+  <!-- Secondary shin line -->
+  <path class="light" d="M328,130 C332,190 336,260 338,330 C340,400 342,470 342,540 C342,605 340,675 336,740" />
+
+  <!-- Calf muscle - right -->
+  <!-- Outer calf bulge -->
+  <path class="pencil" d="M485,180 C495,220 502,270 505,320 C508,370 505,420 498,460 C492,490 485,510 480,520" />
+  <!-- Inner calf line -->
+  <path class="pencil" d="M370,180 C365,220 362,270 360,320 C358,370 360,420 365,460 C370,490 375,510 378,520" />
+
+  <!-- Calf shading lines - right -->
+  <path class="light" d="M488,200 C495,240 500,290 502,340" />
+  <path class="light" d="M482,210 C488,250 492,295 494,340" />
+  <path class="light" d="M475,215 C480,255 484,298 486,342" />
+  <path class="light" d="M375,200 C370,240 366,290 365,340" />
+  <path class="light" d="M380,210 C376,250 372,295 371,340" />
+
+  <!-- Calf muscle separation line -->
+  <path class="pencil" d="M352,200 C355,260 358,320 358,380 C358,430 356,470 352,500" />
+
+  <!-- Achilles tendon area - right -->
+  <path class="pencil" d="M480,520 C482,560 484,600 485,640 C486,680 485,720 482,760" />
+  <path class="pencil" d="M378,520 C380,560 382,600 384,640 C385,680 384,720 382,760" />
+  <!-- Tendon lines -->
+  <path class="light" d="M460,530 C462,580 464,630 465,680 C466,720 464,750 462,770" />
+  <path class="light" d="M400,530 C402,580 404,630 405,680 C406,720 404,750 402,770" />
+
+  <!-- Ankle area - right -->
+  <path class="pencil" d="M482,780 C488,800 490,815 485,830 C480,840 460,845 432,845 C405,845 385,840 378,830 C372,815 375,800 380,780" />
+  <!-- Ankle bone bumps -->
+  <ellipse class="pencil" cx="485" cy="790" rx="8" ry="12" />
+  <ellipse class="pencil" cx="378" cy="790" rx="8" ry="12" />
+  <!-- Ankle shading -->
+  <line class="light" x1="405" y1="815" x2="405" y2="838" />
+  <line class="light" x1="425" y1="818" x2="425" y2="842" />
+  <line class="light" x1="445" y1="818" x2="445" y2="842" />
+  <line class="light" x1="465" y1="815" x2="465" y2="838" />
+
+  <!-- ====== IRON TEXTURE / ARMOR HINTS ====== -->
+  <!-- Roman greave (shin guard) lines - left -->
+  <path class="pencil" d="M125,250 C135,248 155,245 170,248" />
+  <path class="pencil" d="M122,350 C132,347 152,345 168,347" />
+  <path class="pencil" d="M120,450 C130,447 150,445 165,448" />
+
+  <!-- Roman greave lines - right -->
+  <path class="pencil" d="M475,250 C465,248 445,245 430,248" />
+  <path class="pencil" d="M478,350 C468,347 448,345 432,347" />
+  <path class="pencil" d="M480,450 C470,447 450,445 435,448" />
+
+  <!-- Cross-hatch iron texture hints - left leg -->
+  <line class="light" x1="130" y1="300" x2="140" y2="320" />
+  <line class="light" x1="140" y1="300" x2="130" y2="320" />
+  <line class="light" x1="130" y1="400" x2="140" y2="420" />
+  <line class="light" x1="140" y1="400" x2="130" y2="420" />
+  <line class="light" x1="128" y1="500" x2="138" y2="520" />
+  <line class="light" x1="138" y1="500" x2="128" y2="520" />
+
+  <!-- Cross-hatch iron texture hints - right leg -->
+  <line class="light" x1="470" y1="300" x2="460" y2="320" />
+  <line class="light" x1="460" y1="300" x2="470" y2="320" />
+  <line class="light" x1="472" y1="400" x2="462" y2="420" />
+  <line class="light" x1="462" y1="400" x2="472" y2="420" />
+  <line class="light" x1="472" y1="500" x2="462" y2="520" />
+  <line class="light" x1="462" y1="500" x2="472" y2="520" />
+
+  <!-- Two legs annotation -->
+  <text x="168" y="870" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="11" fill="#888">West</text>
+  <text x="432" y="870" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="11" fill="#888">East</text>
+
+</svg>

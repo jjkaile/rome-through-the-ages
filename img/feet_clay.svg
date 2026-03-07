@@ -1,0 +1,420 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <style>
+    .pencil { fill: none; stroke: #4a4a4a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .light { fill: none; stroke: #8a8a8a; stroke-width: 0.8; stroke-linecap: round; }
+    .heavy { fill: none; stroke: #3a3a3a; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .construction { fill: none; stroke: #b0b0b0; stroke-width: 0.5; stroke-dasharray: 6 4; }
+    .iron-fill { fill: #7A7A9A; fill-opacity: 0.08; }
+    .clay-fill { fill: #A0704A; fill-opacity: 0.08; }
+    .crack { fill: none; stroke: #3a3a3a; stroke-width: 1.2; stroke-linecap: round; }
+    .hair { fill: none; stroke: #6a6a6a; stroke-width: 0.6; stroke-linecap: round; }
+  </style>
+
+  <!-- Connection label top -->
+  <text x="400" y="28" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="14" fill="#999">↑ legs of iron ↑</text>
+  <path class="light" d="M280,42 Q400,35 520,42" />
+
+  <!-- ====== LEFT FOOT ====== -->
+
+  <!-- Ankle coming down - left -->
+  <path class="heavy" d="M155,50 C150,70 145,95 140,120 C135,145 132,165 130,180" />
+  <path class="heavy" d="M280,50 C275,70 268,95 262,120 C256,145 252,165 250,180" />
+  <!-- Ankle bone bumps - left -->
+  <ellipse class="pencil" cx="132" cy="145" rx="10" ry="14" />
+  <ellipse class="pencil" cx="252" cy="145" rx="10" ry="14" />
+
+  <!-- Main foot shape - left (side/top view, angled) -->
+  <path class="heavy iron-fill" d="M130,180
+    C120,200 105,220 90,240
+    C75,260 60,280 50,300
+    C40,320 35,340 33,360
+    C31,380 32,395 35,405
+    L35,410" />
+
+  <path class="heavy clay-fill" d="M250,180
+    C248,210 245,240 240,270
+    C235,300 228,330 220,355
+    C215,375 210,390 208,405
+    L208,410" />
+
+  <!-- Sole / bottom of foot - left -->
+  <path class="heavy" d="M35,410
+    C32,420 30,430 32,440
+    C35,455 50,465 75,470
+    C100,475 130,478 160,478
+    C185,478 200,475 210,468
+    C218,460 215,445 212,435
+    L208,410" />
+
+  <!-- Heel - left -->
+  <path class="pencil" d="M130,180 C135,210 138,240 140,270 C142,300 140,340 135,375 C132,395 130,410 128,430" />
+  <!-- Heel pad -->
+  <path class="pencil" d="M128,430 C125,445 128,460 140,468 C155,475 170,478 185,475" />
+  <!-- Heel shading -->
+  <path class="light" d="M135,400 C133,415 132,430 134,445" />
+  <path class="light" d="M142,395 C140,412 139,430 140,448" />
+  <path class="light" d="M150,392 C148,410 148,430 150,452" />
+
+  <!-- Arch of foot -->
+  <path class="pencil" d="M95,410 C100,430 110,445 125,455" />
+  <path class="light" d="M85,400 C90,420 100,440 115,452" />
+
+  <!-- Top of foot surface -->
+  <path class="pencil" d="M130,185 C110,210 90,245 75,280 C60,310 50,340 45,370" />
+  <path class="light" d="M140,190 C122,218 105,252 90,285 C78,315 68,345 62,372" />
+
+  <!-- Veins on top of foot -->
+  <path class="light" d="M100,250 C95,275 88,300 82,325 C78,345 76,360 75,375" />
+  <path class="light" d="M115,240 C112,260 108,285 102,310 C98,330 94,350 92,370" />
+  <path class="light" d="M82,310 C78,312 75,310 73,315" />
+  <path class="light" d="M98,295 C102,298 100,302 96,300" />
+
+  <!-- ====== LEFT TOES ====== -->
+
+  <!-- Big toe - left -->
+  <path class="heavy clay-fill" d="M35,405
+    C28,395 22,382 20,370
+    C18,355 20,340 25,328
+    C30,318 38,312 48,310
+    C58,310 65,315 70,325
+    C74,335 72,348 68,360
+    C65,375 58,388 55,400" />
+  <!-- Big toenail -->
+  <path class="heavy" d="M30,345 C28,335 32,325 40,320 C48,316 56,318 62,325 C66,330 65,340 62,348" />
+  <path class="pencil" d="M35,340 C34,333 37,328 43,325 C49,323 54,325 58,330" />
+  <!-- Big toe knuckle wrinkle -->
+  <path class="light" d="M38,360 C45,358 55,358 62,362" />
+  <path class="light" d="M35,370 C44,367 56,367 64,372" />
+  <!-- Big toe hair (lol) -->
+  <path class="hair" d="M45,355 C44,348 46,342 48,348" />
+  <path class="hair" d="M52,356 C50,349 53,344 54,350" />
+
+  <!-- Second toe - left -->
+  <path class="heavy iron-fill" d="M55,400
+    C50,388 46,374 44,360
+    C42,346 44,332 50,322
+    C56,314 64,310 72,312
+    C80,316 85,325 86,338
+    C87,350 84,365 80,378
+    C76,390 73,400 72,408" />
+  <!-- Second toenail -->
+  <path class="pencil" d="M54,340 C53,332 57,325 63,322 C69,320 75,323 78,330" />
+  <path class="light" d="M58,337 C57,332 60,328 65,326 C70,325 74,327 76,332" />
+  <!-- Second toe wrinkle -->
+  <path class="light" d="M56,362 C62,360 72,360 80,363" />
+
+  <!-- Third toe - left -->
+  <path class="heavy clay-fill" d="M72,408
+    C70,396 67,382 66,368
+    C65,354 67,340 72,332
+    C77,326 84,323 91,326
+    C98,330 102,340 103,352
+    C104,364 101,378 97,390
+    C94,400 92,410 90,418" />
+  <!-- Third toenail -->
+  <path class="pencil" d="M74,348 C74,340 78,334 84,332 C90,330 95,334 97,340" />
+  <path class="light" d="M78,346 C78,340 81,336 86,335 C90,334 94,337 95,342" />
+  <!-- Third toe wrinkle -->
+  <path class="light" d="M74,370 C80,368 90,368 100,372" />
+
+  <!-- Fourth toe - left -->
+  <path class="heavy iron-fill" d="M90,418
+    C88,406 86,392 86,378
+    C86,364 89,352 94,344
+    C99,338 106,336 113,340
+    C120,345 123,354 123,366
+    C123,378 120,392 117,404
+    C114,414 112,422 110,428" />
+  <!-- Fourth toenail -->
+  <path class="pencil" d="M95,360 C96,353 100,348 106,346 C111,345 116,348 118,354" />
+  <!-- Fourth toe wrinkle -->
+  <path class="light" d="M93,382 C100,380 110,380 120,384" />
+
+  <!-- Pinky toe - left (small, curled, a bit wonky) -->
+  <path class="heavy clay-fill" d="M110,428
+    C110,418 110,406 112,396
+    C114,386 118,380 124,378
+    C130,376 135,380 137,388
+    C139,396 137,408 134,418
+    C131,428 128,436 126,442" />
+  <!-- Pinky toenail (tiny) -->
+  <path class="pencil" d="M118,392 C120,387 124,384 128,384 C132,385 134,389 133,393" />
+  <!-- Pinky is always a bit janky -->
+  <path class="light" d="M116,405 C122,403 130,404 136,408" />
+
+  <!-- Toe gaps / skin between toes - left -->
+  <path class="light" d="M55,398 C58,395 62,394 66,396" />
+  <path class="light" d="M73,406 C76,403 80,402 84,404" />
+  <path class="light" d="M91,416 C94,413 98,412 102,414" />
+  <path class="light" d="M111,426 C114,423 118,422 122,424" />
+
+  <!-- ====== RIGHT FOOT ====== -->
+
+  <!-- Ankle coming down - right -->
+  <path class="heavy" d="M535,50 C540,70 545,95 550,120 C555,145 558,165 560,180" />
+  <path class="heavy" d="M660,50 C655,70 648,95 642,120 C636,145 632,165 630,180" />
+  <!-- Ankle bone bumps - right -->
+  <ellipse class="pencil" cx="558" cy="145" rx="10" ry="14" />
+  <ellipse class="pencil" cx="632" cy="145" rx="10" ry="14" />
+
+  <!-- Main foot shape - right -->
+  <path class="heavy clay-fill" d="M560,180
+    C562,210 565,240 570,270
+    C575,300 582,330 590,355
+    C595,375 600,390 602,405
+    L602,410" />
+
+  <path class="heavy iron-fill" d="M630,180
+    C640,200 655,220 670,240
+    C685,260 700,280 710,300
+    C720,320 725,340 727,360
+    C729,380 728,395 725,405
+    L725,410" />
+
+  <!-- Sole / bottom of foot - right -->
+  <path class="heavy" d="M725,410
+    C728,420 730,430 728,440
+    C725,455 710,465 685,470
+    C660,475 630,478 600,478
+    C575,478 560,475 550,468
+    C542,460 545,445 548,435
+    L602,410" />
+
+  <!-- Heel - right -->
+  <path class="pencil" d="M630,180 C625,210 622,240 620,270 C618,300 620,340 625,375 C628,395 630,410 632,430" />
+  <!-- Heel pad -->
+  <path class="pencil" d="M632,430 C635,445 632,460 620,468 C605,475 590,478 575,475" />
+  <!-- Heel shading -->
+  <path class="light" d="M625,400 C627,415 628,430 626,445" />
+  <path class="light" d="M618,395 C620,412 621,430 620,448" />
+  <path class="light" d="M610,392 C612,410 612,430 610,452" />
+
+  <!-- Arch of foot -->
+  <path class="pencil" d="M665,410 C660,430 650,445 635,455" />
+  <path class="light" d="M675,400 C670,420 660,440 645,452" />
+
+  <!-- Top of foot surface -->
+  <path class="pencil" d="M630,185 C650,210 670,245 685,280 C700,310 710,340 715,370" />
+  <path class="light" d="M620,190 C638,218 655,252 670,285 C682,315 692,345 698,372" />
+
+  <!-- Veins on top of foot -->
+  <path class="light" d="M660,250 C665,275 672,300 678,325 C682,345 684,360 685,375" />
+  <path class="light" d="M645,240 C648,260 652,285 658,310 C662,330 666,350 668,370" />
+
+  <!-- ====== RIGHT TOES ====== -->
+
+  <!-- Big toe - right -->
+  <path class="heavy iron-fill" d="M725,405
+    C732,395 738,382 740,370
+    C742,355 740,340 735,328
+    C730,318 722,312 712,310
+    C702,310 695,315 690,325
+    C686,335 688,348 692,360
+    C695,375 702,388 705,400" />
+  <!-- Big toenail -->
+  <path class="heavy" d="M730,345 C732,335 728,325 720,320 C712,316 704,318 698,325 C694,330 695,340 698,348" />
+  <path class="pencil" d="M725,340 C726,333 723,328 717,325 C711,323 706,325 702,330" />
+  <!-- Big toe knuckle wrinkle -->
+  <path class="light" d="M722,360 C715,358 705,358 698,362" />
+  <path class="light" d="M725,370 C716,367 704,367 696,372" />
+  <!-- Big toe hair -->
+  <path class="hair" d="M715,355 C716,348 714,342 712,348" />
+  <path class="hair" d="M708,356 C710,349 707,344 706,350" />
+
+  <!-- Second toe - right -->
+  <path class="heavy clay-fill" d="M705,400
+    C710,388 714,374 716,360
+    C718,346 716,332 710,322
+    C704,314 696,310 688,312
+    C680,316 675,325 674,338
+    C673,350 676,365 680,378
+    C684,390 687,400 688,408" />
+  <!-- Second toenail -->
+  <path class="pencil" d="M706,340 C707,332 703,325 697,322 C691,320 685,323 682,330" />
+  <path class="light" d="M702,337 C703,332 700,328 695,326 C690,325 686,327 684,332" />
+  <!-- Second toe wrinkle -->
+  <path class="light" d="M704,362 C698,360 688,360 680,363" />
+
+  <!-- Third toe - right -->
+  <path class="heavy iron-fill" d="M688,408
+    C690,396 693,382 694,368
+    C695,354 693,340 688,332
+    C683,326 676,323 669,326
+    C662,330 658,340 657,352
+    C656,364 659,378 663,390
+    C666,400 668,410 670,418" />
+  <!-- Third toenail -->
+  <path class="pencil" d="M686,348 C686,340 682,334 676,332 C670,330 665,334 663,340" />
+  <!-- Third toe wrinkle -->
+  <path class="light" d="M686,370 C680,368 670,368 660,372" />
+
+  <!-- Fourth toe - right -->
+  <path class="heavy clay-fill" d="M670,418
+    C672,406 674,392 674,378
+    C674,364 671,352 666,344
+    C661,338 654,336 647,340
+    C640,345 637,354 637,366
+    C637,378 640,392 643,404
+    C646,414 648,422 650,428" />
+  <!-- Fourth toenail -->
+  <path class="pencil" d="M665,360 C664,353 660,348 654,346 C649,345 644,348 642,354" />
+  <!-- Fourth toe wrinkle -->
+  <path class="light" d="M667,382 C660,380 650,380 640,384" />
+
+  <!-- Pinky toe - right -->
+  <path class="heavy iron-fill" d="M650,428
+    C650,418 650,406 648,396
+    C646,386 642,380 636,378
+    C630,376 625,380 623,388
+    C621,396 623,408 626,418
+    C629,428 632,436 634,442" />
+  <!-- Pinky toenail -->
+  <path class="pencil" d="M642,392 C640,387 636,384 632,384 C628,385 626,389 627,393" />
+  <!-- Pinky wrinkle -->
+  <path class="light" d="M644,405 C638,403 630,404 624,408" />
+
+  <!-- Toe gaps - right -->
+  <path class="light" d="M705,398 C702,395 698,394 694,396" />
+  <path class="light" d="M687,406 C684,403 680,402 676,404" />
+  <path class="light" d="M669,416 C666,413 662,412 658,414" />
+  <path class="light" d="M649,426 C646,423 642,422 638,424" />
+
+  <!-- ====== CRACKS - THE WHOLE POINT ====== -->
+  <!-- Major crack running down left foot -->
+  <path class="crack" d="M170,55 C168,80 165,110 160,140 C155,175 148,210 142,245 C135,280 125,320 118,360 C112,390 108,420 110,450" />
+  <!-- Crack branches - left -->
+  <path class="crack" d="M160,140 C175,155 180,165 178,180" />
+  <path class="crack" d="M142,245 C130,250 122,258 125,270" />
+  <path class="crack" d="M118,360 C105,365 98,375 100,388" />
+  <path class="crack" d="M135,280 C148,290 152,300 148,315" />
+
+  <!-- Major crack running down right foot -->
+  <path class="crack" d="M620,55 C622,80 625,110 630,140 C635,175 642,210 648,245 C655,280 665,320 672,360 C678,390 682,420 680,450" />
+  <!-- Crack branches - right -->
+  <path class="crack" d="M630,140 C615,155 610,165 612,180" />
+  <path class="crack" d="M648,245 C660,250 668,258 665,270" />
+  <path class="crack" d="M672,360 C685,365 692,375 690,388" />
+  <path class="crack" d="M655,280 C642,290 638,300 642,315" />
+
+  <!-- Small spider cracks scattered -->
+  <path class="crack" d="M85,320 C82,325 80,332 83,338" />
+  <path class="crack" d="M83,338 C78,340 75,335 76,330" />
+  <path class="crack" d="M200,300 C204,308 202,315 198,318" />
+  <path class="crack" d="M198,318 C205,322 208,320 206,314" />
+  <path class="crack" d="M680,320 C683,328 680,335 676,338" />
+  <path class="crack" d="M590,300 C586,308 588,315 592,318" />
+  <path class="crack" d="M592,318 C585,322 582,320 584,314" />
+
+  <!-- ====== IRON vs CLAY PATCHES ====== -->
+  <!-- Clay patches (rough, lumpy areas) - left foot -->
+  <path class="light" d="M80,280 C75,285 72,295 75,305 C78,312 85,315 92,312" />
+  <path class="light" d="M180,350 C185,358 182,368 175,372 C168,374 162,370 160,362" />
+  <path class="light" d="M100,420 C95,425 92,435 95,442 C98,448 105,450 110,446" />
+
+  <!-- Clay patches - right foot -->
+  <path class="light" d="M680,280 C685,285 688,295 685,305 C682,312 675,315 668,312" />
+  <path class="light" d="M580,350 C575,358 578,368 585,372 C592,374 598,370 600,362" />
+  <path class="light" d="M660,420 C665,425 668,435 665,442 C662,448 655,450 650,446" />
+
+  <!-- Iron rivets/patches (geometric, hard) - left -->
+  <rect class="light" x="145" y="220" width="12" height="12" rx="1" />
+  <rect class="light" x="110" y="350" width="10" height="10" rx="1" />
+  <rect class="light" x="170" y="400" width="11" height="11" rx="1" />
+
+  <!-- Iron rivets/patches - right -->
+  <rect class="light" x="635" y="220" width="12" height="12" rx="1" />
+  <rect class="light" x="670" y="350" width="10" height="10" rx="1" />
+  <rect class="light" x="610" y="400" width="11" height="11" rx="1" />
+
+  <!-- ====== BAND-AIDS (the attempts to hold it together) ====== -->
+  <!-- Band-aid on left foot -->
+  <g transform="translate(90, 260) rotate(-15)">
+    <rect class="pencil" x="0" y="0" width="45" height="18" rx="4" fill="none" />
+    <rect class="light" x="12" y="0" width="21" height="18" rx="0" />
+    <line class="light" x1="4" y1="5" x2="10" y2="5" />
+    <line class="light" x1="4" y1="9" x2="10" y2="9" />
+    <line class="light" x1="4" y1="13" x2="10" y2="13" />
+    <line class="light" x1="35" y1="5" x2="41" y2="5" />
+    <line class="light" x1="35" y1="9" x2="41" y2="9" />
+    <line class="light" x1="35" y1="13" x2="41" y2="13" />
+  </g>
+
+  <!-- Band-aid on right foot -->
+  <g transform="translate(650, 280) rotate(20)">
+    <rect class="pencil" x="0" y="0" width="45" height="18" rx="4" fill="none" />
+    <rect class="light" x="12" y="0" width="21" height="18" rx="0" />
+    <line class="light" x1="4" y1="5" x2="10" y2="5" />
+    <line class="light" x1="4" y1="9" x2="10" y2="9" />
+    <line class="light" x1="4" y1="13" x2="10" y2="13" />
+    <line class="light" x1="35" y1="5" x2="41" y2="5" />
+    <line class="light" x1="35" y1="9" x2="41" y2="9" />
+    <line class="light" x1="35" y1="13" x2="41" y2="13" />
+  </g>
+
+  <!-- Duct tape across a big crack - left -->
+  <g transform="translate(140, 140) rotate(-5)">
+    <rect class="pencil" x="0" y="0" width="55" height="14" rx="1" fill="none" />
+    <line class="light" x1="8" y1="3" x2="8" y2="11" />
+    <line class="light" x1="16" y1="3" x2="16" y2="11" />
+    <line class="light" x1="24" y1="3" x2="24" y2="11" />
+    <line class="light" x1="32" y1="3" x2="32" y2="11" />
+    <line class="light" x1="40" y1="3" x2="40" y2="11" />
+    <line class="light" x1="48" y1="3" x2="48" y2="11" />
+  </g>
+
+  <!-- Duct tape - right -->
+  <g transform="translate(598, 150) rotate(8)">
+    <rect class="pencil" x="0" y="0" width="55" height="14" rx="1" fill="none" />
+    <line class="light" x1="8" y1="3" x2="8" y2="11" />
+    <line class="light" x1="16" y1="3" x2="16" y2="11" />
+    <line class="light" x1="24" y1="3" x2="24" y2="11" />
+    <line class="light" x1="32" y1="3" x2="32" y2="11" />
+    <line class="light" x1="40" y1="3" x2="40" y2="11" />
+    <line class="light" x1="48" y1="3" x2="48" y2="11" />
+  </g>
+
+  <!-- ====== TOE HAIR (sorry not sorry) ====== -->
+  <!-- Left foot toe hairs -->
+  <path class="hair" d="M75,370 C74,362 76,356 78,363" />
+  <path class="hair" d="M95,378 C93,370 96,365 97,372" />
+  <path class="hair" d="M112,390 C110,382 113,377 114,384" />
+  <!-- Right foot toe hairs -->
+  <path class="hair" d="M685,370 C686,362 684,356 682,363" />
+  <path class="hair" d="M665,378 C667,370 664,365 663,372" />
+  <path class="hair" d="M648,390 C650,382 647,377 646,384" />
+
+  <!-- ====== CALLUSES on heels ====== -->
+  <path class="light" d="M135,445 C138,450 142,452 145,450" />
+  <path class="light" d="M142,450 C145,455 150,456 153,454" />
+  <path class="light" d="M625,445 C622,450 618,452 615,450" />
+  <path class="light" d="M618,450 C615,455 610,456 607,454" />
+
+  <!-- ====== LABELS ====== -->
+  <!-- Iron label with arrow -->
+  <line class="pencil" x1="18" y1="520" x2="60" y2="470" />
+  <text x="8" y="540" font-family="Comic Neue, sans-serif" font-size="16" font-weight="700" fill="#7A7A9A">IRON</text>
+  <text x="8" y="558" font-family="Comic Neue, sans-serif" font-size="11" fill="#888">(strong, rigid,</text>
+  <text x="8" y="572" font-family="Comic Neue, sans-serif" font-size="11" fill="#888">unyielding)</text>
+
+  <!-- Clay label with arrow -->
+  <line class="pencil" x1="770" y1="520" x2="720" y2="470" />
+  <text x="720" y="540" font-family="Comic Neue, sans-serif" font-size="16" font-weight="700" fill="#A0704A">CLAY</text>
+  <text x="720" y="558" font-family="Comic Neue, sans-serif" font-size="11" fill="#888">(brittle, crumbly,</text>
+  <text x="720" y="572" font-family="Comic Neue, sans-serif" font-size="11" fill="#888">earthy)</text>
+
+  <!-- The punchline -->
+  <text x="400" y="560" text-anchor="middle" font-family="Permanent Marker, cursive" font-size="20" fill="#888">"they shall not cleave"</text>
+  <text x="400" y="585" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="13" fill="#666">— Daniel 2:43</text>
+
+  <!-- The funny bit -->
+  <text x="400" y="640" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="14" fill="#777">(band-aids, duct tape, and marriage alliances</text>
+  <text x="400" y="660" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="14" fill="#777">can only do so much)</text>
+
+  <!-- Ground line with cracks radiating -->
+  <line class="pencil" x1="20" y1="485" x2="780" y2="485" />
+  <path class="crack" d="M120,485 L115,500 L125,510 L118,520" />
+  <path class="crack" d="M350,485 L355,498 L348,508" />
+  <path class="crack" d="M450,485 L445,498 L452,508" />
+  <path class="crack" d="M660,485 L665,500 L658,510 L662,520" />
+
+</svg>

@@ -1,636 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Big Statue — Daniel 2</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Permanent+Marker&display=swap');
-
-  :root {
-    --gold: #D4A843;
-    --silver: #A8B4C0;
-    --bronze: #B08D57;
-    --iron: #7A7A9A;
-    --clay: #C4A882;
-    --stone: #88BBDD;
-    --bg: #1A1A2E;
-    --text: #E0D8CC;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Comic Neue', cursive, sans-serif;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  h1, h2, h3 {
-    font-family: 'Permanent Marker', cursive;
-    text-transform: none;
-    letter-spacing: 0.02em;
-  }
-
-  /* ====== HERO / TITLE ====== */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.5em, 8vw, 5em);
-    margin-bottom: 10px;
-  }
-
-  .hero h3 {
-    color: #888;
-    font-size: clamp(1em, 3vw, 1.5em);
-    font-weight: 400;
-  }
-
-  .hero .subtitle {
-    color: #666;
-    font-size: 0.85em;
-    margin-top: 20px;
-  }
-
-  .scroll-hint {
-    margin-top: 60px;
-    animation: bounce 2s infinite;
-    color: #555;
-    font-size: 0.8em;
-  }
-
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-  }
-
-  /* ====== SCROLLY SECTIONS ====== */
-  .scrolly-section {
-    min-height: 100vh;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transform: translateY(60px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-
-  .scrolly-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .scrolly-section .content {
-    max-width: 700px;
-    width: 100%;
-  }
-
-  .scrolly-section h2 {
-    font-size: clamp(1.5em, 5vw, 2.2em);
-    margin-bottom: 20px;
-  }
-
-  .scrolly-section p {
-    font-size: clamp(0.9em, 2.5vw, 1.1em);
-    margin-bottom: 15px;
-    color: #CCC;
-  }
-
-  /* ====== IMAGE CONTAINERS ====== */
-  .img-full {
-    width: 100%;
-    max-width: 650px;
-    margin: 25px auto;
-    display: block;
-  }
-
-  .img-sketch {
-    max-width: 500px;
-    width: 100%;
-    margin: 25px auto;
-    display: block;
-    background: #F5F0E8;
-    padding: 10px;
-    border-radius: 6px;
-    border: 2px solid #333;
-  }
-
-  .img-map {
-    max-width: 650px;
-    width: 100%;
-    margin: 20px auto;
-    display: block;
-    border: 2px solid #555;
-    border-radius: 4px;
-  }
-
-  .caption {
-    text-align: center;
-    font-size: 0.7em;
-    color: #666;
-    margin-top: 6px;
-  }
-
-  /* ====== VERSE BLOCKS ====== */
-  .verse {
-    border-left: 3px solid #444;
-    padding: 15px 20px;
-    margin: 25px 0;
-    font-style: italic;
-    color: #B0A8BC;
-    font-size: 0.95em;
-  }
-
-  .verse .ref {
-    text-align: right;
-    font-size: 0.8em;
-    color: #777;
-    margin-top: 8px;
-  }
-
-  /* ====== EMPIRE COLORS ====== */
-  .empire-gold { color: var(--gold); }
-  .empire-silver { color: var(--silver); }
-  .empire-bronze { color: var(--bronze); }
-  .empire-iron { color: var(--iron); }
-  .empire-clay { color: var(--clay); }
-  .empire-stone { color: var(--stone); }
-
-  /* ====== TIMELINE BAR (STICKY) ====== */
-  .timeline-sticky {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(26, 26, 46, 0.95);
-    padding: 8px 10px;
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid #333;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-
-  .timeline-sticky.show {
-    opacity: 1;
-  }
-
-  .timeline-bar {
-    display: flex;
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    border-radius: 4px;
-    overflow: hidden;
-    height: 28px;
-    font-weight: 700;
-    font-size: 0.4em;
-    line-height: 1.2;
-  }
-
-  .timeline-bar div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1A1A2E;
-    text-align: center;
-    transition: opacity 0.5s, flex 0.8s ease;
-  }
-
-  .timeline-bar div.dim { opacity: 0.3; }
-  .timeline-bar div.active { opacity: 1; outline: 2px solid #fff; outline-offset: -2px; }
-
-  /* ====== DIVIDER ====== */
-  .divider {
-    width: 60px;
-    height: 3px;
-    background: #333;
-    margin: 0 auto;
-    border-radius: 2px;
-  }
-
-  /* ====== SO WHAT ITEMS ====== */
-  .so-what-item {
-    border-left: 4px solid var(--stone);
-    padding: 12px 18px;
-    margin: 18px 0;
-    background: rgba(136,187,221,0.05);
-    border-radius: 0 6px 6px 0;
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .so-what-item.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .so-what-item strong {
-    color: var(--stone);
-  }
-
-  /* ====== CLOSING ====== */
-  .closing {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 20px;
-  }
-
-  .closing h1 {
-    font-size: clamp(2em, 7vw, 4em);
-    color: var(--stone);
-  }
-
-  .closing p {
-    color: #888;
-    margin-top: 20px;
-    font-size: 0.9em;
-  }
-
-  /* ====== TRANSITION ARROW ====== */
-  .transition-arrow {
-    text-align: center;
-    font-size: 2em;
-    color: #444;
-    padding: 30px 0;
-  }
-
-  /* ====== MISSION BOX ====== */
-  .mission-box {
-    border: 2px solid #444;
-    border-radius: 8px;
-    padding: 25px;
-    margin: 20px 0;
-    background: rgba(255,255,255,0.02);
-    font-size: 0.95em;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Big Statue</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ====== STICKY TIMELINE ====== -->
-<div class="timeline-sticky" id="stickyTimeline">
-  <div class="timeline-bar" id="timelineBar">
-    <div id="tl-babylon" style="background:var(--gold); flex:1;">BABYLON</div>
-    <div id="tl-persia" style="background:var(--silver); flex:1.5;">PERSIA</div>
-    <div id="tl-greece" style="background:var(--bronze); flex:1;">GREECE</div>
-    <div id="tl-rome" style="background:var(--iron); flex:3; color:#ccc;">ROME</div>
-    <div id="tl-divided" style="background:var(--clay); flex:4; color:#ddd;">DIVIDED</div>
-  </div>
-</div>
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <h1>The Big Statue</h1>
+    <p class="subtitle">Daniel Chapter 2</p>
+  </section>
 
-<!-- ====== HERO ====== -->
-<div class="hero">
-  <h1>The Big Statue</h1>
-  <h3>Daniel Chapter 2</h3>
-  <p class="subtitle">a dream, an interpretation, and why it matters</p>
-  <div class="scroll-hint">↓ scroll ↓</div>
-</div>
+  <!-- ====== CHAPTERS ====== -->
+  <!-- Each .chapter has scrolling text on the left and a sticky image on the right -->
 
-<!-- ====== GROUND RULES ====== -->
-<section class="scrolly-section" data-empire="none">
-  <div class="content">
-    <h2>The Ground Rules</h2>
-    <div class="mission-box">
-      <p>"We shall follow the best commentators, from Josephus down to Sir Isaac Newton... but we shall regard no commentator so much as <strong>the truth of history</strong>, <strong>the evidence of reason</strong>, and <strong>the analogy of scripture.</strong>"</p>
-      <p style="text-align:right; color:#777; font-size:0.8em;">— Bishop Thomas Newton</p>
+  <div class="chapter" data-empire="babylon">
+    <div class="scroll-side">
+      <h2>Head of Gold</h2>
+<p><i>"Thou art this head of gold"</i> — Daniel 2:38</p>
+<p>Babylon. 605–539 BC. About 66 years at the top.</p>
+<p>Nebuchadnezzar heard Daniel's interpretation... and then
+apparently missed the point entirely. He built a statue of his own —
+90 feet tall, pure gold — and commanded everyone to bow down and worship it.</p>
+<p>Gold statue in the dream: <i>you</i> are great, O king.<br>
+Gold statue he built: <i>I</i> am great, O everyone.</p>
+<p>God humbled him. Drove him mad. He lived like an animal for
+seven years, eating grass, nails growing like claws — until he
+finally looked up and acknowledged that heaven rules. (Daniel 4)</p>
+<p>He recovered. But his grandson Belshazzar didn't learn the lesson.</p>
+<p>Belshazzar threw a party. Drank wine from the sacred temple
+vessels his grandfather had looted from Jerusalem. That night,
+a hand appeared on the wall:</p>
+<p style="font-family: 'Permanent Marker', cursive; font-size: 1.4em; text-align: center;">
+<!-- writing on the wall sketch -->
+<img src="img/writing_wall_v2.svg" alt="Writing on the Wall" 
+     style="max-width: 100%; margin: 1.5rem 0;">
+<p>That very night, Belshazzar was killed. Babylon fell to the Medes and Persians.</p>
+<p>66 years. Head of gold. Gone.</p>
+<!-- geacron map -->
+<img src="img/babylon-550.png" alt="Babylon 550 BC" 
+     style="max-width: 100%; margin: 1.5rem 0;">
     </div>
-    <p style="color:#888;">That's the standard. History, reason, scripture. Not vibes.</p>
-  </div>
-</section>
-
-<!-- ====== THE SETUP ====== -->
-<section class="scrolly-section" data-empire="none">
-  <div class="content">
-    <h2>The Setup</h2>
-    <p>Nebuchadnezzar has a dream. It terrifies him.</p>
-    <p>He demands his wise men tell him the dream <em>and</em> its meaning. They can't. He orders them all killed.</p>
-    <p>The guard, Arioch, later takes credit: <em style="color:#888;">"I have found a man among the exiles..."</em></p>
-    <p>But Daniel had <strong>voluntarily</strong> stepped up. And his first words?</p>
-    <p style="color:var(--stone); font-size:1.1em;"><em>"There is a God in heaven who reveals mysteries."</em></p>
-    <p style="color:#777; font-size:0.85em;">Not "I can do this." — "God can."</p>
-  </div>
-</section>
-
-<!-- ====== THE STATUE ====== -->
-<section class="scrolly-section" data-empire="none">
-  <div class="content" style="text-align:center;">
-    <h2>The Statue</h2>
-    <img class="img-sketch" src="statue_pencil.svg" alt="The Statue">
-    <p><span class="empire-gold">Head of Gold</span> — Babylon</p>
-    <p><span class="empire-silver">Chest & Arms of Silver</span> — Medo-Persia</p>
-    <p><span class="empire-bronze">Belly & Thighs of Bronze</span> — Greece</p>
-    <p><span class="empire-iron">Legs of Iron</span> — Rome</p>
-    <p><span class="empire-clay">Feet of Iron & Clay</span> — Divided Nations</p>
-    <p style="color:#888; font-size:0.85em; margin-top:15px;">Each metal less valuable but stronger... until the feet.</p>
-  </div>
-</section>
-
-<!-- ====== BABYLON ====== -->
-<section class="scrolly-section" data-empire="babylon">
-  <div class="content">
-    <h2><span class="empire-gold">Head of Gold</span> — Babylon</h2>
-    <img class="img-map" src="babylon-550.png" alt="Babylon 550 BC">
-    <p class="caption">Geacron · 550 BC</p>
-    <p>Nebuchadnezzar's Babylon. The center of the ancient world. The golden head.</p>
-  </div>
-</section>
-
-<!-- ====== TRANSITION: GOLD → SILVER ====== -->
-<section class="scrolly-section" data-empire="babylon">
-  <div class="content">
-    <h2><span class="empire-gold">Gold</span> → <span class="empire-silver">Silver</span></h2>
-    <img class="img-sketch" src="writing_wall_v2.svg" alt="Writing on the Wall">
-    <div class="verse">
-      <p>MENE, MENE, TEKEL, UPHARSIN</p>
-      <p>Numbered. Numbered. Weighed. Divided.</p>
-      <p class="ref">— Daniel 5:25-28</p>
-    </div>
-    <p>Belshazzar's feast. The writing on the wall. That same night, Babylon fell to Cyrus. 539 BC.</p>
-  </div>
-</section>
-
-<!-- ====== PERSIA ====== -->
-<section class="scrolly-section" data-empire="persia">
-  <div class="content">
-    <h2><span class="empire-silver">Chest & Arms of Silver</span> — Persia</h2>
-    <img class="img-map" src="persia.png" alt="Persia 480 BC">
-    <p class="caption">Geacron · 480 BC</p>
-    <p>From Egypt to India. The largest empire the world had ever seen.</p>
-  </div>
-</section>
-
-<!-- ====== TRANSITION: SILVER → BRONZE ====== -->
-<section class="scrolly-section" data-empire="persia">
-  <div class="content">
-    <h2><span class="empire-silver">Silver</span> → <span class="empire-bronze">Bronze</span></h2>
-    <img class="img-sketch" src="alexander_v2.svg" alt="Alexander vs Darius">
-    <p>Battle of Gaugamela. 331 BC.</p>
-    <p>Alexander was 25. Darius fled the field. The Persian Empire — 200 years old — fell in an afternoon.</p>
-  </div>
-</section>
-
-<!-- ====== GREECE ====== -->
-<section class="scrolly-section" data-empire="greece">
-  <div class="content">
-    <h2><span class="empire-bronze">Belly & Thighs of Bronze</span> — Greece</h2>
-    <img class="img-map" src="greece.png" alt="Greece 328 BC">
-    <p class="caption">Geacron · 328 BC</p>
-    <p>The Empire of Alexander the Great. Greece to the edge of India. One man, one decade.</p>
-  </div>
-</section>
-
-<!-- ====== TRANSITION: BRONZE → IRON ====== -->
-<section class="scrolly-section" data-empire="greece">
-  <div class="content">
-    <h2><span class="empire-bronze">Bronze</span> → <span class="empire-iron">Iron</span></h2>
-    <p>Battle of Pydna. 168 BC. The Roman legions crush the Greek phalanx.</p>
-    <div class="verse">
-      <p>"And the fourth kingdom shall be strong as iron: forasmuch as iron breaketh in pieces and subdueth all things."</p>
-      <p class="ref">— Daniel 2:40</p>
-    </div>
-    <p>Iron. Crushing, breaking, shattering everything.</p>
-  </div>
-</section>
-
-<!-- ====== ROME ====== -->
-<section class="scrolly-section" data-empire="rome">
-  <div class="content">
-    <h2><span class="empire-iron">Legs of Iron</span> — Rome</h2>
-    <img class="img-map" src="rome.png" alt="Rome 117 AD">
-    <p class="caption">Geacron · 117 AD</p>
-    <p>Rome at maximum extent under Trajan. The entire Mediterranean — a Roman lake.</p>
-  </div>
-</section>
-
-<!-- ====== TRANSITION: IRON → CLAY ====== -->
-<section class="scrolly-section" data-empire="rome">
-  <div class="content">
-    <h2><span class="empire-iron">Iron</span> → <span class="empire-clay">Iron + Clay</span></h2>
-    <img class="img-sketch" src="barbarian_rome.svg" alt="Barbarian in Rome">
-    <p>The northern tribes — Visigoths, Vandals, Ostrogoths, Lombards — they didn't just conquer Rome.</p>
-    <p>They <em>moved in</em>.</p>
-    <div class="verse">
-      <p>"They shall mingle themselves with the seed of men: but they shall not cleave one to another."</p>
-      <p class="ref">— Daniel 2:43</p>
+    <div class="sticky-side">
+      <img src="img/Head.png" alt="Head of Gold">
     </div>
   </div>
-</section>
 
-<!-- ====== DIVIDED ====== -->
-<section class="scrolly-section" data-empire="divided">
-  <div class="content">
-    <h2><span class="empire-clay">Feet of Iron & Clay</span> — Divided</h2>
-    <img class="img-map" src="barbarians.png" alt="Barbarians 476 AD">
-    <p class="caption">Geacron · 476 AD</p>
-    <p>Franks, Visigoths, Vandals, Lombards... Roman law mixed with tribal clay. Iron and clay, side by side. Never fusing.</p>
-  </div>
-</section>
+  <div class="chapter" data-empire="persia">
+    <div class="scroll-side">
+      <h2>Chest & Arms of Silver</h2>
+<p><i>"After you shall arise another kingdom inferior to yours"</i> — Daniel 2:39</p>
+<p>Medo-Persia. 539–331 BC. Two hundred years.</p>
+<p>Two arms, two shoulders — the Medes and the Persians.
+Two peoples whose power was united under one man: Cyrus the Great.</p>
+<p>Cyrus didn't just conquer Babylon — he walked in
+almost unopposed. Belshazzar was partying. The Persians
+diverted the Euphrates River and marched under the city walls.
+That same night. The night of the writing on the wall.</p>
+<p><i>"Your kingdom is divided and given to the Medes
+and Persians."</i> — Daniel 5:28</p>
 
-<!-- ====== THEY TRIED TO FIX IT ====== -->
-<section class="scrolly-section" data-empire="divided">
-  <div class="content">
-    <h2>They Tried to Fix It</h2>
-    <img class="img-sketch" src="charlemagne_marriage.svg" alt="Charlemagne marriage">
-    <p>Marriage alliances. Charlemagne married a Lombard princess — then divorced her.</p>
-    <p>The Habsburgs married everyone. <em>"Others wage war; you, happy Austria, marry."</em></p>
-    <p>WWI started with a web of royal cousins killing each other.</p>
-    <p style="color:var(--clay); font-weight:700; margin-top:15px;">They shall not cleave. 1,500 years of trying. It never held.</p>
-  </div>
-</section>
+<img src="img/persia.png" alt="Persian Empire 480 BC"
+     style="max-width: 100%; margin: 1.5rem 0;">
 
-<!-- ====== THE STONE ====== -->
-<section class="scrolly-section" data-empire="none">
-  <div class="content">
-    <h2 class="empire-stone">The Stone</h2>
-    <img class="img-sketch" src="stone_cut_mountain.svg" alt="Stone cut from mountain">
-    <div class="verse">
-      <p>"A stone was cut out without hands, which smote the image upon his feet... and brake them to pieces."</p>
-      <p class="ref">— Daniel 2:34</p>
+<p>Cyrus was different from most conquerors. He freed
+the Jewish exiles. Let them go home. Let them rebuild
+the temple. Isaiah had called him by name 150 years
+before he was born. (Isaiah 45:1)</p>
+<p>His tomb still stands today at Pasargadae, Iran.
+The inscription reads:</p>
+<p style="font-family: 'Permanent Marker', cursive; font-size: 1.1em; text-align: center;">
+"O man, whoever you are, from wherever you come —<br>
+for I know you shall come —<br>
+I am Cyrus, who gave the Persians their empire.<br>
+Do not grudge me this patch of earth<br>
+that covers my body."</p>
+<p>This patch of earth. That's all that's left.</p>
+<p>But Daniel said "inferior." Silver, not gold. Bigger
+territory, longer reign — and still inferior. The metals
+go down in value even as the empires go up in power.
+Something to sit with.</p>
+<p>In the end, the last Persian king — Darius III — fled
+from a 25-year-old Macedonian on a horse. Alexander
+didn't even slow down.</p>
+<p>208 years. Chest of silver. Gone.</p>
     </div>
-    <p>Cut from a mountain. Not by human hands.</p>
-    <p>It strikes the <strong>feet</strong>. Not the head. Not the chest. The feet. The era we're living in now.</p>
-    <p style="color:var(--stone); font-weight:700;">This kingdom is future. We are in the feet.</p>
-  </div>
-</section>
-
-<!-- ====== THE STRIKE ====== -->
-<section class="scrolly-section" data-empire="none">
-  <div class="content">
-    <h2 class="empire-stone">The Strike</h2>
-    <img class="img-sketch" src="stone_meteor.svg" alt="Stone meteor">
-    <div class="verse">
-      <p>"Then was the iron, the clay, the brass, the silver, and the gold, broken to pieces together, and became like the chaff of the summer threshingfloors; and the wind carried them away, that no place was found for them."</p>
-      <p class="ref">— Daniel 2:35</p>
-    </div>
-    <p>Not just the feet. The whole statue. All the empires. All that glory. Dust.</p>
-  </div>
-</section>
-
-<!-- ====== CHAFF & VANITY ====== -->
-<section class="scrolly-section" data-empire="none">
-  <div class="content" style="text-align:center;">
-    <img class="img-sketch" src="chaff_wind.svg" alt="Chaff in the wind">
-    <div style="height:30px;"></div>
-    <img class="img-sketch" src="vanity_dust.svg" alt="Vanity of Vanities">
-    <p style="margin-top:20px; color:var(--clay); font-size:1.1em;">Chaff in the wind. No place found. <em>Vanity of vanities.</em></p>
-  </div>
-</section>
-
-<!-- ====== THE MOUNTAIN ====== -->
-<section class="scrolly-section" data-empire="none">
-  <div class="content">
-    <h2 class="empire-stone">The Mountain Fills the Earth</h2>
-    <div class="verse">
-      <p>"And the stone that smote the image became a great mountain, and filled the whole earth."</p>
-      <p class="ref">— Daniel 2:35</p>
-    </div>
-    <p>The kingdom that replaces all kingdoms.</p>
-    <p>Not reformed Rome. Not a better empire. Something entirely new.</p>
-    <div class="verse">
-      <p>"In the days of these kings shall the God of heaven set up a kingdom, which shall never be destroyed."</p>
-      <p class="ref">— Daniel 2:44</p>
+    <div class="sticky-side">
+      <img src="img/Chest.png" alt="Chest of Silver">
     </div>
   </div>
-</section>
 
-<!-- ====== SO WHAT ====== -->
-<section class="scrolly-section" data-empire="none">
-  <div class="content">
+  <div class="chapter" data-empire="greece">
+    <div class="scroll-side">
+      <h2>Belly & Thighs of Bronze</h2>
+<p><i>"A third kingdom of bronze, which shall rule over all the earth"</i> — Daniel 2:39</p>
+<p>Greece. 331–168 BC.</p>
+<p>One guy. Alexander the Great. 25 years old, mass-conquered the known world
+in about a decade. Then died at 32. Just... died. Fever in Babylon.</p>
+<p>His empire split four ways between his generals — like
+breaking a table into four wobbly pieces. None of them were him.</p>
+
+<img src="img/greece.png" alt="Greek Empire 328 BC"
+     style="max-width: 100%; margin: 1.5rem 0;">
+
+<p>Bronze. Harder than silver, cheaper than gold. 
+Greece gave the world philosophy, democracy, the Olympics — 
+and military campaigns that left a trail of blood across three continents.</p>
+<p>Belly and thighs. The core. The engine. 
+But still — just another section of the statue.</p>
+    </div>
+    <div class="sticky-side">
+      <img src="img/Belly.png" alt="Belly of Bronze">
+    </div>
+  </div>
+
+  <div class="chapter" data-empire="rome">
+    <div class="scroll-side">
+<h2>Legs of Iron</h2>
+<p><i>"Strong as iron — for iron breaks and shatters all things"</i> — Daniel 2:40</p>
+<p>Rome. 168 BC – 476 AD. Six hundred years of iron.</p>
+<p>Rome didn't just conquer. Rome <i>crushed</i>. Built roads over the rubble. 
+Made you speak Latin. Made you pay taxes. Made you grateful for it.</p>
+
+<img src="img/rome.png" alt="Roman Empire 117 AD"
+     style="max-width: 100%; margin: 1.5rem 0;">
+
+<p>Two legs. The empire eventually split in two — 
+East and West. Constantinople and Rome. 
+Same iron, different legs.</p>
+
+
+<p>Iron. The strongest metal in the statue. 
+And it still didn't last.</p>
+    </div>
+    <div class="sticky-side">
+      <img src="img/Legs.png" alt="Legs of Iron">
+    </div>
+  </div>
+
+  <div class="chapter" data-empire="divided">
+    <div class="scroll-side">
+      <h2>Feet of Iron & Clay</h2>
+<p>The western leg fell in 476 AD. Barbarians at the gates — 
+literally. The eastern leg held on another thousand years 
+as Byzantium. But Daniel already saw what was next.</p>
+
+<img src="img/barbarian_rome.png" alt="Fall of Rome"
+     style="max-width: 100%; margin: 1.5rem 0;">
+
+<img src="img/barbarians.png" alt="Barbarian kingdoms 476 AD"
+     style="max-width: 100%; margin: 1.5rem 0;">
+
+<p>Ten toes. Ten kingdoms. When Rome fell, it didn't become
+one thing — it shattered into tribal nations:</p>
+<p>The Franks. The Visigoths. The Vandals. The Ostrogoths.
+The Lombards. The Burgundians. The Heruli. The Suevi.
+The Anglo-Saxons. The Alemanni.</p>
+<p>The Franks are the ones who produced Charlemagne.
+Called himself Emperor.</p>
+<p>But Daniel already said it:</p>
+<p><i>"They will mingle with the seed of men;
+but they will not adhere to one another, just as iron
+does not mix with clay."</i> — Daniel 2:43</p>
+<p>Every attempt to reunite Europe — marriage alliances,
+Napoleon, the EU — iron and clay. They don't stick.</p>
+
+<p>And we're still here. Still in the feet.
+Iron and clay — for over 1,500 years now.</p>
+
+<p>Rome was called the Eternal City. The early church
+believed that when Rome fell, the world itself would perish.
+They couldn't imagine anything after Rome.</p>
+
+<p>But Daniel could. He saw what came after the iron —
+not another empire. Just... pieces. Fragments.
+Toes that don't stick together. And that's exactly
+what we've been living in ever since 476 AD.</p>
+
+<p>We are the feet.</p>
+    </div>
+    <div class="sticky-side">
+      <img src="img/Feet.png" alt="Feet of Iron and Clay">
+    </div>
+  </div>
+
+  <div class="chapter" data-empire="stone">
+    <div class="scroll-side">
+      <h2>The Rock of Ages</h2>
+<p><i>"A stone was cut out without hands"</i> — Daniel 2:34</p>
+<p>Not made by humans. Not voted in. Not built by committee.
+Not cut by human hands.</p>
+<p>That phrase echoes all over the New Testament. Listen for it:</p>
+<p><i>"We have a building from God, a house not made with hands,
+eternal in the heavens."</i> — 2 Corinthians 5:1</p>
+<p><i>"My kingdom is not of this world."</i> — John 18:36</p>
+<p><i>"Our citizenship is in heaven."</i> — Philippians 3:20</p>
+<p><i>"And raised us up with Him, and seated us with Him
+in the heavenly places."</i> — Ephesians 2:6</p>
+<p><i>"On this rock I will build My church, and the gates
+of hell shall not prevail against it."</i> — Matthew 16:18</p>
+<p><i>"Whoever falls on this stone will be broken to pieces;
+and on whomever it falls, it will grind him to powder."</i> — Matthew 21:44</p>
+<p>Jesus knew exactly what He was referencing.
+Daniel's stone. The one that becomes a mountain
+and fills the whole earth.</p>
+<p>Every kingdom on that statue was built by human hands.
+This one isn't.</p>
+
+<p>Remember Gideon? A Midianite soldier dreamed that
+a loaf of barley bread — <i>bread</i> — tumbled into the camp
+and flattened a tent. His friend said: that's the sword of Gideon.
+God has delivered us into his hand. (Judges 7:13)</p>
+<p>A loaf of bread toppling a military camp.
+A stone toppling a statue.
+God's weapons are always underwhelming on paper.</p>
+
+<img src="img/stone_cut_mountain.svg" alt="Stone cut from mountain"
+     style="max-width: 100%; margin: 1.5rem 0;">
+
+<p>And as the stone is being cut out — more and more people
+are added to His number. Born again. Called out.</p>
+<p>The word "church" in Greek is <i>ekklesia</i> —
+literally, "the called-out ones."</p>
+<p><i>"You are a chosen generation, a royal priesthood,
+a holy nation, His own special people."</i> — 1 Peter 2:9</p>
+<p>And right now, on this earth, they are sojourners.
+Strangers passing through.</p>
+<p><i>"They desire a better country, that is, a heavenly one.
+Therefore God is not ashamed to be called their God,
+for He has prepared a city for them."</i> — Hebrews 11:16</p>
+    </div>
+    <div class="sticky-side">
+      <img src="img/Stone.png" alt="The Stone">
+    </div>
+  </div>
+
+  <div class="chapter" data-empire="iconoclasm">
+    <div class="scroll-side">
+      <h2>Iconoclasm!</h2>
+<p><i>"Then the iron, the clay, the bronze, the silver and the gold
+were broken to pieces and became like chaff on a threshing floor
+in the summer."</i> — Daniel 2:35</p>
+<p>Chaff. That's the image. Not rubble. Not ruins. <i>Chaff.</i>
+The worthless husk that blows away and nobody goes looking for.</p>
+<p>That image shows up everywhere in Scripture when
+God talks about the wicked:</p>
+<p><i>"The wicked are not so, but are like chaff
+that the wind drives away."</i> — Psalm 1:4</p>
+<p><i>"Let them be like chaff before the wind, with the angel
+of the LORD driving them away."</i> — Psalm 35:5</p>
+<p><i>"His winnowing fork is in His hand, and He will clear
+His threshing floor, gathering the wheat into the barn
+and burning up the chaff with unquenchable fire."</i>
+— Matthew 3:12 (John the Baptist)</p>
+<p>Gold. Silver. Bronze. Iron. Clay.
+All of it — chaff. Wind took it. Gone.
+No trace left.</p>
+<p>Jesus told a parable. A nobleman went to a far country
+to receive a kingdom. Before he left, he gave his servants
+money to invest. Some of them said: <i>"We do not want
+this man to reign over us."</i></p>
+<p>When he returned as king, he said:</p>
+<p style="font-family: 'Permanent Marker', cursive; font-size: 1.1em; text-align: center;">
+"But those enemies of mine who did not want me<br>
+to be king over them — bring them here<br>
+and kill them before me."</p>
+<p style="text-align: center; color: #777;">— Luke 19:27</p>
+<p>That's the stone. That's what it does.</p>
+
+<p>And it's not gradual. It's sudden.</p>
+
+<p><i>"Behold, I am coming quickly."</i> — Revelation 22:12</p>
+
+<p>The stone doesn't slowly erode the statue. It strikes.
+One hit. Done.</p>
+
+<p><i>"The LORD is a man of war."</i> — Exodus 15:3</p>
+
+<p>The rider on the white horse — eyes like a flame of fire,
+and on His robe and on His thigh a name written:</p>
+
+<p style="font-family: 'Permanent Marker', cursive; font-size: 1.3em; text-align: center;">
+KING OF KINGS AND LORD OF LORDS</p>
+<p style="text-align: center; color: #777;">— Revelation 19:16</p>
+
+<p>A mighty deliverance.</p>
+
+<p>And then — fire. Just like the flood wiped the world clean
+in Noah's day, fire finishes the job:</p>
+
+<p><i>"The heavens will pass away with a great noise,
+and the elements will melt with fervent heat;
+both the earth and the works that are in it
+will be burned up."</i> — 2 Peter 3:10</p>
+
+<p><i>"And then the lawless one will be revealed,
+whom the Lord will consume with the brightness
+of His coming."</i> — 2 Thessalonians 2:8</p>
+
+<p>Consumed by the brightness. Not by an army.
+Not by a battle plan. Just — His presence.</p>
+
+<p><i>"When You awake, You shall despise their image
+as a dream."</i> — Psalm 73:20</p>
+
+<p>Despised like a dream. All of it. Every empire,
+every throne, every monument — like waking up
+and forgetting what you dreamed about.</p>
+
+<p>And remember the parable of the wheat and the tares?
+An enemy sowed weeds among the wheat. The servants asked,
+should we pull them up? The master said — no. Let them
+grow together until the harvest.</p>
+
+<p><i>"Let both grow together until the harvest...
+gather the tares and bind them in bundles to burn them,
+but gather the wheat into my barn."</i> — Matthew 13:30</p>
+
+<p>And then Jesus explains what happens after:</p>
+
+<p><i>"Then the righteous will shine like the sun
+in the kingdom of their Father."</i> — Matthew 13:43</p>
+
+<p>Starting fresh. Building from the ashes. Literally.</p>
+
+<p><i>"Then comes the end, when He delivers the kingdom
+to God the Father, when He puts an end to all rule
+and all authority and power."</i> — 1 Corinthians 15:24</p>
+    </div>
+    <div class="sticky-side">
+      <img src="img/Feetsmash.png" alt="Iconoclasm">
+    </div>
+  </div>
+
+  <div class="chapter" data-empire="kingdom">
+    <div class="scroll-side">
+      <h2>The Return of the King</h2>
+
+<p><i>"And the stone that struck the image became a great mountain
+and filled the whole earth."</i> — Daniel 2:35</p>
+
+<p>A stone becomes a mountain. Sound familiar?
+Jesus told a parable about a mustard seed — the smallest seed,
+becomes the biggest tree. Same pattern. The kingdom starts small.
+Then it grows. And grows. And fills everything.</p>
+
+<p>Now that all the kingdoms are destroyed — imagine it.</p>
+
+<p>Imagine the beautiful lands of Russia without the communism.
+The hills of China without the surveillance.
+The streets of every nation — without the tyrants.</p>
+
+<p><i>"Destructions are come to a perpetual end."</i> — Psalm 9:6</p>
+
+<p><i>"They shall not hurt nor destroy in all My holy mountain."</i>
+— Isaiah 11:9</p>
+
+<p><i>"They shall not learn war anymore."</i> — Isaiah 2:4</p>
+
+<p>One ruler. One king. The whole world.</p>
+
+<p><i>"The government shall be upon His shoulders."</i> — Isaiah 9:6</p>
+
+<p>And here's what makes this king different from every king
+on that statue. Alexander's father was a king. His mother was a queen.
+Nebuchadnezzar was born into royalty. Caesar was raised for power.</p>
+
+<p>Jesus? His dad was a carpenter.</p>
+
+<p>And yet — one substance with the Father and the Son.
+Not mixed like iron and clay. Not alloyed. Not fragile.
+One. Completely unified. Forever.</p>
+
+<p>Imagine a kingdom where every single citizen is a child of the king.</p>
+
+<p>A kingdom of love. The capital — the New Jerusalem.</p>
+
+<p><i>"Of the increase of His government and peace
+there will be no end."</i> — Isaiah 9:7</p>
+
+<p>The old kingdoms won't just be gone. They'll be SO gone
+that <i>"not even the remembrance of them will come up."</i></p>
+
+<p>A clean slate. The world wiped completely clean.</p>
+
+<p>What was that show we used to watch? Who knows. Who cares.
+All the accumulated garbage in our minds — gone.
+Alexander the who? All their glories — like nothing.</p>
+
+<p><i>"Since there will be found no more place for them."</i>
+— Daniel 2:35</p>
+
+<p>A complete remaking of the entire earth.
+The blueprints of the mansions are already drawn.</p>
+
+<p style="font-size: 1.2em; line-height: 2; text-align: center;">
+The rock from <span style="color: #5b9bd5; font-weight: bold;">a mountain</span>
+became <span style="color: #6aab3d; font-weight: bold;">a mountain</span>.<br>
+Thy kingdom come, thy will be done,<br>
+on <span style="color: #6aab3d; font-weight: bold;">earth</span>
+as it is in <span style="color: #5b9bd5; font-weight: bold;">heaven</span>.
+</p>
+
+<p>When Christ comes it will be: epic 🤩</p>
+    </div>
+    <div class="sticky-side">
+      <img src="img/v2.png" alt="Earth Remade">
+    </div>
+  </div>
+
+  <!-- ====== SO WHAT ====== -->
+  <section class="so-what">
     <h2>So What?</h2>
-    <p style="color:#888;">Why does a 2,600-year-old dream matter to you and me?</p>
 
-    <div class="so-what-item">
-      <strong>Cosmic Poise</strong> — Seeing history from God's altitude changes how you stand in the present. You stop being rattled by headlines when you've watched gold empires become dust.
-    </div>
+    <p>Know how worthless the things of this world are —
+    because of how worthless they will be.
+    Chaff in the wind. Washed away like sand at the shore.</p>
 
-    <div class="so-what-item">
-      <strong>The Pharisee Warning</strong> — 30-some years before 70 AD, they had every resource to see it coming. They white-knuckled the wrong kingdom. Would they have changed anything?
-    </div>
+    <p><i>"Do not lay up for yourselves treasures on earth,
+    where moth and rust destroy..."</i> — Matthew 6:19</p>
 
-    <div class="so-what-item">
-      <strong>Powderize Your Materialism</strong> — You just watched gold become dust. Loosen the grip. Nebuchadnezzar couldn't — he went right out and built a gold idol in chapter 3.
-    </div>
+    <p>Don't lay up treasures on an earth that the stone will destroy.</p>
 
-    <div class="so-what-item">
-      <strong>Recall</strong> — Life zooms you in. The mortgage, the email, the petty stuff. This dream is a reset button. Come back to the view from above.
-    </div>
+    <p>Estimate things based on what they will be in the end.
+    Gold, silver, bronze, iron — in the end, it's all dust.
+    Value things accordingly.</p>
 
-    <div class="so-what-item">
-      <strong>Demystify the Glory</strong> — The awe you feel toward great civilizations isn't wrong. It's just aimed too low. The impressive thing isn't the statue. It's the mountain.
-    </div>
-  </div>
-</section>
+    <p>Strengthen your alliance with the coming King.
+    Every other king on that statue is gone. This one is coming.
+    Pick your side now.</p>
 
-<!-- ====== CLOSING ====== -->
-<div class="closing">
-  <h1 class="empire-stone">Thy Kingdom Come</h1>
-  <p>Not a doctrine. A posture.</p>
-  <p style="color:#555; font-size:0.8em; margin-top:30px;">Daniel 2 · Ecclesiastes 1:2 · Matthew 6:10</p>
-</div>
+  </section>
 
-<script>
-  // Intersection Observer for fade-in sections
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+  <!-- ====== CLOSING ====== -->
+  <section class="closing">
+    <h2>Thy Kingdom Come</h2>
+  </section>
 
-        // Highlight timeline
-        const empire = entry.target.dataset.empire;
-        if (empire && empire !== 'none') {
-          highlightTimeline(empire);
-        }
-      }
-    });
-  }, {
-    threshold: 0.3,
-    rootMargin: '0px 0px -10% 0px'
-  });
-
-  document.querySelectorAll('.scrolly-section').forEach(s => observer.observe(s));
-
-  // SO WHAT items - staggered reveal
-  const soWhatObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const items = entry.target.querySelectorAll('.so-what-item');
-        items.forEach((item, i) => {
-          setTimeout(() => item.classList.add('visible'), i * 300);
-        });
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.scrolly-section').forEach(s => {
-    if (s.querySelector('.so-what-item')) soWhatObserver.observe(s);
-  });
-
-  // Sticky timeline show/hide
-  const stickyTimeline = document.getElementById('stickyTimeline');
-  const timelineShow = new IntersectionObserver((entries) => {
-    // Show timeline once we pass the statue section
-  }, { threshold: 0 });
-
-  let timelineVisible = false;
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const showAfter = window.innerHeight * 3; // after ~3 screens
-    const hideAfter = document.body.scrollHeight - window.innerHeight * 3;
-
-    if (scrollY > showAfter && scrollY < hideAfter) {
-      if (!timelineVisible) {
-        stickyTimeline.classList.add('show');
-        timelineVisible = true;
-      }
-    } else {
-      if (timelineVisible) {
-        stickyTimeline.classList.remove('show');
-        timelineVisible = false;
-      }
-    }
-  });
-
-  function highlightTimeline(empire) {
-    const ids = ['babylon', 'persia', 'greece', 'rome', 'divided'];
-    const map = {
-      'babylon': 0,
-      'persia': 1,
-      'greece': 2,
-      'rome': 3,
-      'divided': 4
-    };
-
-    ids.forEach((id, i) => {
-      const el = document.getElementById('tl-' + id);
-      if (i <= map[empire]) {
-        el.classList.remove('dim');
-        if (i === map[empire]) {
-          el.classList.add('active');
-        } else {
-          el.classList.remove('active');
-        }
-      } else {
-        el.classList.add('dim');
-        el.classList.remove('active');
-      }
-    });
-  }
-</script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>

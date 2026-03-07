@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <style>
+    .pencil { fill: none; stroke: #4a4a4a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .light { fill: none; stroke: #8a8a8a; stroke-width: 0.8; stroke-linecap: round; }
+    .heavy { fill: none; stroke: #3a3a3a; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .construction { fill: none; stroke: #b0b0b0; stroke-width: 0.5; stroke-dasharray: 6 4; }
+    .gold-fill { fill: #D4A843; fill-opacity: 0.08; }
+  </style>
+
+  <!-- Construction lines -->
+  <line class="construction" x1="300" y1="50" x2="300" y2="680" />
+  <ellipse class="construction" cx="300" cy="380" rx="140" ry="170" />
+
+  <!-- Neck / base - where it connects to silver chest -->
+  <path class="pencil" d="M230,620 C230,610 240,590 250,580 L350,580 C360,590 370,610 370,620" />
+  <!-- Neck shading lines -->
+  <line class="light" x1="260" y1="585" x2="260" y2="615" />
+  <line class="light" x1="280" y1="582" x2="280" y2="618" />
+  <line class="light" x1="300" y1="580" x2="300" y2="620" />
+  <line class="light" x1="320" y1="582" x2="320" y2="618" />
+  <line class="light" x1="340" y1="585" x2="340" y2="615" />
+
+  <!-- Cut-off line at bottom showing this connects to chest -->
+  <path class="light" d="M220,640 Q300,660 380,640" />
+  <text x="300" y="675" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="14" fill="#999">↓ chest of silver ↓</text>
+
+  <!-- Face shape - oval, slightly blocky jaw for a king -->
+  <path class="heavy gold-fill" d="M220,400
+    C215,350 218,300 225,270
+    C232,240 250,210 270,200
+    C285,193 315,193 330,200
+    C350,210 368,240 375,270
+    C382,300 385,350 380,400
+    C375,440 365,470 350,490
+    C335,510 320,520 300,525
+    C280,520 265,510 250,490
+    C235,470 225,440 220,400 Z" />
+
+  <!-- Ears -->
+  <!-- Left ear -->
+  <path class="pencil" d="M218,340 C205,335 195,350 193,370 C191,390 198,410 210,405 C215,400 218,390 220,375" />
+  <path class="light" d="M205,355 C200,365 200,385 207,395" />
+  <!-- Right ear -->
+  <path class="pencil" d="M382,340 C395,335 405,350 407,370 C409,390 402,410 390,405 C385,400 382,390 380,375" />
+  <path class="light" d="M395,355 C400,365 400,385 393,395" />
+
+  <!-- Earrings - Babylonian style hoops -->
+  <ellipse class="pencil" cx="200" cy="415" rx="8" ry="12" />
+  <ellipse class="pencil" cx="400" cy="415" rx="8" ry="12" />
+
+  <!-- Eyes - stern, kingly, slightly narrowed -->
+  <!-- Left eye -->
+  <path class="heavy" d="M250,340 C255,330 275,328 285,335 C290,340 288,350 280,355 C270,358 255,355 250,348 Z" />
+  <circle cx="268" cy="342" r="6" fill="#3a3a3a" />
+  <circle cx="270" cy="340" r="2" fill="white" />
+  <!-- Left eyebrow - thick, authoritative -->
+  <path class="heavy" d="M245,318 C255,310 275,308 290,315" />
+  <path class="light" d="M248,322 C258,315 272,313 286,318" />
+
+  <!-- Right eye -->
+  <path class="heavy" d="M315,335 C325,328 345,330 350,340 C352,348 345,358 335,355 C325,352 315,345 315,340 Z" />
+  <circle cx="333" cy="342" r="6" fill="#3a3a3a" />
+  <circle cx="335" cy="340" r="2" fill="white" />
+  <!-- Right eyebrow -->
+  <path class="heavy" d="M310,315 C325,308 345,310 355,318" />
+  <path class="light" d="M314,318 C328,313 342,315 352,322" />
+
+  <!-- Nose - strong, prominent -->
+  <path class="pencil" d="M295,345 L290,385 C285,395 280,400 275,405 C285,410 300,412 315,408 C310,402 305,395 302,385 L298,345" />
+  <!-- Nostril hints -->
+  <path class="light" d="M282,402 C280,398 282,395 286,396" />
+  <path class="light" d="M310,400 C312,396 310,393 306,394" />
+
+  <!-- Mouth - firm, regal, slight frown of authority -->
+  <path class="heavy" d="M268,440 C280,435 295,433 310,435 C320,437 330,440 335,442" />
+  <!-- Lower lip -->
+  <path class="pencil" d="M272,445 C285,455 310,457 332,447" />
+  <!-- Lip detail -->
+  <path class="light" d="M290,438 L295,436 L302,437" />
+
+  <!-- Beard - thick, curled Assyrian/Babylonian style -->
+  <!-- Main beard outline -->
+  <path class="heavy" d="M235,460
+    C230,480 232,510 240,530
+    C248,548 265,560 300,565
+    C335,560 352,548 360,530
+    C368,510 370,480 365,460" />
+
+  <!-- Beard curl rows - the iconic Babylonian tiered beard -->
+  <!-- Row 1 -->
+  <path class="pencil" d="M245,470 C260,475 280,478 300,479 C320,478 340,475 355,470" />
+  <path class="light" d="M250,465 C253,472 257,475 260,473" />
+  <path class="light" d="M270,468 C273,476 277,478 280,476" />
+  <path class="light" d="M290,469 C293,477 297,479 300,477" />
+  <path class="light" d="M310,469 C313,477 317,478 320,476" />
+  <path class="light" d="M330,468 C333,475 337,477 340,474" />
+  <path class="light" d="M348,465 C350,472 352,474 354,471" />
+
+  <!-- Row 2 -->
+  <path class="pencil" d="M240,495 C258,502 280,505 300,506 C320,505 342,502 360,495" />
+  <path class="light" d="M248,488 C251,496 255,500 258,497" />
+  <path class="light" d="M268,492 C271,500 275,503 278,500" />
+  <path class="light" d="M288,493 C291,502 295,505 298,502" />
+  <path class="light" d="M308,493 C311,502 315,505 318,502" />
+  <path class="light" d="M328,492 C331,500 335,502 338,499" />
+  <path class="light" d="M348,488 C350,495 353,498 355,495" />
+
+  <!-- Row 3 -->
+  <path class="pencil" d="M245,520 C262,528 282,532 300,533 C318,532 338,528 355,520" />
+  <path class="light" d="M255,514 C258,522 262,526 265,523" />
+  <path class="light" d="M275,517 C278,526 282,529 285,526" />
+  <path class="light" d="M295,518 C298,527 302,530 305,527" />
+  <path class="light" d="M315,517 C318,526 322,528 325,525" />
+  <path class="light" d="M335,514 C338,522 342,525 345,522" />
+
+  <!-- Row 4 - bottom curls -->
+  <path class="pencil" d="M252,542 C270,552 285,558 300,560 C315,558 330,552 348,542" />
+  <path class="light" d="M262,538 C265,546 269,550 272,547" />
+  <path class="light" d="M282,541 C285,550 289,554 292,551" />
+  <path class="light" d="M302,542 C305,551 309,554 312,551" />
+  <path class="light" d="M322,540 C325,548 329,551 332,548" />
+
+  <!-- Hair - thick, flowing from under the crown -->
+  <!-- Left side hair -->
+  <path class="pencil" d="M222,260 C215,290 210,330 212,370 C213,390 215,400 218,410" />
+  <path class="light" d="M228,265 C222,295 218,330 219,365" />
+  <path class="light" d="M234,260 C228,290 225,325 226,360" />
+
+  <!-- Right side hair -->
+  <path class="pencil" d="M378,260 C385,290 390,330 388,370 C387,390 385,400 382,410" />
+  <path class="light" d="M372,265 C378,295 382,330 381,365" />
+  <path class="light" d="M366,260 C372,290 375,325 374,360" />
+
+  <!-- ====== THE CROWN ====== -->
+  <!-- Crown base band -->
+  <path class="heavy gold-fill" d="M210,230
+    C210,220 215,210 230,205
+    L370,205
+    C385,210 390,220 390,230
+    L385,250
+    C380,255 370,258 360,260
+    L240,260
+    C230,258 220,255 215,250 Z" />
+
+  <!-- Crown band decoration - horizontal lines -->
+  <line class="pencil" x1="220" y1="220" x2="380" y2="220" />
+  <line class="pencil" x1="218" y1="235" x2="382" y2="235" />
+  <line class="pencil" x1="216" y1="250" x2="384" y2="250" />
+
+  <!-- Crown jewel circles on band -->
+  <circle class="pencil" cx="260" cy="228" r="7" />
+  <circle class="light" cx="260" cy="228" r="3" />
+  <circle class="pencil" cx="300" cy="228" r="7" />
+  <circle class="light" cx="300" cy="228" r="3" />
+  <circle class="pencil" cx="340" cy="228" r="7" />
+  <circle class="light" cx="340" cy="228" r="3" />
+
+  <!-- Crown points/spikes -->
+  <!-- Point 1 - left -->
+  <path class="heavy" d="M230,205 L220,150 L250,190" />
+  <path class="light" d="M225,175 L230,180" />
+  <circle class="pencil" cx="222" cy="155" r="5" />
+
+  <!-- Point 2 -->
+  <path class="heavy" d="M260,200 L248,130 L280,188" />
+  <path class="light" d="M255,160 L260,168" />
+  <circle class="pencil" cx="250" cy="135" r="5" />
+
+  <!-- Point 3 - center (tallest) -->
+  <path class="heavy" d="M290,198 L280,90 L310,198" />
+  <path class="light" d="M286,140 L292,150" />
+  <circle class="pencil" cx="282" cy="95" r="6" />
+  <!-- Star/sun at top of center point -->
+  <line class="light" x1="282" y1="80" x2="282" y2="70" />
+  <line class="light" x1="272" y1="88" x2="266" y2="82" />
+  <line class="light" x1="292" y1="88" x2="298" y2="82" />
+  <line class="light" x1="275" y1="97" x2="268" y2="97" />
+  <line class="light" x1="290" y1="97" x2="296" y2="97" />
+
+  <!-- Point 4 -->
+  <path class="heavy" d="M320,188 L352,130 L340,200" />
+  <path class="light" d="M340,160 L345,168" />
+  <circle class="pencil" cx="350" cy="135" r="5" />
+
+  <!-- Point 5 - right -->
+  <path class="heavy" d="M350,190 L380,150 L370,205" />
+  <path class="light" d="M370,175 L375,180" />
+  <circle class="pencil" cx="378" cy="155" r="5" />
+
+  <!-- Cross-hatching on crown for gold texture -->
+  <line class="light" x1="235" y1="210" x2="245" y2="250" />
+  <line class="light" x1="255" y1="208" x2="265" y2="255" />
+  <line class="light" x1="275" y1="205" x2="285" y2="258" />
+  <line class="light" x1="310" y1="205" x2="318" y2="258" />
+  <line class="light" x1="330" y1="208" x2="338" y2="255" />
+  <line class="light" x1="350" y1="210" x2="358" y2="250" />
+
+  <!-- Forehead wrinkles - the man has seen things -->
+  <path class="light" d="M255,275 C275,270 325,270 345,275" />
+  <path class="light" d="M260,285 C280,281 320,281 340,285" />
+
+  <!-- Cheekbone shading -->
+  <path class="light" d="M235,380 C238,375 242,372 245,375" />
+  <path class="light" d="M240,386 C243,381 247,378 250,381" />
+  <path class="light" d="M355,375 C358,372 362,375 365,380" />
+  <path class="light" d="M350,381 C353,378 357,381 360,386" />
+
+</svg>

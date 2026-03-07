@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" width="700" height="900">
+  <style>
+    .pencil { fill: none; stroke: #4a4a4a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .light { fill: none; stroke: #8a8a8a; stroke-width: 0.8; stroke-linecap: round; }
+    .heavy { fill: none; stroke: #3a3a3a; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .construction { fill: none; stroke: #b0b0b0; stroke-width: 0.5; stroke-dasharray: 6 4; }
+  </style>
+
+  <!-- ====== CONNECTION from chest above ====== -->
+  <text x="350" y="30" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="12" fill="#999">↑ chest of silver ↑</text>
+  <path class="construction" d="M200,50 L500,50" />
+
+  <!-- ====== THE TORSO — belly and waist ====== -->
+  <!-- Outer contour of the torso -->
+  <path class="heavy" d="M200,50 C195,80 190,120 188,160 C186,200 188,240 195,280 C200,310 210,340 225,370 C235,390 248,405 260,415" />
+  <path class="heavy" d="M500,50 C505,80 510,120 512,160 C514,200 512,240 505,280 C500,310 490,340 475,370 C465,390 452,405 440,415" />
+
+  <!-- ====== ABDOMINAL MUSCLES — the six-pack ====== -->
+  <!-- Linea alba (center line) -->
+  <path class="pencil" d="M350,60 C350,100 350,150 350,200 C350,250 350,300 350,350" />
+
+  <!-- Linea semilunaris (lateral lines) -->
+  <path class="pencil" d="M300,70 C298,110 295,160 294,210 C293,260 296,310 302,350" />
+  <path class="pencil" d="M400,70 C402,110 405,160 406,210 C407,260 404,310 398,350" />
+
+  <!-- Tendinous inscriptions (horizontal lines between abs) -->
+  <path class="pencil" d="M300,110 C315,105 335,103 350,104 C365,103 385,105 400,110" />
+  <path class="pencil" d="M296,170 C312,163 334,160 350,161 C366,160 388,163 404,170" />
+  <path class="pencil" d="M294,235 C310,228 334,225 350,226 C366,225 390,228 406,235" />
+  <path class="pencil" d="M296,300 C312,294 334,292 350,293 C366,292 388,294 404,300" />
+
+  <!-- Ab shading / definition lines -->
+  <path class="light" d="M315,80 C318,92 316,108 312,118" />
+  <path class="light" d="M385,80 C382,92 384,108 388,118" />
+  <path class="light" d="M312,135 C314,150 312,168 308,178" />
+  <path class="light" d="M388,135 C386,150 388,168 392,178" />
+  <path class="light" d="M310,200 C312,215 310,230 306,242" />
+  <path class="light" d="M390,200 C388,215 390,230 394,242" />
+  <path class="light" d="M312,262 C314,278 312,295 308,305" />
+  <path class="light" d="M388,262 C386,278 388,295 392,305" />
+
+  <!-- ====== NAVEL ====== -->
+  <ellipse cx="350" cy="265" rx="12" ry="15" class="pencil" />
+  <path class="light" d="M345,258 C348,262 352,262 355,258" />
+  <path class="light" d="M344,270 C348,274 352,274 356,270" />
+  <!-- Navel shadow -->
+  <path class="light" d="M348,260 C346,265 347,272 350,275" />
+
+  <!-- ====== OBLIQUES ====== -->
+  <!-- Left obliques -->
+  <path class="light" d="M200,120 C220,130 240,125 260,118" />
+  <path class="light" d="M195,170 C215,180 235,175 255,168" />
+  <path class="light" d="M190,220 C210,230 230,225 250,218" />
+  <path class="light" d="M192,270 C212,278 232,274 252,268" />
+
+  <!-- Right obliques -->
+  <path class="light" d="M500,120 C480,130 460,125 440,118" />
+  <path class="light" d="M505,170 C485,180 465,175 445,168" />
+  <path class="light" d="M510,220 C490,230 470,225 450,218" />
+  <path class="light" d="M508,270 C488,278 468,274 448,268" />
+
+  <!-- ====== V-LINES (iliac furrows) ====== -->
+  <path class="pencil" d="M230,310 C250,330 270,350 285,370 C295,385 300,395 305,410" />
+  <path class="pencil" d="M470,310 C450,330 430,350 415,370 C405,385 400,395 395,410" />
+
+  <!-- ====== GREEK PTERUGES HINTS ====== -->
+  <!-- Leather strip hints at the waistline -->
+  <path class="light" d="M220,350 C225,360 230,370 228,380" />
+  <path class="light" d="M245,345 C248,355 250,365 248,375" />
+  <path class="light" d="M270,342 C272,352 273,362 271,372" />
+  <path class="light" d="M480,350 C475,360 470,370 472,380" />
+  <path class="light" d="M455,345 C452,355 450,365 452,375" />
+  <path class="light" d="M430,342 C428,352 427,362 429,372" />
+
+  <!-- Waistband / belt line -->
+  <path class="pencil" d="M210,340 C250,330 300,325 350,324 C400,325 450,330 490,340" />
+
+  <!-- ====== TRANSITION TO THIGHS ====== -->
+  <!-- Hip crease -->
+  <path class="pencil" d="M260,415 C280,425 300,430 320,430" />
+  <path class="pencil" d="M440,415 C420,425 400,430 380,430" />
+  <!-- Gap between thighs -->
+  <path class="heavy" d="M320,430 C330,440 340,460 345,480 C348,500 349,520 350,540" />
+  <path class="heavy" d="M380,430 C370,440 360,460 355,480 C352,500 351,520 350,540" />
+
+  <!-- ====== LEFT THIGH ====== -->
+  <path class="heavy" d="M260,415 C250,450 238,500 228,550 C220,590 215,630 212,670 C210,700 210,720 212,740" />
+  <!-- Outer left thigh -->
+  <path class="heavy" d="M195,350 C190,400 185,460 184,520 C183,580 186,640 190,690 C192,710 196,730 200,745" />
+
+  <!-- Left quad definition -->
+  <!-- Rectus femoris -->
+  <path class="pencil" d="M240,440 C236,480 232,530 228,580 C225,620 222,660 220,700" />
+  <!-- Vastus medialis -->
+  <path class="light" d="M248,450 C244,490 240,540 236,590 C234,620 232,650 230,680" />
+  <!-- Vastus lateralis -->
+  <path class="light" d="M200,420 C198,470 196,530 195,580 C194,620 194,650 196,690" />
+  <!-- Quad separation shadow -->
+  <path class="light" d="M225,460 C222,500 219,550 218,600" />
+
+  <!-- ====== RIGHT THIGH ====== -->
+  <path class="heavy" d="M440,415 C450,450 462,500 472,550 C480,590 485,630 488,670 C490,700 490,720 488,740" />
+  <!-- Outer right thigh -->
+  <path class="heavy" d="M505,350 C510,400 515,460 516,520 C517,580 514,640 510,690 C508,710 504,730 500,745" />
+
+  <!-- Right quad definition -->
+  <path class="pencil" d="M460,440 C464,480 468,530 472,580 C475,620 478,660 480,700" />
+  <path class="light" d="M452,450 C456,490 460,540 464,590 C466,620 468,650 470,680" />
+  <path class="light" d="M500,420 C502,470 504,530 505,580 C506,620 506,650 504,690" />
+  <path class="light" d="M475,460 C478,500 481,550 482,600" />
+
+  <!-- ====== KNEECAPS ====== -->
+  <!-- Left kneecap -->
+  <ellipse cx="210" cy="745" rx="22" ry="18" class="pencil" />
+  <path class="light" d="M200,738 C205,742 210,744 215,742" />
+  <path class="light" d="M198,750 C204,754 212,755 220,752" />
+
+  <!-- Right kneecap -->
+  <ellipse cx="490" cy="745" rx="22" ry="18" class="pencil" />
+  <path class="light" d="M480,738 C485,742 490,744 495,742" />
+  <path class="light" d="M478,750 C484,754 492,755 500,752" />
+
+  <!-- ====== CONNECTION to legs below ====== -->
+  <path class="construction" d="M150,780 L550,780" />
+  <text x="350" y="800" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="12" fill="#999">↓ legs of iron ↓</text>
+
+  <!-- ====== LABELS ====== -->
+  <text x="350" y="860" text-anchor="middle" font-family="Permanent Marker, cursive" font-size="22" fill="#B08D57">belly &amp; thighs of bronze</text>
+  <text x="350" y="885" text-anchor="middle" font-family="Comic Neue, sans-serif" font-size="13" fill="#777">Greece — "a kingdom of bronze which shall rule over all the earth" — Daniel 2:39</text>
+
+</svg>
