@@ -3,9 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Big Statue — Daniel Chapter 2</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+<title>The Big Statue — Daniel 2</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Permanent+Marker&display=swap');
 
@@ -17,32 +15,152 @@
     --clay: #C4A882;
     --stone: #88BBDD;
     --bg: #1A1A2E;
+    --text: #E0D8CC;
   }
 
-  .reveal {
-    font-family: 'Comic Neue', cursive, sans-serif;
-    color: #E0D8CC;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  .reveal .slides section {
+  body {
     background: var(--bg);
+    color: var(--text);
+    font-family: 'Comic Neue', cursive, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
   }
 
-  .reveal h1, .reveal h2, .reveal h3 {
+  h1, h2, h3 {
     font-family: 'Permanent Marker', cursive;
     text-transform: none;
     letter-spacing: 0.02em;
   }
 
-  .reveal h1 { font-size: 2.2em; }
-  .reveal h2 { font-size: 1.6em; }
-  .reveal h3 { font-size: 1.2em; color: #B0A8BC; }
-
-  .reveal p, .reveal li {
-    font-size: 0.85em;
-    line-height: 1.5;
+  /* ====== HERO / TITLE ====== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
   }
 
+  .hero h1 {
+    font-size: clamp(2.5em, 8vw, 5em);
+    margin-bottom: 10px;
+  }
+
+  .hero h3 {
+    color: #888;
+    font-size: clamp(1em, 3vw, 1.5em);
+    font-weight: 400;
+  }
+
+  .hero .subtitle {
+    color: #666;
+    font-size: 0.85em;
+    margin-top: 20px;
+  }
+
+  .scroll-hint {
+    margin-top: 60px;
+    animation: bounce 2s infinite;
+    color: #555;
+    font-size: 0.8em;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+
+  /* ====== SCROLLY SECTIONS ====== */
+  .scrolly-section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .scrolly-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scrolly-section .content {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .scrolly-section h2 {
+    font-size: clamp(1.5em, 5vw, 2.2em);
+    margin-bottom: 20px;
+  }
+
+  .scrolly-section p {
+    font-size: clamp(0.9em, 2.5vw, 1.1em);
+    margin-bottom: 15px;
+    color: #CCC;
+  }
+
+  /* ====== IMAGE CONTAINERS ====== */
+  .img-full {
+    width: 100%;
+    max-width: 650px;
+    margin: 25px auto;
+    display: block;
+  }
+
+  .img-sketch {
+    max-width: 500px;
+    width: 100%;
+    margin: 25px auto;
+    display: block;
+    background: #F5F0E8;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid #333;
+  }
+
+  .img-map {
+    max-width: 650px;
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #555;
+    border-radius: 4px;
+  }
+
+  .caption {
+    text-align: center;
+    font-size: 0.7em;
+    color: #666;
+    margin-top: 6px;
+  }
+
+  /* ====== VERSE BLOCKS ====== */
+  .verse {
+    border-left: 3px solid #444;
+    padding: 15px 20px;
+    margin: 25px 0;
+    font-style: italic;
+    color: #B0A8BC;
+    font-size: 0.95em;
+  }
+
+  .verse .ref {
+    text-align: right;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 8px;
+  }
+
+  /* ====== EMPIRE COLORS ====== */
   .empire-gold { color: var(--gold); }
   .empire-silver { color: var(--silver); }
   .empire-bronze { color: var(--bronze); }
@@ -50,78 +168,34 @@
   .empire-clay { color: var(--clay); }
   .empire-stone { color: var(--stone); }
 
-  .verse {
-    font-style: italic;
-    color: #B0A8BC;
-    border-left: 3px solid #444;
-    padding-left: 20px;
-    margin: 20px auto;
-    max-width: 80%;
-    text-align: left;
-    font-size: 0.8em;
+  /* ====== TIMELINE BAR (STICKY) ====== */
+  .timeline-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26, 26, 46, 0.95);
+    padding: 8px 10px;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #333;
+    opacity: 0;
+    transition: opacity 0.5s;
   }
 
-  .sketch-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px auto;
-  }
-
-  .sketch-container img {
-    max-height: 420px;
-    max-width: 90%;
-    border: 2px solid #333;
-    border-radius: 4px;
-    background: #F5F0E8;
-    padding: 8px;
-  }
-
-  .mission {
-    border: 2px solid #555;
-    border-radius: 8px;
-    padding: 25px;
-    margin: 20px auto;
-    max-width: 85%;
-    background: rgba(255,255,255,0.03);
-  }
-
-  .split-slide {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .split-slide .text-side {
-    flex: 1;
-    text-align: left;
-    max-width: 50%;
-  }
-
-  .split-slide .image-side {
-    flex: 1;
-    max-width: 45%;
-  }
-
-  .split-slide .image-side img {
-    max-height: 380px;
-    max-width: 100%;
-    border: 2px solid #333;
-    border-radius: 4px;
-    background: #F5F0E8;
-    padding: 6px;
+  .timeline-sticky.show {
+    opacity: 1;
   }
 
   .timeline-bar {
     display: flex;
-    width: 90%;
-    margin: 20px auto;
-    border-radius: 6px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 4px;
     overflow: hidden;
-    height: 50px;
+    height: 28px;
     font-weight: 700;
-    font-size: 0.7em;
+    font-size: 0.4em;
+    line-height: 1.2;
   }
 
   .timeline-bar div {
@@ -129,348 +203,434 @@
     align-items: center;
     justify-content: center;
     color: #1A1A2E;
+    text-align: center;
+    transition: opacity 0.5s, flex 0.8s ease;
   }
 
+  .timeline-bar div.dim { opacity: 0.3; }
+  .timeline-bar div.active { opacity: 1; outline: 2px solid #fff; outline-offset: -2px; }
+
+  /* ====== DIVIDER ====== */
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: #333;
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+
+  /* ====== SO WHAT ITEMS ====== */
   .so-what-item {
-    text-align: left;
-    margin: 12px auto;
-    max-width: 80%;
-    padding: 10px 15px;
     border-left: 4px solid var(--stone);
+    padding: 12px 18px;
+    margin: 18px 0;
     background: rgba(136,187,221,0.05);
     border-radius: 0 6px 6px 0;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .so-what-item.visible {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   .so-what-item strong {
     color: var(--stone);
   }
 
-  .subtitle {
-    color: #8A8A9A;
-    font-size: 0.65em;
-    margin-top: 10px;
+  /* ====== CLOSING ====== */
+  .closing {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
   }
 
-  /* ====== MOBILE / PHONE ====== */
-  @media screen and (max-width: 800px) {
-    .reveal h1 { font-size: 1.6em; }
-    .reveal h2 { font-size: 1.2em; }
-    .reveal h3 { font-size: 0.9em; }
-    .reveal p, .reveal li { font-size: 0.7em; }
+  .closing h1 {
+    font-size: clamp(2em, 7vw, 4em);
+    color: var(--stone);
+  }
 
-    .split-slide {
-      flex-direction: column;
-      gap: 10px;
-    }
-    .split-slide .text-side,
-    .split-slide .image-side {
-      max-width: 95%;
-    }
-    .split-slide .image-side img {
-      max-height: 200px;
-    }
+  .closing p {
+    color: #888;
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
 
-    .timeline-bar {
-      flex-direction: column;
-      height: auto;
-      font-size: 0.55em;
-    }
-    .timeline-bar div {
-      padding: 6px 10px;
-      justify-content: flex-start;
-    }
+  /* ====== TRANSITION ARROW ====== */
+  .transition-arrow {
+    text-align: center;
+    font-size: 2em;
+    color: #444;
+    padding: 30px 0;
+  }
 
-    .verse {
-      font-size: 0.65em;
-      padding-left: 12px;
-      max-width: 95%;
-    }
-
-    .mission {
-      padding: 12px;
-      max-width: 95%;
-      font-size: 0.75em;
-    }
-
-    .so-what-item {
-      max-width: 95%;
-      padding: 8px 10px;
-      font-size: 0.7em;
-    }
+  /* ====== MISSION BOX ====== */
+  .mission-box {
+    border: 2px solid #444;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 20px 0;
+    background: rgba(255,255,255,0.02);
+    font-size: 0.95em;
   }
 </style>
 </head>
 <body>
-<div class="reveal">
-<div class="slides">
 
-<!-- ====== SLIDE 1: TITLE ====== -->
-<section>
+<!-- ====== STICKY TIMELINE ====== -->
+<div class="timeline-sticky" id="stickyTimeline">
+  <div class="timeline-bar" id="timelineBar">
+    <div id="tl-babylon" style="background:var(--gold); flex:1;">BABYLON</div>
+    <div id="tl-persia" style="background:var(--silver); flex:1.5;">PERSIA</div>
+    <div id="tl-greece" style="background:var(--bronze); flex:1;">GREECE</div>
+    <div id="tl-rome" style="background:var(--iron); flex:3; color:#ccc;">ROME</div>
+    <div id="tl-divided" style="background:var(--clay); flex:4; color:#ddd;">DIVIDED</div>
+  </div>
+</div>
+
+<!-- ====== HERO ====== -->
+<div class="hero">
   <h1>The Big Statue</h1>
   <h3>Daniel Chapter 2</h3>
   <p class="subtitle">a dream, an interpretation, and why it matters</p>
-</section>
-
-<!-- ====== SLIDE 2: MISSION STATEMENT ====== -->
-<section>
-  <h2>The Ground Rules</h2>
-  <div class="mission">
-    <p>"We shall follow the best commentators, from Josephus down to Sir Isaac Newton... but we shall regard no commentator so much as <strong>the truth of history</strong>, <strong>the evidence of reason</strong>, and <strong>the analogy of scripture.</strong>"</p>
-    <p style="text-align:right; color:#777; font-size:0.7em;">— Bishop Thomas Newton, <em>Dissertations on the Prophecies</em></p>
-  </div>
-  <p style="font-size:0.75em; color:#888; margin-top:20px;">That's the standard. History, reason, scripture. Not vibes.</p>
-</section>
-
-<!-- ====== SLIDE 3: THE DREAM — CONTEXT ====== -->
-<section>
-  <h2>The Setup</h2>
-  <p>Nebuchadnezzar has a dream. It terrifies him.</p>
-  <p>He demands his wise men tell him the dream <em>and</em> its meaning.</p>
-  <p>They can't. He orders them all killed.</p>
-  <p class="fragment" style="margin-top:20px;">The guard, Arioch, later takes credit:<br>
-  <em style="color:#888;">"I have found a man among the exiles..."</em></p>
-  <p class="fragment">But Daniel had <strong>voluntarily</strong> stepped up.<br>
-  And his first words? <em style="color:var(--stone);">"There is a God in heaven who reveals mysteries."</em></p>
-  <p class="fragment" style="font-size:0.75em; color:#777;">Not "I can do this." — "God can."</p>
-</section>
-
-<!-- ====== SLIDE 4: THE STATUE ====== -->
-<section>
-  <div class="split-slide">
-    <div class="text-side">
-      <h2>The Statue</h2>
-      <p><span class="empire-gold">Head of Gold</span> — Babylon</p>
-      <p><span class="empire-silver">Chest & Arms of Silver</span> — Medo-Persia</p>
-      <p><span class="empire-bronze">Belly & Thighs of Bronze</span> — Greece</p>
-      <p><span class="empire-iron">Legs of Iron</span> — Rome</p>
-      <p><span class="empire-clay">Feet of Iron & Clay</span> — Divided Nations</p>
-      <p class="fragment" style="font-size:0.75em; color:#888; margin-top:15px;">Each metal less valuable but stronger... until the feet.</p>
-    </div>
-    <div class="image-side">
-      <img src="statue_pencil.svg" alt="The Statue sketch">
-    </div>
-  </div>
-</section>
-
-<!-- ====== SLIDE 5: THE TIMELINE ====== -->
-<section>
-  <h2>The History — At a Glance</h2>
-  <div class="timeline-bar">
-    <div style="background:var(--gold); flex:1;">Babylon<br>605–539 BC</div>
-    <div style="background:var(--silver); flex:1.5;">Medo-Persia<br>539–331 BC</div>
-    <div style="background:var(--bronze); flex:1;">Greece<br>331–168 BC</div>
-    <div style="background:var(--iron); flex:3; color:#ccc;">Rome<br>168 BC – 476 AD</div>
-    <div style="background:var(--clay); flex:4; color:#ddd; font-size:0.6em;">Divided Nations<br>476 AD – ???</div>
-  </div>
-  <p style="font-size:0.75em; color:#888; margin-top:15px;">Every transition: a war, a conquest, a collapse.</p>
-  <p style="font-size:0.65em; color:#666;">(Let's walk through each one.)</p>
-</section>
-
-<!-- ====== SLIDE 6: BABYLON → PERSIA ====== -->
-<section>
-  <h2><span class="empire-gold">Gold</span> → <span class="empire-silver">Silver</span></h2>
-  <h3>Cyrus takes Babylon · 539 BC</h3>
-  <div class="split-slide">
-    <div class="text-side">
-      <div class="verse">
-        <p>MENE, MENE, TEKEL, UPHARSIN</p>
-        <p>Numbered. Numbered. Weighed. Divided.</p>
-        <p style="text-align:right; font-size:0.8em;">— Daniel 5:25-28</p>
-      </div>
-      <p style="font-size:0.8em;">Belshazzar's feast. The writing on the wall. That same night, Babylon fell.</p>
-    </div>
-    <div class="image-side">
-      <img src="writing_wall_v2.svg" alt="Writing on the Wall">
-    </div>
-  </div>
-</section>
-
-<!-- ====== SLIDE 7: PERSIA → GREECE ====== -->
-<section>
-  <h2><span class="empire-silver">Silver</span> → <span class="empire-bronze">Bronze</span></h2>
-  <h3>Alexander defeats Darius · 331 BC</h3>
-  <div class="split-slide">
-    <div class="text-side">
-      <p>Battle of Gaugamela.</p>
-      <p>Alexander was 25. Darius fled the field.</p>
-      <p>The Persian Empire — 200 years old — fell in an afternoon.</p>
-      <p class="fragment" style="font-size:0.75em; color:#888; margin-top:10px;">Even Hesiod, 200 years before Daniel, wrote about ages of gold, silver, bronze...</p>
-    </div>
-    <div class="image-side">
-      <img src="alexander_v2.svg" alt="Alexander vs Darius">
-    </div>
-  </div>
-</section>
-
-<!-- ====== SLIDE 8: GREECE → ROME ====== -->
-<section>
-  <h2><span class="empire-bronze">Bronze</span> → <span class="empire-iron">Iron</span></h2>
-  <h3>Rome conquers Greece · 168 BC</h3>
-  <p>Battle of Pydna. The legions crush the phalanx.</p>
-  <p>Iron. Crushing, breaking, shattering everything.</p>
-  <div class="verse">
-    <p>"And the fourth kingdom shall be strong as iron: forasmuch as iron breaketh in pieces and subdueth all things."</p>
-    <p style="text-align:right; font-size:0.8em;">— Daniel 2:40</p>
-  </div>
-</section>
-
-<!-- ====== SLIDE 9: ROME → DIVIDED (BARBARIANS) ====== -->
-<section>
-  <h2><span class="empire-iron">Iron</span> → <span class="empire-clay">Iron + Clay</span></h2>
-  <h3>The barbarians enter Rome</h3>
-  <div class="split-slide">
-    <div class="text-side">
-      <p>The northern tribes — Visigoths, Vandals, Ostrogoths, Lombards — they didn't just conquer Rome.</p>
-      <p>They <em>moved in</em>.</p>
-      <p class="fragment">Iron mixed with clay. Roman law, language, roads — mixed with tribal peoples who wouldn't fully blend.</p>
-      <div class="verse fragment">
-        <p>"They shall mingle themselves with the seed of men: but they shall not cleave one to another."</p>
-        <p style="text-align:right; font-size:0.8em;">— Daniel 2:43</p>
-      </div>
-    </div>
-    <div class="image-side">
-      <img src="barbarian_rome.svg" alt="Barbarian in the Roman Senate">
-    </div>
-  </div>
-</section>
-
-<!-- ====== SLIDE 10: MARRIAGE ALLIANCES ====== -->
-<section>
-  <h2>They Tried to Fix It</h2>
-  <div class="split-slide">
-    <div class="text-side">
-      <p>Marriage alliances. Charlemagne married a Lombard princess — then divorced her.</p>
-      <p>The Habsburgs married everyone. "Others wage war; you, happy Austria, marry."</p>
-      <p>WWI started with a web of royal cousins killing each other.</p>
-      <p class="fragment" style="color:var(--clay);"><strong>They shall not cleave.</strong> 1,500 years of trying. It never held.</p>
-    </div>
-    <div class="image-side">
-      <img src="charlemagne_marriage.svg" alt="Charlemagne marriage alliance">
-    </div>
-  </div>
-</section>
-
-<!-- ====== SLIDE 11: THE STONE ====== -->
-<section>
-  <h2 class="empire-stone">The Stone</h2>
-  <div class="split-slide">
-    <div class="text-side">
-      <div class="verse">
-        <p>"A stone was cut out without hands, which smote the image upon his feet... and brake them to pieces."</p>
-        <p style="text-align:right; font-size:0.8em;">— Daniel 2:34</p>
-      </div>
-      <p>Cut from a mountain. Not by human hands.</p>
-      <p class="fragment">It strikes the <strong>feet</strong>. Not the head. Not the chest. The feet. The era we're living in now.</p>
-      <p class="fragment" style="color:var(--stone);">This kingdom is future. We are in the feet.</p>
-    </div>
-    <div class="image-side">
-      <img src="stone_cut_mountain.svg" alt="Stone cut from mountain">
-    </div>
-  </div>
-</section>
-
-<!-- ====== SLIDE 12: THE STRIKE ====== -->
-<section>
-  <div class="split-slide">
-    <div class="image-side">
-      <img src="stone_meteor.svg" alt="Stone as meteor">
-    </div>
-    <div class="text-side">
-      <h2 class="empire-stone">The Strike</h2>
-      <div class="verse">
-        <p>"Then was the iron, the clay, the brass, the silver, and the gold, broken to pieces together, and became like the chaff of the summer threshingfloors; and the wind carried them away, that no place was found for them."</p>
-        <p style="text-align:right; font-size:0.8em;">— Daniel 2:35</p>
-      </div>
-      <p>Not just the feet. The whole statue. All the empires. All that glory. Dust.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ====== SLIDE 13: CHAFF & VANITY ====== -->
-<section>
-  <div class="split-slide">
-    <div class="image-side">
-      <img src="chaff_wind.svg" alt="Chaff in the wind">
-    </div>
-    <div class="image-side">
-      <img src="vanity_dust.svg" alt="Vanity of Vanities - dust cloud">
-    </div>
-  </div>
-  <p style="margin-top:15px; font-size:0.9em; color:var(--clay);">Chaff in the wind. No place found. <em>Vanity of vanities.</em></p>
-</section>
-
-<!-- ====== SLIDE 14: THE MOUNTAIN ====== -->
-<section>
-  <h2 class="empire-stone">The Mountain Fills the Earth</h2>
-  <div class="verse">
-    <p>"And the stone that smote the image became a great mountain, and filled the whole earth."</p>
-    <p style="text-align:right; font-size:0.8em;">— Daniel 2:35</p>
-  </div>
-  <p>The kingdom that replaces all kingdoms.</p>
-  <p>Not reformed Rome. Not a better empire. Something entirely new.</p>
-  <div class="verse fragment">
-    <p>"In the days of these kings shall the God of heaven set up a kingdom, which shall never be destroyed."</p>
-    <p style="text-align:right; font-size:0.8em;">— Daniel 2:44</p>
-  </div>
-</section>
-
-<!-- ====== SLIDE 15: SO WHAT? (Part 1) ====== -->
-<section>
-  <h2>So What?</h2>
-  <p style="font-size:0.75em; color:#888; margin-bottom:20px;">Why does a 2,600-year-old dream matter to you and me?</p>
-
-  <div class="so-what-item fragment">
-    <strong>Cosmic Poise</strong> — Seeing history from God's altitude changes how you stand in the present. You stop being rattled by headlines when you've watched gold empires become dust.
-  </div>
-
-  <div class="so-what-item fragment">
-    <strong>The Pharisee Warning</strong> — 30-some years before 70 AD, they had every resource to see it coming. They white-knuckled the wrong kingdom. Would they have changed anything?
-  </div>
-
-  <div class="so-what-item fragment">
-    <strong>Powderize Your Materialism</strong> — You just watched gold become dust. Loosen the grip. Nebuchadnezzar couldn't — he went right out and built a gold idol in chapter 3.
-  </div>
-</section>
-
-<!-- ====== SLIDE 16: SO WHAT? (Part 2) ====== -->
-<section>
-  <h2>So What?</h2>
-
-  <div class="so-what-item fragment">
-    <strong>Recall</strong> — Life zooms you in. The mortgage, the email, the petty stuff. This dream is a reset button. Come back to the view from above.
-  </div>
-
-  <div class="so-what-item fragment">
-    <strong>Demystify the Glory</strong> — The awe you feel toward great civilizations isn't wrong. It's just aimed too low. The impressive thing isn't the statue. It's the mountain.
-  </div>
-</section>
-
-<!-- ====== SLIDE 16: THY KINGDOM COME ====== -->
-<section>
-  <h1 class="empire-stone" style="font-size:2.5em;">Thy Kingdom Come</h1>
-  <p style="color:#888; margin-top:30px; font-size:0.8em;">Not a doctrine. A posture.</p>
-  <p style="color:#666; font-size:0.7em; margin-top:20px;">Daniel 2 · Ecclesiastes 1:2 · Matthew 6:10</p>
-</section>
-
-</div>
+  <div class="scroll-hint">↓ scroll ↓</div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<!-- ====== GROUND RULES ====== -->
+<section class="scrolly-section" data-empire="none">
+  <div class="content">
+    <h2>The Ground Rules</h2>
+    <div class="mission-box">
+      <p>"We shall follow the best commentators, from Josephus down to Sir Isaac Newton... but we shall regard no commentator so much as <strong>the truth of history</strong>, <strong>the evidence of reason</strong>, and <strong>the analogy of scripture.</strong>"</p>
+      <p style="text-align:right; color:#777; font-size:0.8em;">— Bishop Thomas Newton</p>
+    </div>
+    <p style="color:#888;">That's the standard. History, reason, scripture. Not vibes.</p>
+  </div>
+</section>
+
+<!-- ====== THE SETUP ====== -->
+<section class="scrolly-section" data-empire="none">
+  <div class="content">
+    <h2>The Setup</h2>
+    <p>Nebuchadnezzar has a dream. It terrifies him.</p>
+    <p>He demands his wise men tell him the dream <em>and</em> its meaning. They can't. He orders them all killed.</p>
+    <p>The guard, Arioch, later takes credit: <em style="color:#888;">"I have found a man among the exiles..."</em></p>
+    <p>But Daniel had <strong>voluntarily</strong> stepped up. And his first words?</p>
+    <p style="color:var(--stone); font-size:1.1em;"><em>"There is a God in heaven who reveals mysteries."</em></p>
+    <p style="color:#777; font-size:0.85em;">Not "I can do this." — "God can."</p>
+  </div>
+</section>
+
+<!-- ====== THE STATUE ====== -->
+<section class="scrolly-section" data-empire="none">
+  <div class="content" style="text-align:center;">
+    <h2>The Statue</h2>
+    <img class="img-sketch" src="statue_pencil.svg" alt="The Statue">
+    <p><span class="empire-gold">Head of Gold</span> — Babylon</p>
+    <p><span class="empire-silver">Chest & Arms of Silver</span> — Medo-Persia</p>
+    <p><span class="empire-bronze">Belly & Thighs of Bronze</span> — Greece</p>
+    <p><span class="empire-iron">Legs of Iron</span> — Rome</p>
+    <p><span class="empire-clay">Feet of Iron & Clay</span> — Divided Nations</p>
+    <p style="color:#888; font-size:0.85em; margin-top:15px;">Each metal less valuable but stronger... until the feet.</p>
+  </div>
+</section>
+
+<!-- ====== BABYLON ====== -->
+<section class="scrolly-section" data-empire="babylon">
+  <div class="content">
+    <h2><span class="empire-gold">Head of Gold</span> — Babylon</h2>
+    <img class="img-map" src="babylon-550.png" alt="Babylon 550 BC">
+    <p class="caption">Geacron · 550 BC</p>
+    <p>Nebuchadnezzar's Babylon. The center of the ancient world. The golden head.</p>
+  </div>
+</section>
+
+<!-- ====== TRANSITION: GOLD → SILVER ====== -->
+<section class="scrolly-section" data-empire="babylon">
+  <div class="content">
+    <h2><span class="empire-gold">Gold</span> → <span class="empire-silver">Silver</span></h2>
+    <img class="img-sketch" src="writing_wall_v2.svg" alt="Writing on the Wall">
+    <div class="verse">
+      <p>MENE, MENE, TEKEL, UPHARSIN</p>
+      <p>Numbered. Numbered. Weighed. Divided.</p>
+      <p class="ref">— Daniel 5:25-28</p>
+    </div>
+    <p>Belshazzar's feast. The writing on the wall. That same night, Babylon fell to Cyrus. 539 BC.</p>
+  </div>
+</section>
+
+<!-- ====== PERSIA ====== -->
+<section class="scrolly-section" data-empire="persia">
+  <div class="content">
+    <h2><span class="empire-silver">Chest & Arms of Silver</span> — Persia</h2>
+    <img class="img-map" src="persia.png" alt="Persia 480 BC">
+    <p class="caption">Geacron · 480 BC</p>
+    <p>From Egypt to India. The largest empire the world had ever seen.</p>
+  </div>
+</section>
+
+<!-- ====== TRANSITION: SILVER → BRONZE ====== -->
+<section class="scrolly-section" data-empire="persia">
+  <div class="content">
+    <h2><span class="empire-silver">Silver</span> → <span class="empire-bronze">Bronze</span></h2>
+    <img class="img-sketch" src="alexander_v2.svg" alt="Alexander vs Darius">
+    <p>Battle of Gaugamela. 331 BC.</p>
+    <p>Alexander was 25. Darius fled the field. The Persian Empire — 200 years old — fell in an afternoon.</p>
+  </div>
+</section>
+
+<!-- ====== GREECE ====== -->
+<section class="scrolly-section" data-empire="greece">
+  <div class="content">
+    <h2><span class="empire-bronze">Belly & Thighs of Bronze</span> — Greece</h2>
+    <img class="img-map" src="greece.png" alt="Greece 328 BC">
+    <p class="caption">Geacron · 328 BC</p>
+    <p>The Empire of Alexander the Great. Greece to the edge of India. One man, one decade.</p>
+  </div>
+</section>
+
+<!-- ====== TRANSITION: BRONZE → IRON ====== -->
+<section class="scrolly-section" data-empire="greece">
+  <div class="content">
+    <h2><span class="empire-bronze">Bronze</span> → <span class="empire-iron">Iron</span></h2>
+    <p>Battle of Pydna. 168 BC. The Roman legions crush the Greek phalanx.</p>
+    <div class="verse">
+      <p>"And the fourth kingdom shall be strong as iron: forasmuch as iron breaketh in pieces and subdueth all things."</p>
+      <p class="ref">— Daniel 2:40</p>
+    </div>
+    <p>Iron. Crushing, breaking, shattering everything.</p>
+  </div>
+</section>
+
+<!-- ====== ROME ====== -->
+<section class="scrolly-section" data-empire="rome">
+  <div class="content">
+    <h2><span class="empire-iron">Legs of Iron</span> — Rome</h2>
+    <img class="img-map" src="rome.png" alt="Rome 117 AD">
+    <p class="caption">Geacron · 117 AD</p>
+    <p>Rome at maximum extent under Trajan. The entire Mediterranean — a Roman lake.</p>
+  </div>
+</section>
+
+<!-- ====== TRANSITION: IRON → CLAY ====== -->
+<section class="scrolly-section" data-empire="rome">
+  <div class="content">
+    <h2><span class="empire-iron">Iron</span> → <span class="empire-clay">Iron + Clay</span></h2>
+    <img class="img-sketch" src="barbarian_rome.svg" alt="Barbarian in Rome">
+    <p>The northern tribes — Visigoths, Vandals, Ostrogoths, Lombards — they didn't just conquer Rome.</p>
+    <p>They <em>moved in</em>.</p>
+    <div class="verse">
+      <p>"They shall mingle themselves with the seed of men: but they shall not cleave one to another."</p>
+      <p class="ref">— Daniel 2:43</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== DIVIDED ====== -->
+<section class="scrolly-section" data-empire="divided">
+  <div class="content">
+    <h2><span class="empire-clay">Feet of Iron & Clay</span> — Divided</h2>
+    <img class="img-map" src="barbarians.png" alt="Barbarians 476 AD">
+    <p class="caption">Geacron · 476 AD</p>
+    <p>Franks, Visigoths, Vandals, Lombards... Roman law mixed with tribal clay. Iron and clay, side by side. Never fusing.</p>
+  </div>
+</section>
+
+<!-- ====== THEY TRIED TO FIX IT ====== -->
+<section class="scrolly-section" data-empire="divided">
+  <div class="content">
+    <h2>They Tried to Fix It</h2>
+    <img class="img-sketch" src="charlemagne_marriage.svg" alt="Charlemagne marriage">
+    <p>Marriage alliances. Charlemagne married a Lombard princess — then divorced her.</p>
+    <p>The Habsburgs married everyone. <em>"Others wage war; you, happy Austria, marry."</em></p>
+    <p>WWI started with a web of royal cousins killing each other.</p>
+    <p style="color:var(--clay); font-weight:700; margin-top:15px;">They shall not cleave. 1,500 years of trying. It never held.</p>
+  </div>
+</section>
+
+<!-- ====== THE STONE ====== -->
+<section class="scrolly-section" data-empire="none">
+  <div class="content">
+    <h2 class="empire-stone">The Stone</h2>
+    <img class="img-sketch" src="stone_cut_mountain.svg" alt="Stone cut from mountain">
+    <div class="verse">
+      <p>"A stone was cut out without hands, which smote the image upon his feet... and brake them to pieces."</p>
+      <p class="ref">— Daniel 2:34</p>
+    </div>
+    <p>Cut from a mountain. Not by human hands.</p>
+    <p>It strikes the <strong>feet</strong>. Not the head. Not the chest. The feet. The era we're living in now.</p>
+    <p style="color:var(--stone); font-weight:700;">This kingdom is future. We are in the feet.</p>
+  </div>
+</section>
+
+<!-- ====== THE STRIKE ====== -->
+<section class="scrolly-section" data-empire="none">
+  <div class="content">
+    <h2 class="empire-stone">The Strike</h2>
+    <img class="img-sketch" src="stone_meteor.svg" alt="Stone meteor">
+    <div class="verse">
+      <p>"Then was the iron, the clay, the brass, the silver, and the gold, broken to pieces together, and became like the chaff of the summer threshingfloors; and the wind carried them away, that no place was found for them."</p>
+      <p class="ref">— Daniel 2:35</p>
+    </div>
+    <p>Not just the feet. The whole statue. All the empires. All that glory. Dust.</p>
+  </div>
+</section>
+
+<!-- ====== CHAFF & VANITY ====== -->
+<section class="scrolly-section" data-empire="none">
+  <div class="content" style="text-align:center;">
+    <img class="img-sketch" src="chaff_wind.svg" alt="Chaff in the wind">
+    <div style="height:30px;"></div>
+    <img class="img-sketch" src="vanity_dust.svg" alt="Vanity of Vanities">
+    <p style="margin-top:20px; color:var(--clay); font-size:1.1em;">Chaff in the wind. No place found. <em>Vanity of vanities.</em></p>
+  </div>
+</section>
+
+<!-- ====== THE MOUNTAIN ====== -->
+<section class="scrolly-section" data-empire="none">
+  <div class="content">
+    <h2 class="empire-stone">The Mountain Fills the Earth</h2>
+    <div class="verse">
+      <p>"And the stone that smote the image became a great mountain, and filled the whole earth."</p>
+      <p class="ref">— Daniel 2:35</p>
+    </div>
+    <p>The kingdom that replaces all kingdoms.</p>
+    <p>Not reformed Rome. Not a better empire. Something entirely new.</p>
+    <div class="verse">
+      <p>"In the days of these kings shall the God of heaven set up a kingdom, which shall never be destroyed."</p>
+      <p class="ref">— Daniel 2:44</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SO WHAT ====== -->
+<section class="scrolly-section" data-empire="none">
+  <div class="content">
+    <h2>So What?</h2>
+    <p style="color:#888;">Why does a 2,600-year-old dream matter to you and me?</p>
+
+    <div class="so-what-item">
+      <strong>Cosmic Poise</strong> — Seeing history from God's altitude changes how you stand in the present. You stop being rattled by headlines when you've watched gold empires become dust.
+    </div>
+
+    <div class="so-what-item">
+      <strong>The Pharisee Warning</strong> — 30-some years before 70 AD, they had every resource to see it coming. They white-knuckled the wrong kingdom. Would they have changed anything?
+    </div>
+
+    <div class="so-what-item">
+      <strong>Powderize Your Materialism</strong> — You just watched gold become dust. Loosen the grip. Nebuchadnezzar couldn't — he went right out and built a gold idol in chapter 3.
+    </div>
+
+    <div class="so-what-item">
+      <strong>Recall</strong> — Life zooms you in. The mortgage, the email, the petty stuff. This dream is a reset button. Come back to the view from above.
+    </div>
+
+    <div class="so-what-item">
+      <strong>Demystify the Glory</strong> — The awe you feel toward great civilizations isn't wrong. It's just aimed too low. The impressive thing isn't the statue. It's the mountain.
+    </div>
+  </div>
+</section>
+
+<!-- ====== CLOSING ====== -->
+<div class="closing">
+  <h1 class="empire-stone">Thy Kingdom Come</h1>
+  <p>Not a doctrine. A posture.</p>
+  <p style="color:#555; font-size:0.8em; margin-top:30px;">Daniel 2 · Ecclesiastes 1:2 · Matthew 6:10</p>
+</div>
+
 <script>
-  Reveal.initialize({
-    hash: true,
-    transition: 'fade',
-    transitionSpeed: 'slow',
-    controls: true,
-    progress: true,
-    center: true,
-    touch: true,
-    width: 1200,
-    height: 700,
-    margin: 0.04,
-    minScale: 0.2,
-    maxScale: 1.5
+  // Intersection Observer for fade-in sections
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+
+        // Highlight timeline
+        const empire = entry.target.dataset.empire;
+        if (empire && empire !== 'none') {
+          highlightTimeline(empire);
+        }
+      }
+    });
+  }, {
+    threshold: 0.3,
+    rootMargin: '0px 0px -10% 0px'
   });
+
+  document.querySelectorAll('.scrolly-section').forEach(s => observer.observe(s));
+
+  // SO WHAT items - staggered reveal
+  const soWhatObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const items = entry.target.querySelectorAll('.so-what-item');
+        items.forEach((item, i) => {
+          setTimeout(() => item.classList.add('visible'), i * 300);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.scrolly-section').forEach(s => {
+    if (s.querySelector('.so-what-item')) soWhatObserver.observe(s);
+  });
+
+  // Sticky timeline show/hide
+  const stickyTimeline = document.getElementById('stickyTimeline');
+  const timelineShow = new IntersectionObserver((entries) => {
+    // Show timeline once we pass the statue section
+  }, { threshold: 0 });
+
+  let timelineVisible = false;
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const showAfter = window.innerHeight * 3; // after ~3 screens
+    const hideAfter = document.body.scrollHeight - window.innerHeight * 3;
+
+    if (scrollY > showAfter && scrollY < hideAfter) {
+      if (!timelineVisible) {
+        stickyTimeline.classList.add('show');
+        timelineVisible = true;
+      }
+    } else {
+      if (timelineVisible) {
+        stickyTimeline.classList.remove('show');
+        timelineVisible = false;
+      }
+    }
+  });
+
+  function highlightTimeline(empire) {
+    const ids = ['babylon', 'persia', 'greece', 'rome', 'divided'];
+    const map = {
+      'babylon': 0,
+      'persia': 1,
+      'greece': 2,
+      'rome': 3,
+      'divided': 4
+    };
+
+    ids.forEach((id, i) => {
+      const el = document.getElementById('tl-' + id);
+      if (i <= map[empire]) {
+        el.classList.remove('dim');
+        if (i === map[empire]) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active');
+        }
+      } else {
+        el.classList.add('dim');
+        el.classList.remove('active');
+      }
+    });
+  }
 </script>
 </body>
 </html>
